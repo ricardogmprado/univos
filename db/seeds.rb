@@ -8,7 +8,7 @@
 
 gender = ["male", "female"]
 age = (25..45).to_a
-status = ["1", "2", "3", "4"]
+status = ["confirmed", "rejected", "saved"]
 
 25.times do
   user = User.new(name: Faker::FunnyName.name,
