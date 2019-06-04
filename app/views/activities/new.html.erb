@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Activities#new</h1>
+  <%= link_to "Back to Activities", activities_path, class: 'btn btn-outline-primary' %>
+  <h3>Create your Activity</h3>
+  <%= simple_form_for @activity do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :category %>
+    <%= f.input :number_of_people %>
+    <%= f.input :date %>
+    <%= f.input :meeting_point %>
+    <%= f.input :gender %>
+    <%= f.input :min_age %>
+    <%= f.input :max_age %>
+    <%= f.input :photo %>
+    <%= f.button :submit, class: 'btn btn-outline-success' %>
+  <% end %>
+</div>

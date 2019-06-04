@@ -1,0 +1,13 @@
+<h1>Activities#show</h1>
+<h3><%= @activity.title %></h3>
+<ul>
+  <li><%= @activity.description %></li>
+  <li><%= @activity.category %></li>
+  <li><%= @activity.date %></li>
+  <li><%= @activity.number_of_people %></li>
+  <li><%= @activity.meeting_point %></li>
+  <li><%= @activity.gender %></li>
+  <li><%= @activity.min_age %></li><li><%= @activity.max_age %></li>
+  <li><%= @activity.photo %></li>
+</ul>
+<%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>

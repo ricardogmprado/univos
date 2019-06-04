@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Activities Index</h1>
+  <%= link_to "Add your Activity", new_activity_path, class: 'btn btn-outline-success' %>
+  <% @activities.each do |activity| %>
+  <h3><%= link_to activity.title, activity_path(activity) %></h3>
+  <ul>
+    <li><%= activity.description %></li>
+    <li><%= activity.category %></li>
+    <li><%= activity.date %></li>
+    <li><%= activity.meeting_point %></li>
+  </ul>
+  <%= link_to "Delete", activity_path(activity), method: :delete, class: 'btn btn-outline-primary', data: {confirm: "Are you sure?"} %>
+  <%= link_to "Edit", edit_activity_path(activity), class: 'btn btn-outline-primary' %>
+  <% end %>
+
+</div>
