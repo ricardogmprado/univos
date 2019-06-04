@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Activities Index</h1>
+
+  <% @activities.each do |activity| %>
+  <h3><%= link_to activity.title, activity_path(activity) %></h3>
+  <ul>
+    <li><%= activity.description %></li>
+    <li><%= activity.category %></li>
+    <li><%= activity.date %></li>
+    <li><%= activity.meeting_point %></li>
+  </ul>
+  <% end %>
+
+</div>

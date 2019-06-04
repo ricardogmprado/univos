@@ -6,16 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Message.destroy_all
+Appointment.destroy_all
+Activity.destroy_all
+User.destroy_all
+
 gender = ["male", "female"]
 age = (25..45).to_a
 status = ["confirmed", "rejected", "saved"]
 
 25.times do
   user = User.new(name: Faker::FunnyName.name,
-   location: Faker::Address.city,
-   gender: gender.sample,
-  age:  age.sample)
-
+    location: Faker::Address.city,
+    gender: gender.sample,
+    age:  age.sample)
   user.save
 end
 
@@ -44,7 +48,6 @@ end
     content: Faker::Movies::HarryPotter.quote)
   message.save
 end
-
 
 
 
