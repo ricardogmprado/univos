@@ -9,8 +9,12 @@
     <li><%= activity.date %></li>
     <li><%= activity.meeting_point %></li>
   </ul>
+  <% if policy(activity).destroy? %>
   <%= link_to "Delete", activity_path(activity), method: :delete, class: 'btn btn-outline-primary', data: {confirm: "Are you sure?"} %>
+  <% end %>
+   <% if policy(activity).edit? %>
   <%= link_to "Edit", edit_activity_path(activity), class: 'btn btn-outline-primary' %>
+  <% end %>
   <% end %>
 
 </div>
