@@ -14,8 +14,9 @@ class ActivitiesController < ApplicationController
 
   def create
     @activity = Activity.new(activity_params)
+    @activity.user = current_user
     if @activity.save
-      redirect_to activity_path(@activity.id), notice: 'Your activity is now visible for awesome people.'
+      redirect_to activity_path(@activity), notice: 'Your activity is now visible for awesome people.'
     else
       render :new
     end
@@ -34,7 +35,7 @@ class ActivitiesController < ApplicationController
 
   def destroy
     @activity.destroy
-    redirect_to dashboard_root_path
+    redirect_to activities_path, notice: 'Activity has been deleted.'
   end
 
   private
@@ -44,6 +45,6 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    params.require(:activity).permit(:title, :description, :datetime, :meeting_point, :category)
+    params.require(:activity).permit(:title, :description, :date, :meeting_point, :category, :number_of_people)
   end
 end

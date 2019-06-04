@@ -15,14 +15,19 @@ gender = ["male", "female"]
 age = (25..45).to_a
 status = ["confirmed", "rejected", "saved"]
 
+puts "seeding Users"
 25.times do
-  user = User.new(name: Faker::FunnyName.name,
+  user = User.new(
+    name: Faker::FunnyName.name,
+    email: Faker::Internet.email,
+    password: "password",
     location: Faker::Address.city,
     gender: gender.sample,
     age:  age.sample)
   user.save
 end
 
+puts "seeding Activities"
 10.times do
   activity = Activity.new(title: Faker::Movies::HarryPotter.character,
     description: "description",
@@ -34,6 +39,7 @@ end
   activity.save
 end
 
+puts "seeding Appointments"
 10.times do
   appointment = Appointment.new(user: User.last,
     activity: Activity.last,
@@ -41,6 +47,7 @@ end
   appointment.save
 end
 
+puts "seeding Messages"
 5.times do
   message = Message.new(
     user: User.last,

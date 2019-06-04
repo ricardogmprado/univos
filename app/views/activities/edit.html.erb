@@ -1,2 +1,17 @@
-<h1>Activities#edit</h1>
-<p>Find me in app/views/activities/edit.html.erb</p>
+<div class="container">
+  <h3>Edit your Activity</h3>
+  <%= link_to "Back to Activities", activities_path, class: 'btn btn-outline-primary' %>
+  <%= simple_form_for @activity do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :category %>
+    <%= f.input :number_of_people %>
+    <%= f.input :date %>
+    <%= f.input :meeting_point %>
+    <%= f.input :gender %>
+    <%= f.input :min_age %>
+    <%= f.input :max_age %>
+    <%= f.input :photo %>
+    <%= f.button :submit, class: 'btn btn-outline-success' %>
+  <% end %>
+</div>
