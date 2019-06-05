@@ -2,14 +2,14 @@ class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
   before_action :set_categories, only: [:new, :create, :index]
   skip_after_action :verify_authorized, only: :index
-  
+
   def index
      # need all activities that do not have an appointment with current user
     @seen_activities = current_user.appointments.pluck(:activity_id)
     @activities = policy_scope(Activity).where.not(id: @seen_activities).where.not(user_id: current_user.id)
     # SQL query: Activity.joins(:appointments).where.not(appointments: { user_id: current_user.id })
     if params[:category].present?
-      @activity = Activity.where(category: params[:category]).sample
+      @activity = @activities.where(category: params[:category]).sample
       if @activity.nil?
       redirect_to activities_path
       flash[:alert] = "Sorry, no activities match the selected category"
