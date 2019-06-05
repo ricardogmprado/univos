@@ -8,26 +8,25 @@
       <p>Descriptions hello kjsbc kjdsbnk klj hike surf ...</p>
   </div>
 <!--   <%= link_to "Add your Activity", new_activity_path, class: 'btn btn-outline-success' %>
-  <% @activities.each do |activity| %>
-  <h3><%= link_to activity.title, activity_path(activity) %></h3>
+  <h3><%= link_to @activity.title, activity_path(@activity) %></h3>
+
   <ul>
-    <li><%= activity.description %></li>
-    <li><%= activity.category %></li>
-    <li><%= activity.date %></li>
-    <li><%= activity.meeting_point %></li>
+    <li><%= @activity.description %></li>
+    <li><%= @activity.category %></li>
+    <li><%= @activity.date %></li>
+    <li><%= @activity.meeting_point %></li>
   </ul>
 
-  <%= link_to "Decline", activity_appointments_path(activity, status: 'decline'), method: :post, class: 'btn btn-outline-primary'%>
-  <%= link_to "Save", activity_appointments_path(activity, status: 'saved'), method: :post, class: 'btn btn-outline-primary'%>
+  <%= link_to "Decline", activity_appointments_path(@activity, status: 'decline'), method: :post, class: 'btn btn-outline-primary'%>
+  <%= link_to "Save", activity_appointments_path(@activity, status: 'saved'), method: :post, class: 'btn btn-outline-primary'%>
 
-  <% if policy(activity).destroy? %>
+  <% if policy(@activity).destroy? %>
   <%= link_to "Delete", activity_path(activity), method: :delete, class: 'btn btn-outline-primary', data: {confirm: "Are you sure?"} %>
   <% end %>
-   <% if policy(activity).edit? %>
-  <%= link_to "Edit", edit_activity_path(activity), class: 'btn btn-outline-primary' %>
+   <% if policy(@activity).edit? %>
+  <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>
 
   <% end %>
-  <% end %>
- -->
+
 </div>
 <%= render 'shared/footer' %>

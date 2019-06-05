@@ -3,8 +3,8 @@ class ActivitiesController < ApplicationController
   skip_after_action :verify_authorized, only: :index
   def index
     @activities = policy_scope(Activity)
-    # @activities = @activities.where.not(user_id: current_user.id)
-    # @activity = @activities.sample
+    @activities = @activities.where.not(user_id: current_user.id)
+    @activity = @activities.sample
   end
 
   def show
