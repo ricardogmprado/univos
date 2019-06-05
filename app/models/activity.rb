@@ -9,4 +9,9 @@ class Activity < ApplicationRecord
   validates :meeting_point, presence: true
   validates :number_of_people, presence: true
   validates :category, presence: true
+  after_create :appointment_for_activity_creator
+
+  def appointment_for_activity_creator
+    Appointment.create(user: self.user, activity: self, status: 'confirmed')
+  end
 end
