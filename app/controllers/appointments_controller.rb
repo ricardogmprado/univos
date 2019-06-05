@@ -4,7 +4,7 @@ class AppointmentsController < ApplicationController
     authorize appointment
     appointment.user = current_user
     appointment.save
-    redirect_to activities_path
+    redirect_to activities_path(category: params[:category], checked:true)
   end
 
   def update
