@@ -1,12 +1,23 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :set_categories, only: [:new, :create, :index]
   skip_after_action :verify_authorized, only: :index
+  
   def index
-    # need all activities that do not have an appointment with current user
+     # need all activities that do not have an appointment with current user
     @seen_activities = current_user.appointments.pluck(:activity_id)
     @activities = policy_scope(Activity).where.not(id: @seen_activities).where.not(user_id: current_user.id)
     # SQL query: Activity.joins(:appointments).where.not(appointments: { user_id: current_user.id })
+    if params[:category].present?
+      @activity = Activity.where(category: params[:category]).sample
+      if @activity.nil?
+      redirect_to activities_path
+      flash[:alert] = "Sorry, no activities match the selected category"
+    end
+    else
     @activity = @activities.sample
+  end
+    @selected_categories = params[:category] || []
   end
 
   def show
@@ -49,6 +60,10 @@ class ActivitiesController < ApplicationController
   end
 
   private
+
+  def set_categories
+    @categories = ['sports', 'food & drinks', 'nature', 'art & culture', 'Music & Dance', 'Hobbies', 'LGBTQ', 'Nightlife', 'Outdoors', 'Health & Wellness']
+  end
 
   def set_activity
     @activity = Activity.find(params[:id])

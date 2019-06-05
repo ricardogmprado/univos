@@ -4,11 +4,13 @@ class AppointmentsController < ApplicationController
     authorize appointment
     appointment.user = current_user
     appointment.save
+
     if params[:show] != nil
     redirect_to activity_path(appointment.activity), notice: 'Appointment has been created.'
     else
-    redirect_to activities_path, notice: 'Appointment has been created.'
+    redirect_to activities_path(category: params[:category], checked:true), notice: 'Appointment has been created.'
    end
+
   end
 
   def update
