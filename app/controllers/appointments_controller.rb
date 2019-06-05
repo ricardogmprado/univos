@@ -4,18 +4,19 @@ class AppointmentsController < ApplicationController
     authorize appointment
     appointment.user = current_user
     appointment.save
-    redirect_to activities_path
+    if params[:show] != nil
+    redirect_to activity_path(appointment.activity), notice: 'Appointment has been created.'
+    else
+    redirect_to activities_path, notice: 'Appointment has been created.'
+   end
   end
 
   def update
-    authorize @appointment
-    appointment = Appointment.find(params[:activity_id])
+    appointment = Appointment.find(params[:id])
+    authorize appointment
     appointment.user = current_user
     appointment.update(appointment_params)
-    redirect_to activity_path(@activity), notice: 'You successfully joined this Activity.'
-  end
-
-  def destroy
+    redirect_to dashboard_path
   end
 
   private

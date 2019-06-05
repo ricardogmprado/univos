@@ -1,4 +1,5 @@
-<!-- <div class="container"> -->
+  <%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %>
+
   <div class="maincard">
     <div class= "card-img">
     <%= image_tag "https://www.mch-group.com/-/media/mch-group/Images/Content/News/Blog/2017/2017-04/mch-group-live-marketing-aktivierung.jpg" %>
@@ -16,6 +17,7 @@
     <li><%= @activity.date %></li>
     <li><%= @activity.meeting_point %></li>
   </ul>
+
 
   <%= link_to "Decline", activity_appointments_path(@activity, status: 'decline'), method: :post, class: 'btn btn-outline-primary'%>
   <%= link_to "Save", activity_appointments_path(@activity, status: 'saved'), method: :post, class: 'btn btn-outline-primary'%>

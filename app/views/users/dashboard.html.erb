@@ -1,2 +1,23 @@
-<h1>Users#dashboard</h1>
-<p>Find me in app/views/users/dashboard.html.erb</p>
+<%= link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %>
+<h3>Activities you're interested in:</h3>
+<% @saved_appointments.each do |appointment| %>
+  <ul>
+    <li><%= appointment.activity.title %>
+    <%= link_to "Decline", activity_appointment_path(id: appointment.id, activity_id: appointment.activity.id, status: 'declined'), method: :patch, class: 'btn btn-outline-primary'%>
+    <%= link_to "Confirm", activity_appointment_path(id: appointment.id, activity_id: appointment.activity.id, status: 'confirmed'), method: :patch, class: 'btn btn-outline-primary'%></li>
+  </ul>
+<% end %>
+<h3>Activities you're joining:</h3>
+<% @confirmed_activities.each do |activity| %>
+  <ul>
+    <li><%= link_to "#{activity.title}", activity_path(activity) %></li>
+  </ul>
+<% end %>
+
+<h3>Created by you:</h3><%= link_to "Add your Activity", new_activity_path, class: 'btn btn-outline-success' %>
+<% @created_activities.each do |activity| %>
+  <ul>
+    <li><%= link_to "#{activity.title}", activity_path(activity) %>
+  <%= link_to "Delete", activity_path(activity), method: :delete, class: 'btn btn-outline-danger', data: {confirm: "Are you sure?"}  %></li>
+  </ul>
+<% end %>
