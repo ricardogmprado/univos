@@ -23,6 +23,8 @@
   <%= link_to "see messages", activity_messages_path(@activity) %>
 <% end %>
 
+<% if ! policy(@activity).confirmed? %>
 <%= link_to "Join Activity", activity_appointments_path(@activity, status: 'confirmed'), method: :post, class: 'btn btn-outline-primary'%>
+<% end %>
 
 
