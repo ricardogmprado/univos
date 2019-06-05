@@ -1,12 +1,8 @@
-<<<<<<< HEAD
+
 <div class="card-img"><%= cl_image_tag @activity.photo %></div>
 
-<!-- <div class="container"> -->
-
-=======
 <p><%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %><%= link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %></p>
-<h1>Activities#show</h1>
->>>>>>> 7dec6517e666b26f0296b2ff34f8eaaa73b2e22f
+
 <h3><%= @activity.title %></h3>
 
 
@@ -18,15 +14,10 @@
   <li><%= @activity.meeting_point %></li>
   <li><%= @activity.gender %></li>
   <li><%= @activity.min_age %></li><li><%= @activity.max_age %></li>
- <!--  <li><%= @activity.photo %></li> -->
 
 </ul>
-<<<<<<< HEAD
 
- <% if policy(@activity).edit? %>
-<%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>
-=======
->>>>>>> 7dec6517e666b26f0296b2ff34f8eaaa73b2e22f
+
 
 <% if policy(@activity).edit? %>
   <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>
