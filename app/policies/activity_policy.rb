@@ -28,4 +28,9 @@ class ActivityPolicy < ApplicationPolicy
   def destroy?
     record.user == user
   end
+
+  def confirmed?
+    # if appointment with status confirmed exists with current user and current activity
+    Appointment.where(status: "confirmed").where(activity: record).find_by(user: user).present?
+  end
 end

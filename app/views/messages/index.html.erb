@@ -1,0 +1,9 @@
+<% @messages.each do |message| %>
+<%= message %>
+<% end %>
+
+  <%= simple_form_for [@message, @activity] do |f| %>
+    <%= f.input :content %>
+    <%= f.button :submit, class: 'btn btn-outline-success' %>
+  <% end %>
+
