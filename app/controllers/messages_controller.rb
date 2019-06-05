@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
     if confirmed_for_activity
       @messages = policy_scope(Message).where(activity: @activity)
     end
+    @message = Message.new
   end
 
   def new
