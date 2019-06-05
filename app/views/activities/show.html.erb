@@ -1,6 +1,11 @@
+
+<div class="card-img"><%= cl_image_tag @activity.photo %></div>
+
 <p><%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %><%= link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %></p>
-<h1>Activities#show</h1>
+
 <h3><%= @activity.title %></h3>
+
+
 <ul>
   <li><%= @activity.description %></li>
   <li><%= @activity.category %></li>
@@ -9,8 +14,10 @@
   <li><%= @activity.meeting_point %></li>
   <li><%= @activity.gender %></li>
   <li><%= @activity.min_age %></li><li><%= @activity.max_age %></li>
-  <li><%= @activity.photo %></li>
+
 </ul>
+
+
 
 <% if policy(@activity).edit? %>
   <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>
@@ -26,5 +33,6 @@
   <% else %>
   <%= link_to "Join Activity", activity_appointments_path(@activity, show: "show", status: 'confirmed'), method: :post, class: 'btn btn-outline-primary'%>
 <% end %>
+
 
 
