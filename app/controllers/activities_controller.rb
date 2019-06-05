@@ -1,6 +1,6 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
-
+  skip_after_action :verify_authorized, only: :index
   def index
     @activities = Activity.all
   end
