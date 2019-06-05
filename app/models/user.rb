@@ -10,4 +10,5 @@ class User < ApplicationRecord
   validates :location, presence: true
   validates :gender, presence: true
   validates :age, presence: true
+  mount_uploader :photo, UserPhotoUploader
 end
