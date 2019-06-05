@@ -1,3 +1,11 @@
+<%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %>
 <% if @user == current_user %>
-<%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-outline-secondary ml-3" %>
+  <%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-outline-secondary ml-3" %>
 <% end %>
+<ul>
+  <li><%= @user.name %></li>
+  <li><%= @user.gender %></li>
+  <li><%= @user.age %></li>
+  <li><%= @user.avatar %></li>
+</ul>
+

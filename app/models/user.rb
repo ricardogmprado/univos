@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :appointments
-  has_many :activities, through: :appointments
+  has_many :activities #activities that the user created
   has_many :messages
   validates :name, presence: true
   validates :location, presence: true
