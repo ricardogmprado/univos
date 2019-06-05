@@ -5,12 +5,12 @@ class MessagesController < ApplicationController
     if confirmed_for_activity
       @messages = policy_scope(Message).where(activity: @activity)
     end
-    # handle with custom error page if not...
   end
 
   def new
     @message = Message.new(message_params)
     authorize @message
+    redirect_to activity_messages_path(@message.activity)
   end
 
   def create
