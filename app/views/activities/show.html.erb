@@ -12,11 +12,18 @@
 </ul>
  <% if policy(@activity).edit? %>
 <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>
+
 <% end %>
 <% if policy(@activity).destroy? %>
   <%= link_to "Delete", activity_path(@activity), method: :delete, class: 'btn btn-outline-danger', data: {confirm: "Are you sure?"}  %>
 <% end %>
+<<<<<<< HEAD
 
 <% if policy(@activity).confirmed? %>
   <%= link_to "see messages", activity_messages_path %>
 <% end %>
+=======
+<%= link_to "Join Activity", activity_appointments_path(@activity, status: 'confirmed'), method: :post, class: 'btn btn-outline-primary'%>
+
+
+>>>>>>> 362402316d72e7cac831f59e7173b02fd3d3250c

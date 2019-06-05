@@ -9,11 +9,16 @@
     <li><%= activity.date %></li>
     <li><%= activity.meeting_point %></li>
   </ul>
+
+  <%= link_to "Decline", activity_appointments_path(activity, status: 'decline'), method: :post, class: 'btn btn-outline-primary'%>
+  <%= link_to "Save", activity_appointments_path(activity, status: 'saved'), method: :post, class: 'btn btn-outline-primary'%>
+
   <% if policy(activity).destroy? %>
   <%= link_to "Delete", activity_path(activity), method: :delete, class: 'btn btn-outline-primary', data: {confirm: "Are you sure?"} %>
   <% end %>
    <% if policy(activity).edit? %>
   <%= link_to "Edit", edit_activity_path(activity), class: 'btn btn-outline-primary' %>
+
   <% end %>
   <% end %>
 
