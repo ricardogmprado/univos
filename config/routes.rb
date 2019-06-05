@@ -10,7 +10,7 @@ end
 
 resources :users, only: [:show]
 
-root 'pages#home'
+root to: 'pages#home'
 
 get '/dashboard', to: 'users#dashboard', as: 'dashboard'
 end

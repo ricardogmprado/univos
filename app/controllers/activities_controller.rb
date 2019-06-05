@@ -1,6 +1,6 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
-
+  skip_after_action :verify_authorized, only: :index
   def index
     @activities = policy_scope(Activity)
     # @activities = @activities.where.not(user_id: current_user.id)
