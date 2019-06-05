@@ -1,38 +1,33 @@
-<<<<<<< HEAD
-  <!-- For visual -->
-=======
-  <%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %>
 
->>>>>>> 7dec6517e666b26f0296b2ff34f8eaaa73b2e22f
-  <div class="maincard">
-    <div class= "card-img">
-  <%= image_tag "https://www.mch-group.com/-/media/mch-group/Images/Content/News/Blog/2017/2017-04/mch-group-live-marketing-aktivierung.jpg" %>
+<%= form_tag activities_path, method: :get do %>
+<% @categories.each do |category| %>
+
+<%= check_box_tag 'category[]', category, @selected_categories.include?(category)  %>
+  <label for=""><%= category %></label>
+  <% end %>
+  <%= submit_tag 'Filter' %>
+<% end %>
+ <%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %>
+
+  <div class="maincard text-center">
+    <div class= "card-img text-center">
+<div class="card-img"><%= cl_image_tag @activity.photo %></div>
+    
     </div>
       <h6 class = "activity-location">location, category</h6>
-      <h2>Title Hot Spring</h2>
+      <h2> <%= @activity.title %></h2>
       <p>Descriptions hello kjsbc kjdsbnk klj hike surf ...</p>
   </div>
-<<<<<<< HEAD
-  <!-- For visual -->
 
-   <% @activities.each do |activity| %>
-    <div class="card-img"><%= cl_image_tag activity.photo %></div>
-  <h3><%= link_to activity.title, activity_path(activity) %></h3>
-=======
-<!--   <%= link_to "Add your Activity", new_activity_path, class: 'btn btn-outline-success' %>
-  <h3><%= link_to @activity.title, activity_path(@activity) %></h3>
+ <div class = "activity-description text-center ">
+    <p><%= @activity.description %></p>
+    <p><%= @activity.category %></p>
+    <p><%= @activity.date %></p>
+    <p><%= @activity.meeting_point %></p>
+</div>
 
->>>>>>> 7dec6517e666b26f0296b2ff34f8eaaa73b2e22f
-  <ul>
-    <li><%= @activity.description %></li>
-    <li><%= @activity.category %></li>
-    <li><%= @activity.date %></li>
-    <li><%= @activity.meeting_point %></li>
-  </ul>
-
-
-  <%= link_to "Decline", activity_appointments_path(@activity, status: 'decline'), method: :post, class: 'btn btn-outline-primary'%>
-  <%= link_to "Save", activity_appointments_path(@activity, status: 'saved'), method: :post, class: 'btn btn-outline-primary'%>
+  <%= link_to "Decline", activity_appointments_path(@activity, status: 'decline', category: params[:category], checked: true), method: :post, class: 'btn btn-outline-primary'%>
+  <%= link_to "Save", activity_appointments_path(@activity, status: 'saved', category: params[:category]), method: :post, class: 'btn btn-outline-primary'%>
 
   <% if policy(@activity).destroy? %>
   <%= link_to "Delete", activity_path(activity), method: :delete, class: 'btn btn-outline-primary', data: {confirm: "Are you sure?"} %>
@@ -41,12 +36,6 @@
   <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>
 
   <% end %>
-<<<<<<< HEAD
-  <% end %>
-   <%= link_to "Add your Activity", new_activity_path, class: 'btn btn-outline-success' %>
- </div>
-=======
 
 </div>
->>>>>>> 7dec6517e666b26f0296b2ff34f8eaaa73b2e22f
 <%= render 'shared/footer' %>

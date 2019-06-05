@@ -14,6 +14,7 @@ User.destroy_all
 gender = ["male", "female"]
 age = (25..45).to_a
 status = ["confirmed", "rejected", "saved"]
+categories = ['sports', 'food & drinks', 'nature', 'art & culture', 'Music & Dance', 'Hobbies', 'LGBTQ', 'Nightlife', 'Outdoors', 'Health & Wellness']
 
 puts "seeding Users"
 25.times do
@@ -34,7 +35,7 @@ puts "seeding Activities"
     date: Faker::Time.forward(23, :morning),
     meeting_point: Faker::Address.city,
     number_of_people: age.sample,
-    category: "none",
+    category: categories.sample,
     user: User.last)
   activity.save
 end

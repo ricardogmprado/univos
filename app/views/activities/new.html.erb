@@ -5,7 +5,7 @@
   <%= simple_form_for @activity do |f| %>
     <%= f.input :title %>
     <%= f.input :description %>
-    <%= f.input :category %>
+    <%= f.input :category, as: :select, collection: ['sports', 'food & drinks', 'nature', 'art & culture', 'Music & Dance', 'Hobbies', 'LGBTQ', 'Nightlife', 'Outdoors', 'Health & Wellness'] %>
     <%= f.input :number_of_people %>
     <%= f.input :date %>
     <%= f.input :meeting_point %>
