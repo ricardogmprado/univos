@@ -1,5 +1,5 @@
 <% @messages.each do |message| %>
-<%= message %>
+<%= message.content %>
 <% end %>
 
   <%= simple_form_for [@message, @activity] do |f| %>
