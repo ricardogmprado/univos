@@ -1,6 +1,6 @@
 class Activity < ApplicationRecord
-  has_many :appointments
   belongs_to :user
+  has_many :appointments, dependent: :destroy
   has_many :users, through: :appointments
   validates :title, presence: true
   validates :description, presence: true
