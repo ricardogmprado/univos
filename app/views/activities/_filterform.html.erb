@@ -4,6 +4,7 @@
 <%= check_box_tag 'category[]', category, @selected_categories.include?(category)  %>
   <label for=""><%= category %></label>
   <% end %>
-<%= date_field(:activity, :date) %>
+  <input value="<%= @selected_dates %>" type="date" name="date" id="activity_date">
+
   <%= submit_tag 'Filter' %>
 <% end %>

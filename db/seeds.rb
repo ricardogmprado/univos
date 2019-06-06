@@ -17,7 +17,7 @@ status = ["confirmed", "rejected", "saved"]
 categories = ['sports', 'food & drinks', 'nature', 'art & culture', 'Music & Dance', 'Hobbies', 'LGBTQ', 'Nightlife', 'Outdoors', 'Health & Wellness']
 
 puts "seeding Users"
-25.times do
+100.times do
   user = User.new(
     name: Faker::FunnyName.name,
     email: Faker::Internet.email,
@@ -29,10 +29,10 @@ puts "seeding Users"
 end
 
 puts "seeding Activities"
-10.times do
+100.times do
   activity = Activity.new(title: Faker::Movies::HarryPotter.character,
     description: "description",
-    date: Faker::Time.forward(23, :morning),
+    date: Faker::Time.forward(2, :morning),
     meeting_point: Faker::Address.city,
     number_of_people: age.sample,
     category: categories.sample,
@@ -41,7 +41,7 @@ puts "seeding Activities"
 end
 
 puts "seeding Appointments"
-10.times do
+100.times do
   appointment = Appointment.new(user: User.last,
     activity: Activity.last,
     status: status.sample)
