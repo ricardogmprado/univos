@@ -4,24 +4,27 @@ class ActivitiesController < ApplicationController
   skip_after_action :verify_authorized, only: :index
 
   def index
-     # need all activities that do not have an appointment with current user
+    # need all activities that do not have an appointment with current user
     @seen_activities = current_user.appointments.pluck(:activity_id)
     @activities = policy_scope(Activity).where.not(id: @seen_activities).where.not(user_id: current_user.id)
     # SQL query: Activity.joins(:appointments).where.not(appointments: { user_id: current_user.id })
     if params[:category].present?
       @activity = @activities.where(category: params[:category]).sample
       if @activity.nil?
-      redirect_to activities_path
-      flash[:alert] = "Sorry, no activities match the selected category"
-    end
+        redirect_to activities_path
+        flash[:alert] = 'Sorry, no activities match the selected category'
+      end
     else
-    @activity = @activities.sample
-  end
+      @activity = @activities.sample
+    end
     @selected_categories = params[:category] || []
   end
 
   def show
     authorize @activity
+    @activity = Activity.find(params[:id])
+
+    @markers = [{ lat: @activity.latitude, lng: @activity.longitude }]
   end
 
   def new

@@ -31,5 +31,13 @@
     <%= link_to "Join Activity", activity_appointments_path(@activity, show: "show", status: 'confirmed'), method: :post, class: 'btn btn-outline-primary'%>
   <% end %>
 
+  <div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+
 
 
