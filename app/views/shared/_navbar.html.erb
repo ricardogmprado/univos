@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to user_path(current_user), id: "profile", class: "navbar-brand" do %>
-    <%= image_tag "https://cdn1.iconfinder.com/data/icons/navigation-elements/512/user-login-man-human-body-mobile-person-512.png" %>
+    <%= avatar_url = current_user.facebook_picture_url || "https://cdn1.iconfinder.com/data/icons/navigation-elements/512/user-login-man-human-body-mobile-person-512.png" %>
     <% end %>
 
   <%= link_to dashboard_path, id: "dashboard", class: "navbar-brand" do %>
