@@ -22,7 +22,7 @@ puts "seeding Users"
     name: Faker::FunnyName.name,
     email: Faker::Internet.email,
     password: "password",
-    location: Faker::Address.city,
+    location: Faker::Address.street_address,
     gender: gender.sample,
     age:  age.sample)
   user.save

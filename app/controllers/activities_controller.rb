@@ -4,10 +4,11 @@ class ActivitiesController < ApplicationController
   skip_after_action :verify_authorized, only: :index
 
   def index
-     # need all activities that do not have an appointment with current user
+    # need all activities that do not have an appointment with current user
     @seen_activities = current_user.appointments.pluck(:activity_id)
     @activities = policy_scope(Activity).where.not(id: @seen_activities).where.not(user_id: current_user.id)
     # SQL query: Activity.joins(:appointments).where.not(appointments: { user_id: current_user.id })
+
     # raise
       # end_filter_date = params[:activity][:date].to_datetime.end_of_day
       # start_filter_date = params[:activity][:date].to_datetime.beginning_of_day
@@ -38,6 +39,9 @@ class ActivitiesController < ApplicationController
 
   def show
     authorize @activity
+    @activity = Activity.find(params[:id])
+
+    @markers = [{ lat: @activity.latitude, lng: @activity.longitude }]
   end
 
   def new
