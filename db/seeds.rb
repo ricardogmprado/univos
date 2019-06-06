@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 Message.destroy_all
 Appointment.destroy_all
@@ -17,31 +10,32 @@ status = ["confirmed", "rejected", "saved"]
 categories = ['sports', 'food & drinks', 'nature', 'art & culture', 'Music & Dance', 'Hobbies', 'LGBTQ', 'Nightlife', 'Outdoors', 'Health & Wellness']
 
 puts "seeding Users"
-25.times do
+100.times do
   user = User.new(
     name: Faker::FunnyName.name,
     email: Faker::Internet.email,
     password: "password",
-    location: Faker::Address.city,
+    location: Faker::Address.street_address,
     gender: gender.sample,
     age:  age.sample)
   user.save
 end
 
 puts "seeding Activities"
-10.times do
+100.times do
   activity = Activity.new(title: Faker::Movies::HarryPotter.character,
-    description: "description",
-    date: Faker::Time.forward(23, :morning),
-    meeting_point: Faker::Address.city,
+    description: "Let's share that amazing experience, I'm the description btw.",
+    date: Faker::Time.forward(2, :morning),
+    meeting_point: ["Denpasar, Bali", "Singapore"].sample,
     number_of_people: age.sample,
     category: categories.sample,
+    remote_photo_url: 'https://images.unsplash.com/photo-1521115507110-6a627e5ce14e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     user: User.last)
   activity.save
 end
 
 puts "seeding Appointments"
-10.times do
+100.times do
   appointment = Appointment.new(user: User.last,
     activity: Activity.last,
     status: status.sample)

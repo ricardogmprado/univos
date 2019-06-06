@@ -4,11 +4,10 @@ class AppointmentsController < ApplicationController
     authorize appointment
     appointment.user = current_user
     appointment.save
-
     if params[:show] != nil
-    redirect_to activity_path(appointment.activity)
+     redirect_to activity_path(appointment.activity)
     else
-    redirect_to activities_path(category: params[:category], checked:true)
+     redirect_to activities_path(category: params[:category], date: params[:date], checked:true)
    end
 
   end
