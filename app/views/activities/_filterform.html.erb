@@ -1,0 +1,10 @@
+<%= form_tag activities_path, method: :get do %>
+<% @categories.each do |category| %>
+
+<%= check_box_tag 'category[]', category, @selected_categories.include?(category)  %>
+  <label for=""><%= category %></label>
+  <% end %>
+  <input value="<%= @selected_dates %>" type="date" name="date" id="activity_date">
+
+  <%= submit_tag 'Filter' %>
+<% end %>
