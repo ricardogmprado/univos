@@ -4,35 +4,33 @@ class ActivitiesController < ApplicationController
   skip_after_action :verify_authorized, only: :index
 
   def index
-    # need all activities that do not have an appointment with current user
+    if request.location.longitude
+      @activities = policy_scope(Activity).near([request.location.latitude, request.location.longitude], 200)
+      # need all activities that do not have an appointment with current user
+    else
+      @activities = policy_scope(Activity)
+    end
     @seen_activities = current_user.appointments.pluck(:activity_id)
-    @activities = policy_scope(Activity).where.not(id: @seen_activities).where.not(user_id: current_user.id)
+    @activities = @activities.where.not(id: @seen_activities).where.not(user_id: current_user.id)
     # SQL query: Activity.joins(:appointments).where.not(appointments: { user_id: current_user.id })
 
     # raise
       # end_filter_date = params[:activity][:date].to_datetime.end_of_day
       # start_filter_date = params[:activity][:date].to_datetime.beginning_of_day
       #.where('date >= ? AND date <= ?', start_filter_date, end_filter_date).sample
-  if params[:category].present?
-    @activities = @activities.where(category: params[:category])
-  end
-  if params[:date].present?
-    date = params[:date].to_date
-    @activities = @activities.where('date >= ? AND date <= ?', date.beginning_of_day, date.end_of_day)
-  end
 
+    if params[:category].present?
+      @activities = @activities.where(category: params[:category])
+    end
+    if params[:date].present?
+      date = params[:date].to_date
+      @activities = @activities.where('date >= ? AND date <= ?', date.beginning_of_day, date.end_of_day)
+    end
 
-
-    #   if @activity.nil?
-    #     redirect_to activities_path
-    #     flash[:alert] = "Sorry, no activities match the selected category"
-    #   end
-    # else
-    # end
     @activity = @activities.sample
     if @activity.nil?
-        flash[:alert] = "Sorry, no activities match the selected category"
-      end
+      flash[:alert] = "Sorry, no activities match the selected category"
+    end
     @selected_categories = params[:category] || []
     @selected_dates = params[:date] || []
   end

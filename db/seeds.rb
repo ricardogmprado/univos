@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 Message.destroy_all
 Appointment.destroy_all
@@ -33,7 +26,7 @@ puts "seeding Activities"
   activity = Activity.new(title: Faker::Movies::HarryPotter.character,
     description: "description",
     date: Faker::Time.forward(2, :morning),
-    meeting_point: Faker::Address.city,
+    meeting_point: ["Denpasar, Bali", "Singapore"].sample,
     number_of_people: age.sample,
     category: categories.sample,
     user: User.last)
