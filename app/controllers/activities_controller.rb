@@ -8,8 +8,9 @@ class ActivitiesController < ApplicationController
     @seen_activities = current_user.appointments.pluck(:activity_id)
     @activities = policy_scope(Activity).where.not(id: @seen_activities).where.not(user_id: current_user.id)
     # SQL query: Activity.joins(:appointments).where.not(appointments: { user_id: current_user.id })
+    # raise
     if params[:category].present?
-      @activity = @activities.where(category: params[:category]).sample
+      @activity = @activities.where(category: params[:category], date: params[:activity][:date]).sample
       if @activity.nil?
       redirect_to activities_path
       flash[:alert] = "Sorry, no activities match the selected category"
@@ -18,6 +19,7 @@ class ActivitiesController < ApplicationController
     @activity = @activities.sample
   end
     @selected_categories = params[:category] || []
+    # @selected_dates = params[:activity][:date] || []
   end
 
   def show
