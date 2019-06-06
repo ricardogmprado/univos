@@ -1,4 +1,5 @@
 <%= link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %>
+
 <h3>Activities you're interested in:</h3>
 <% @saved_appointments.each do |appointment| %>
   <ul>
@@ -7,6 +8,7 @@
     <%= link_to "Confirm", activity_appointment_path(id: appointment.id, activity_id: appointment.activity.id, status: 'confirmed'), method: :patch, class: 'btn btn-outline-primary'%></li>
   </ul>
 <% end %>
+
 <h3>Activities you're joining:</h3>
 <% @confirmed_activities.each do |activity| %>
   <ul>
