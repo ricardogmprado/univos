@@ -1,43 +1,26 @@
-<%= form_tag activities_path, method: :get do %>
-<% @categories.each do |category| %>
+<%= render 'shared/navbar' %>
 
-<%= check_box_tag 'category[]', category, @selected_categories.include?(category)  %>
-  <label for=""><%= category %></label>
-  <% end %>
-  <%= submit_tag 'Filter' %>
-<% end %>
+<div class="maincard text-center">
+  <%= render 'filterform' %>
+
+  <% if @activity.nil?%>
+    <%= "There are no activities" %>
+  <% else %>
+
  <%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %>
 
-  <div class="maincard text-center">
-    <div class= "card-img text-center">
-
-    <%= image_tag "https://www.mch-group.com/-/media/mch-group/Images/Content/News/Blog/2017/2017-04/mch-group-live-marketing-aktivierung.jpg" %>
+      <div class= "card-img text-center">
+        <%= cl_image_tag @activity.photo %>
+      </div>
+      <h6 class="activity-location">location, category</h6>
+      <h2><%= link_to "#{@activity.title}", activity_path(@activity) %></h2>
+  
+    <div class="activity-description text-center ">
+      <p><%= @activity.description %></p>
+      <p><%= @activity.category %></p>
+      <p><%= @activity.date %></p>
+      <p><%= @activity.meeting_point %></p>
     </div>
-      <h6 class = "activity-location">location, category</h6>
-      <h2> <%= @activity.title %></h2>
-      <p>Descriptions hello kjsbc kjdsbnk klj hike surf ...</p>
-  </div>
-<!--   <%= link_to "Add your Activity", new_activity_path, class: 'btn btn-outline-success' %>
-  <h3><%= link_to @activity.title, activity_path(@activity) %></h3>
- -->
- <div class = "activity-description text-center ">
-    <p><%= @activity.description %></p>
-    <p><%= @activity.category %></p>
-    <p><%= @activity.date %></p>
-    <p><%= @activity.meeting_point %></p>
+    <%= render 'shared/footer' %>
 </div>
-
-  <%= link_to "Decline", activity_appointments_path(@activity, status: 'decline', category: params[:category], checked: true), method: :post, class: 'btn btn-outline-primary'%>
-  <%= link_to "Save", activity_appointments_path(@activity, status: 'saved', category: params[:category]), method: :post, class: 'btn btn-outline-primary'%>
-
-
-  <% if policy(@activity).destroy? %>
-  <%= link_to "Delete", activity_path(activity), method: :delete, class: 'btn btn-outline-primary', data: {confirm: "Are you sure?"} %>
-  <% end %>
-   <% if policy(@activity).edit? %>
-  <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>
-
-  <% end %>
-
-</div>
-<%= render 'shared/footer' %>
+<% end %>

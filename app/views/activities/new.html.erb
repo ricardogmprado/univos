@@ -8,7 +8,9 @@
     <%= f.input :category, as: :select, collection: ['sports', 'food & drinks', 'nature', 'art & culture', 'Music & Dance', 'Hobbies', 'LGBTQ', 'Nightlife', 'Outdoors', 'Health & Wellness'] %>
     <%= f.input :number_of_people %>
     <%= f.input :date %>
-    <%= f.input :meeting_point %>
+    <%= f.input :meeting_point, id: "meeting_point" %>
+    <%= f.input :latitude, as: :hidden %>
+    <%= f.input :longitude, as: :hidden %>
     <%= f.input :gender %>
     <%= f.input :min_age %>
     <%= f.input :max_age %>

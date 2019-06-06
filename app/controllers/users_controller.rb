@@ -13,4 +13,8 @@ class UsersController < ApplicationController
     @confirmed_activities = Activity.where(id: @confirmed_appointments).where.not(user_id: @user.id)
     @created_activities = @user.activities
   end
+
+  def user_params
+    params.require(:user).permit(:title, :body, :photo)
+  end
 end

@@ -1,30 +1,43 @@
-<p><%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %><%= link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %></p>
-<h1>Activities#show</h1>
-<h3><%= @activity.title %></h3>
-<ul>
-  <li><%= @activity.description %></li>
-  <li><%= @activity.category %></li>
-  <li><%= @activity.date %></li>
-  <li><%= @activity.number_of_people %></li>
-  <li><%= @activity.meeting_point %></li>
-  <li><%= @activity.gender %></li>
-  <li><%= @activity.min_age %></li><li><%= @activity.max_age %></li>
-  <li><%= @activity.photo %></li>
-</ul>
+  <%= render 'shared/navbar' %>
+  <div class="card-img">
+    <%= cl_image_tag @activity.photo %>
+  </div>
 
-<% if policy(@activity).edit? %>
-  <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>
-<% end %>
+  <p><%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %><%= link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %></p>
 
-<% if policy(@activity).destroy? %>
-  <%= link_to "Delete", activity_path(@activity), method: :delete, class: 'btn btn-outline-danger', data: {confirm: "Are you sure?"}  %>
-<% end %>
+  <h3><%= @activity.title %></h3>
 
+  <ul>
+    <li><%= @activity.description %></li>
+    <li><%= @activity.category %></li>
+    <li><%= @activity.date %></li>
+    <li><%= @activity.number_of_people %></li>
+    <li><%= @activity.meeting_point %></li>
+    <li><%= @activity.gender %></li>
+    <li><%= @activity.min_age %></li><li><%= @activity.max_age %></li>
+  </ul>
 
-<% if policy(@activity).confirmed? %>
-  <%= link_to "see messages", activity_messages_path(@activity) %>
-  <% else %>
-  <%= link_to "Join Activity", activity_appointments_path(@activity, show: "show", status: 'confirmed'), method: :post, class: 'btn btn-outline-primary'%>
-<% end %>
+  <% if policy(@activity).edit? %>
+    <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>
+  <% end %>
+
+  <% if policy(@activity).destroy? %>
+    <%= link_to "Delete", activity_path(@activity), method: :delete, class: 'btn btn-outline-danger', data: {confirm: "Are you sure?"}  %>
+  <% end %>
+
+  <% if policy(@activity).confirmed? %>
+    <%= link_to "see messages", activity_messages_path(@activity) %>
+    <% else %>
+    <%= link_to "Join Activity", activity_appointments_path(@activity, show: "show", status: 'confirmed'), method: :post, class: 'btn btn-outline-primary'%>
+  <% end %>
+
+  <div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+
 
 
