@@ -1,3 +1,5 @@
+<%= link_to "See All Participants", activity_appointments_path, class: 'btn btn-outline-primary'%>
+
 <% @activity.messages.each do |message| %>
 <p><%= message.user.name %></p>
 <p><%= message.content %></p>
@@ -9,3 +11,5 @@
     <%= f.button :submit, class: 'btn btn-outline-success' %>
   <% end %>
 
+
+<!-- user_appointments_path(@appointment, status: 'active', category: params[:category], checked: true), method: :post,  -->
