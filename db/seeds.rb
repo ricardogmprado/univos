@@ -24,11 +24,12 @@ end
 puts "seeding Activities"
 100.times do
   activity = Activity.new(title: Faker::Movies::HarryPotter.character,
-    description: "description",
+    description: "Let's share that amazing experience, I'm the description btw.",
     date: Faker::Time.forward(2, :morning),
     meeting_point: ["Denpasar, Bali", "Singapore"].sample,
     number_of_people: age.sample,
     category: categories.sample,
+    remote_photo_url: 'https://images.unsplash.com/photo-1521115507110-6a627e5ce14e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     user: User.last)
   activity.save
 end

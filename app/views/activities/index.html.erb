@@ -10,16 +10,16 @@
  <%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %>
 
       <div class= "card-img text-center">
-        <%= cl_image_tag @activity.photo %>
+        <%= cl_image_tag @activity.photo.url %>
       </div>
-      <h6 class="activity-location">location, category</h6>
+      <h6 class="activity-location"><%= @activity.meeting_point %>, <%= @activity.category %></h6>
       <h2><%= link_to "#{@activity.title}", activity_path(@activity) %></h2>
 
     <div class="activity-description text-center ">
       <p><%= @activity.description %></p>
-      <p><%= @activity.category %></p>
-      <p><%= @activity.date %></p>
-      <p><%= @activity.meeting_point %></p>
+      <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
+      <p><i class=" far fa-clock"></i> <%= @activity.date %></p>
+      <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
     </div>
     <%= render 'shared/footer' %>
 </div>
