@@ -3,11 +3,13 @@
   <%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-outline-secondary ml-3" %>
 <% end %>
 
+
 <% if !@user.photo.blank? %>
 <div class="user-profile"><%= cl_image_tag @user.photo%></div>
 <% else %>
 <img src="<%= @user.facebook_picture_url %> " alt="" >
 <% end %>
+
 <ul>
   <li><%= @user.name %></li>
   <li><%= @user.gender %></li>
