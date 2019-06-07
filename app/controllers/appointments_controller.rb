@@ -20,19 +20,6 @@ class AppointmentsController < ApplicationController
     redirect_to dashboard_path
   end
 
-  def destroy
-      a = Appointment.find(params[:id])
-      authorize a
-      a.destroy
-      flash[:notice] = "Guest deleted."
-      redirect_to activity_appointments_path(Activity.find(params[:activity_id]))
-  end
-
-  def index
-    @activity = Activity.find(params[:activity_id])
-    @appointments = @activity.appointments
-  end
-
   private
 
   def appointment_params
