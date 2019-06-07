@@ -13,6 +13,7 @@
      <% if !(current_user == user)  %>
       <%= link_to 'Delete User', activity_appointment_path(@activity, Appointment.where(activity_id: @activity.id, user_id: user.id)[0]), method: :delete,class: 'btn btn-outline-primary' %>
     <% end %>
+    <% end %>
 
       <% if DateTime.now > @activity.date && @activity.user %>
         <%= link_to "Mark Absent",class: 'btn btn-outline-primary' %>
