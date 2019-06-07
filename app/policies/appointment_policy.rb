@@ -16,8 +16,4 @@ class AppointmentPolicy < ApplicationPolicy
   def edit?
     update?
   end
-
-    def destroy?
-    record.activity.user == user
-  end
 end
