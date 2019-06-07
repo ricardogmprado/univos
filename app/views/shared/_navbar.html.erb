@@ -2,10 +2,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "index-navbar" if params[:action] == "index" && params[:controller] == "activities" %>">
   <%= link_to user_path(current_user), id: "profile", class: "navbar-brand" do %>
 
-<% if !@user.photo.blank? %>
+<% if !current_user.photo.blank? %>
 <div class="rounded-circle"><%= cl_image_tag current_user.photo%></div>
 <% else %>
-<img src="<%= @user.facebook_picture_url %> " alt="" class="rounded-circle">
+<img src="<%= current_user.facebook_picture_url %> " alt="" class="rounded-circle">
 <% end %>
 
     <% end %>
