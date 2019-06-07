@@ -1,25 +1,31 @@
-<%= render 'shared/navbar' %>
 
+<%= render 'shared/navbar' %>
 <div class="maincard text-center">
-  <%= render 'filterform' %>
+<!--   <%= render 'filterform' %> -->
 
   <% if @activity.nil?%>
     <%= "There are no activities" %>
   <% else %>
+  <%= link_to activity_path(@activity) do %>
+    <div class="card-trip card-trip-index">
 
- <%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %>
-
-      <div class= "card-img text-center">
-        <%= cl_image_tag @activity.photo.url %>
+      <div style="background-image:
+    url('<%= cl_image_path @activity.photo %> ')" class="index-picture" >
       </div>
-      <h6 class="activity-location"><%= @activity.meeting_point %>, <%= @activity.category %></h6>
-      <h2><%= link_to "#{@activity.title}", activity_path(@activity) %></h2>
+        <% end %>
 
-    <div class="activity-description text-center ">
-      <p><%= @activity.description %></p>
-      <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
-      <p><i class=" far fa-clock"></i> <%= @activity.date %></p>
-      <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
+      <div class="card-trip-infos">
+        <div>
+          <h6 class="location-category"><%= @activity.meeting_point %> • <%= @activity.category %></h6>
+          <h2><%= @activity.title %></h2>
+          <p><%= @activity.description %></p>
+          <div class="icon-info">
+            <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
+            <p><i class=" far fa-clock"></i> <%= @activity.date %></p>
+            <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
+          </div>
+        </div>
+      </div>
     </div>
     <%= render 'shared/footer' %>
 </div>

@@ -1,11 +1,23 @@
 .footer {
-  justify-content: space-evenly;
   display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  height: 8vh;
+  padding: 8px 0 8px 0;
+  border-top: 1px solid lightgrey;
+  position: sticky;
+  bottom: 0px;
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+  }
 }
 
 .footer-button {
-   width: 73px;
-   height: 73px;
+   width: 50px;
+   height: 50px;
+
 }
 
 
