@@ -3,7 +3,7 @@
   <%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-outline-secondary ml-3" %>
 <% end %>
 
-<div class="user-profile"><%= cl_image_tag @user.photo%></div>
+<div class="user-profile"><%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %></div>
 
 <ul>
   <li><%= @user.name %></li>
