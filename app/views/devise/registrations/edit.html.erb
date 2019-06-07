@@ -25,6 +25,7 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "location" }%>
+                <% if !(resource.provider == "facebook") %>
     <%= f.input :current_password,
                 hint: "we need your current password to confirm your changes",
                 required: true,
@@ -37,6 +38,7 @@
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :photo %>
+                <% end %>
   </div>
 
   <div class="form-actions">
