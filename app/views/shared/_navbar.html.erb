@@ -1,6 +1,13 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "index-navbar" if params[:action] == "index" && params[:controller] == "activities" %>">
   <%= link_to user_path(current_user), id: "profile", class: "navbar-brand" do %>
-    <%= image_tag "https://cdn1.iconfinder.com/data/icons/navigation-elements/512/user-login-man-human-body-mobile-person-512.png" %>
+
+<% if !current_user.photo.blank? %>
+<div class="rounded-circle"><%= cl_image_tag current_user.photo%></div>
+<% else %>
+<img src="<%= current_user.facebook_picture_url %> " alt="" class="rounded-circle">
+<% end %>
+
     <% end %>
 
   <%= link_to dashboard_path, id: "dashboard", class: "navbar-brand" do %>
