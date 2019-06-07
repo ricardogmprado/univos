@@ -20,6 +20,8 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+    <%= link_to omniauth_authorize_path(resource_name, provider) do %>
+    <img src="https://scontent.fjog1-1.fna.fbcdn.net/v/t39.2365-6/17639236_1785253958471956_282550797298827264_n.png?_nc_cat=105&_nc_ht=scontent.fjog1-1.fna&oh=1853244e3fdd46d909384939d4614a5c&oe=5D51E9EA" alt="Continue with facebook" width= "350" height="64.77">
+    <% end %>
   <% end %>
 <% end %>
