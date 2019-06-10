@@ -31,5 +31,7 @@ if (indexPage != null){
 }
   document.querySelector("#profile").addEventListener("click", displayProfile);
 
+
 initMapbox();
 initAutocomplete();
+

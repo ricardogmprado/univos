@@ -1,6 +1,57 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* Setting */
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700&subset=latin-ext');
+*:focus {outline:none;}
+body {
+    font-family: 'Oxygen', sans-serif;
+    background-color: white;
+    margin:0;
+
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ececec;
+    background-color: white;
+    box-shadow: 0px 0px 100px -33px #0000003d;
+}
+
+ body  .chatSend {
+    height: 48px;
+  position:relative;
+}
+
+body .chatSend > .errorTxt {
+    position: absolute;
+    top: -27px;
+    left: 0;
+    right: 0;
+    background-color: #fb5c5c;
+    font-size: 12px;
+    padding: 7px;
+    color: #fff;
+    text-align: center;
+}
+
+body .chatSend > .sendText {
+    border: 0;
+    height: 48px;
+    padding-right: 55px;
+    padding-left: 20px;
+    font-size: 12px;
+    color: #6f6f6f;
+    display: block;
+    width: calc(100% - 75px);
+}
+
+body .chatSend > .sendText::-webkit-input-placeholder {
+    color: rgba(54, 153, 246, 0.38);
+}
+
+body .chatSend > .sendText::-moz-placeholder {
+    color: rgba(54, 153, 246, 0.38);
 
 .card-product {
   overflow: hidden;
@@ -11,27 +62,130 @@
   align-items: center;
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+body .chatSend > .sendText:-ms-input-placeholder {
+    color: rgba(54, 153, 246, 0.38);
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
+body .chatSend > .sendText:-moz-placeholder {
+    color: rgba(54, 153, 246, 0.38);
+}
+
+body .chatSend > #send-message {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    z-index: 2;
+    height: 48px;
+    line-height: 48px;
+    border: 0;
+    width: 55px;
+    background-color: #fff;
+    font-size: 20px;
+    color: #3699f6;
+}
+
+body .chatContent {
+    height: 100%;
+    padding: 20px;
+    max-height: 100vh;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+body .chatContent::-webkit-scrollbar {
+  width: 3px;
+}
+
+body .chatContent::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+body .chatContent::-webkit-scrollbar-thumb {
+  background: #4bffa54d;
+}
+body .chatContent::-webkit-scrollbar-thumb:hover {
+  background: #4bffa54d;
+}
+
+body .chatContent .chat-column {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+body .chatContent .chat-column > .item > .chat-icon {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    background-color:#C6C4C5;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+    margin-right: 13px;
+    margin-top: 5px;
+}
+
+body .chatContent .chat-column > .item > .chat-message {
+    background-color:  #4BFFA5;
+    color: #040F3D;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 20px;
+    margin-bottom: 3px;
+}
+
+body .chatContent .chat-column > .item > .message-date {
+    font-size: 10px;
+    color: #c6c4c5d1;
+    font-weight: 600;
+    margin-top: 1px;
+}
+
+body .chatContent .chat-column.company {
+    flex-direction: row-reverse;
+}
+
+body .chatContent .chat-column.company > .item > .chat-icon {
+    margin-right: 0;
+    margin-left: 13px;
+    background-color: #C6C4C5;
+    color: white;
+}
+
+body .chatContent .chat-column.company > .item > .chat-message {
+    background-color: #4bffa54d;
+    color: #040F3D;
+}
+
+.chat-message p {
   margin: 0;
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+.chat-column .item:last-child {
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
+.required.message_content {
+  flex-grow: 1;
+}
+
+.participants_button {
+  border-radius: 50px;
+  align: center;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 15px;
+  background-color: #040F3D;
+  color:  #4BFFA5;
+  // text-align: center;
+}
+
+.user_name {
+  font-size: 12.5px;
+  color: #45454599;
+  padding-bottom: 10px;
+}
+
+.chat-container {
+  height: 83vh
 }
 

@@ -23,6 +23,7 @@ class MessagesController < ApplicationController
     redirect_to activity_messages_path(@message.activity)
   end
 
+
   private
 
   def confirmed_for_activity
@@ -37,4 +38,5 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:content)
   end
+
 end

@@ -1,12 +1,84 @@
 
-<%= link_to "See All Participants", activity_appointments_path, class: 'btn btn-outline-primary'%>
-
-<% @activity.messages.each do |message| %>
-<p><%= message.user.name %></p>
-<p><%= message.content %></p>
-<% end %>
+<%= render 'shared/navbar' %>
 
 
+<div class="container chat-container">
+  <!-- BEGIN : chatHeader -->
+
+
+  <!-- END : chatHeader -->
+
+  <!-- BEGIN : chatContent -->
+  <div class="chatContent">
+<!--     <div class="chat-column customer">
+      <div class="item">
+        <div class="chat-icon">SA</div>
+      </div>
+      <div class="item">
+ -->
+          <% @activity.messages.each do |message| %>
+
+          <% if message.user == current_user %>
+          <div class="user_name text-right">
+          <%= message.user.name %>
+        </div>
+            <div class="chat-column company">
+              <div class="item">
+              </div>
+              <div class="item">
+                <div class="chat-message text-right"><%= message.content %></div>
+                <div class="message-date text-right"><%= message.created_at.strftime("%b %e, %l:%M %p") %></div>
+              </div>
+            </div>
+          <% else %>
+            <div class="user_name text-left">
+              <%= message.user.name %>
+            </div>
+              <div class="chat-column customer">
+                <div class="item">
+
+                </div>
+                <div class="item">
+                  <div class="chat-message text-left"><%= message.content %></div>
+                  <div class="message-date text-left"><%= message.created_at.strftime("%b %e, %l:%M %p") %></div>
+                </div>
+              </div>
+          <% end %>
+
+
+<!--             <div class="chat-message">
+ -->
+<!-- <p><%#= message.user.name %></p> -->
+            <!--   <p><%#= message.content %></p>
+            </div>
+
+            <div class="message-date"><%#= message.created_at.strftime("%b %e, %l:%M %p") %></div>
+ -->
+          <% end %>
+
+<!--       </div>
+ -->
+</div>
+
+  <!-- END : chatContent -->
+
+  <!-- BEGIN : chatSend -->
+
+  <!-- END : chatSend -->
+</div>
+
+  <%= simple_form_for [@activity, @message], wrapper: :inline_form, html: { class: 'form-inline' }  do |f| %>
+    <%= f.input :content, label: false, placeholder: "Write message..." %>
+    <%= f.button :submit , "X", class: 'btn btn-outline-success' %>
+  <% end %>
+
+<!--   <div class="participants_button"> -->
+
+<!-- </div>
+ -->
 
 
 
+<!--
+<input type="text" class="sendText" placeholder="Write Message...">
+    <div id="send-message"> -->
