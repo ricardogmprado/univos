@@ -1,7 +1,8 @@
 
 <%= render 'shared/navbar' %>
 <div class="maincard text-center">
-<%= render 'filterform' %>
+
+ <%= render 'filterform' %>
 
   <% if @activity.nil?%>
     <%= "There are no activities" %>
@@ -30,3 +31,4 @@
     <%= render 'shared/footer' %>
 </div>
 <% end %>
+

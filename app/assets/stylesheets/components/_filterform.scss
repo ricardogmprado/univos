@@ -1,0 +1,17 @@
+.maincard form {
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  overflow: hidden;
+  &.show {
+    height: 100%;
+  }
+  #category-check {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .date-picker {
+    border-radius: 20px;
+  }
+}

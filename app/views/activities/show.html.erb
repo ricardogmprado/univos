@@ -1,9 +1,9 @@
   <%= render 'shared/navbar' %>
-  <div class="card-img">
-    <%= cl_image_tag @activity.photo %>
-  </div>
+<div style="background-image:
+    url('<%= cl_image_path @activity.photo %> ')" class="index-picture" >
+      </div>
 
-  <p><%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %><%= link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %></p>
+  <p><%= link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %></p>
 
   <h3><%= @activity.title %></h3>
 
@@ -26,7 +26,7 @@
   <% end %>
 
   <% if policy(@activity).confirmed? %>
-    <%= link_to "see messages", activity_messages_path(@activity) %>
+    <%= link_to "see messages", activity_messages_path(@activity), class: 'btn btn-outline-primary' %>
     <% else %>
     <%= link_to "Join Activity", activity_appointments_path(@activity, show: "show", status: 'confirmed'), method: :post, class: 'btn btn-outline-primary'%>
   <% end %>
