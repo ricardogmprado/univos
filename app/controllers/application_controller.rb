@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     if resource.gender.nil?
       edit_user_registration_path
     else
-      root_path
+      activities_path
     end
   end
 

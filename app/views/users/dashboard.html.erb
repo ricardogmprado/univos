@@ -1,28 +1,112 @@
-  <%= link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %>
-<div class="container">
 
-  <h3>Activities you're interested in:</h3>
-  <% @saved_appointments.each do |appointment| %>
-    <ul>
-      <li><%= link_to appointment.activity.title, activity_path(appointment.activity) %>
-      <%= link_to "Decline", activity_appointment_path(id: appointment.id, activity_id: appointment.activity.id, status: 'declined'), method: :patch, class: 'btn btn-outline-primary'%>
-      <%= link_to "Confirm", activity_appointment_path(id: appointment.id, activity_id: appointment.activity.id, status: 'confirmed'), method: :patch, class: 'btn btn-outline-primary'%></li>
-    </ul>
-  <% end %>
+<%= render 'shared/navbar' %>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="saved-tab" data-toggle="tab" href="#saved" role="tab" aria-controls="saved" aria-selected="true">Saved</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="Joining-tab" data-toggle="tab" href="#joining" role="tab" aria-controls="joining" aria-selected="false">Confirmed</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="created-tab" data-toggle="tab" href="#created" role="tab" aria-controls="created" aria-selected="false">Created by you</a>
+  </li>
+</ul>
 
-  <h3>Activities you're joining:</h3>
-  <% @confirmed_activities.each do |activity| %>
-    <ul>
-      <li><%= link_to "#{activity.title}", activity_path(activity) %></li>
-    </ul>
-  <% end %>
 
-  <h3>Created by you:</h3><%= link_to "Add your Activity", new_activity_path, class: 'btn btn-outline-success' %>
-  <% @created_activities.each do |activity| %>
-    <ul>
-      <li><%= link_to "#{activity.title}", activity_path(activity) %>
-    <%= link_to "Delete", activity_path(activity), method: :delete, class: 'btn btn-outline-danger', data: {confirm: "Are you sure?"}  %></li>
-    </ul>
+
+<div class="tab-content" id="myTabContent">
+
+
+
+  <div class="tab-pane fade show active" id="saved" role="tabpanel" aria-labelledby="saved-tab">
+    <% @saved_appointments.each do |appointment| %>
+    <div class="card-activity d-flex">
+      <%= link_to activity_path(appointment.activity), class: "card-activity-img-link" do %>
+      <div class="card-activity-img" style="background-image: url('<%= cl_image_path appointment.activity.photo %>')">
+
+      </div>
+     <% end %>
+      <div class="card-activity-infos">
+        <div class="card-activity-infos-details">
+          <div class="d-flex justify-content-center">
+              <h5 class="mb-0"><%= appointment.activity.title %></h5>
+          <%= link_to activity_path(appointment.activity) do %>
+            <i class=" ml-3 fas fa-search-plus"></i>
+          <% end %>
+
+          </div>
+           <p><%= appointment.activity.description[0..90] %>...</p>
+          <p><%= appointment.activity.date.strftime("%b %e, %l:%M %p") %></p>
+        </div>
+        <div class="card-activity-buttons">
+          <%= link_to "Confirm", activity_appointment_path(id: appointment.id, activity_id: appointment.activity.id, status: 'confirmed'), method: :patch, class: 'btn-sm btn mr-3 btn-outline-primary', id: 'regular-button'%>
+          <%= link_to "Decline", activity_appointment_path(id: appointment.id, activity_id: appointment.activity.id, status: 'declined'), method: :patch, class: 'btn-sm btn btn-outline-primary', id: "decline"%>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+
+
+
+  <div class="tab-pane fade" id="joining" role="tabpanel" aria-labelledby="joining-tab"><% @confirmed_activities.each do |activity| %>
+    <div class="card-activity d-flex">
+      <%= link_to activity_path(activity), class: "card-activity-img-link" do %>
+      <div class="card-activity-img" style="background-image: url('<%= cl_image_path activity.photo %>')">
+
+      </div>
+     <% end %>
+     <div class="card-activity-infos">
+      <div class="card-activity-infos-details">
+          <div class="d-flex justify-content-center">
+              <h5 class="mb-0"><%= activity.title %></h5>
+          <%= link_to activity_path(activity) do %>
+            <i class=" ml-3 fas fa-search-plus"></i>
+          <% end %>
+          </div>
+           <p><%= activity.description[0..80] %>...</p>
+          <p><%= activity.date.strftime("%b %e, %l:%M %p") %></p>
+        </div>
+             <div class="card-activity-buttons">
+           <%= link_to raw('<i class="far fa-comments"></i> Messages'), activity_messages_path( activity), class: 'btn-sm btn btn-outline-primary', id: "messages-btn"%>
+      </div>
+    </div>
+  </div>
   <% end %>
 
 </div>
+
+<div class="tab-pane fade" id="created" role="tabpanel" aria-labelledby="created-tab"><% @created_activities.each do |activity| %>
+  <div class="card-activity d-flex">
+     <%= link_to activity_path(activity), class: "card-activity-img-link" do %>
+      <div class="card-activity-img" style="background-image: url('<%= cl_image_path activity.photo %>')">
+
+      </div>
+      <% end %>
+    <div class="card-activity-infos">
+      <div class="card-activity-infos-details">
+        <div class="d-flex justify-content-center">
+              <h5 class="mb-0"><%= activity.title %></h5>
+          <%= link_to activity_path(activity) do %>
+            <i class=" ml-3 fas fa-search-plus"></i>
+          <% end %>
+        </div>
+          <p><%= activity.description[0..80] %>...</p>
+          <p><%= activity.date.strftime("%b %e, %l:%M %p") %></p>
+      </div>
+      <div class="card-activity-buttons">
+        <%= link_to "Edit", edit_activity_path(activity), class: 'btn-sm mr-3 btn btn-outline-primary', id:"edit-btn" %>
+        <%= link_to "Delete", activity_path(activity), method: :delete, class: 'btn-sm btn btn-outline-danger', id: "delete-btn", data: {confirm: "Are you sure?"}  %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <div class="card-create-activity">
+<%= link_to raw('<i class=" mr-2 fas fa-plus"></i>Create an activity'), new_activity_path, class: 'btn-sm btn btn-outline-primary', id:"create-btn"%>
+</div>
+</div>
+</div>
+
+<%#=# link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %>
+
