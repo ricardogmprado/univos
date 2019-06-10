@@ -52,6 +52,14 @@ body .chatSend > .sendText::-webkit-input-placeholder {
 
 body .chatSend > .sendText::-moz-placeholder {
     color: rgba(54, 153, 246, 0.38);
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
 }
 
 body .chatSend > .sendText:-ms-input-placeholder {

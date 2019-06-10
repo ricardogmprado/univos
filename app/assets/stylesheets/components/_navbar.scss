@@ -1,8 +1,14 @@
 .navbar {
+  padding: 8px 10px;
+  display: flex;
   justify-content: space-between;
   background: white;
-  display: flex;
+  height: 66px;
 
+}
+.navbar-brand {
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,4 +26,29 @@
   max-height: 66px;
   z-index: 100;
   width: 100%;
+}
+
+
+.navbar-toggler {
+  border-style: none;
+  padding: 0;
+  button {
+    padding: 0px;
+  }
+
+
+.nav-link {
+  color: #040F3D;
+  // font-weight: bold;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #E1E2E2;
+  color: #040F3D;
+  border-color: #E1E2E2;
+}
+
+.nav-item {
+  text-align: center;
+
 }

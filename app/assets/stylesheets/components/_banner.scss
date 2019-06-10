@@ -1,0 +1,36 @@
+.homebanner {
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  padding: 150px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.explore-container {
+  h1 {
+color: white;
+font-weight: bold;
+text-align: center;
+justify-content: center;
+font-size: 48px;
+}
+}
+
+.create-container {
+  // text-decoration: none;
+  h1 {
+  color: #040F3D;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  font-size: 48px;
+}
+h1:hover{
+    text-decoration: none;
+
+}
+}
+
+.create-container:hover {
+}
