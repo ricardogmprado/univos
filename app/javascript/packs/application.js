@@ -21,32 +21,15 @@ import 'bootstrap';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 
-const form = document.querySelector('.maincard form')
-const profile = document.querySelector('.profile-show')
+import { displayFilter } from 'components/toggle_navbar_links';
+import { displayProfile } from 'components/toggle_navbar_links';
 
-const displayFilter = (e) => {
-  e.preventDefault();
+const indexPage = document.querySelector('.activities.index');
+if (indexPage != null){
+  document.querySelector("#filter").addEventListener("click", displayFilter);
 
-  // add class show to form filter element
-  if(profile.classList.contains('show')) {
-    profile.classList.remove('show')
-  }
-
-  form.classList.toggle('show')
 }
-
-document.querySelector("#filter").addEventListener("click", displayFilter);
-
-
-const displayProfile = (e) => {
-  e.preventDefault();
-
-  if(form.classList.contains('show')) {
-    form.classList.remove('show')
-  }
-  profile.classList.toggle('show')
-}
-document.querySelector("#profile").addEventListener("click", displayProfile);
+  document.querySelector("#profile").addEventListener("click", displayProfile);
 
 initMapbox();
 initAutocomplete();

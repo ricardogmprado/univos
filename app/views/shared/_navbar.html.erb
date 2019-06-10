@@ -1,10 +1,12 @@
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "index-navbar" if params[:action] == "index" && params[:controller] == "activities" %>">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to "#", class: "navbar-brand", style: "width: 40px" do %>
 
-    <button id="filter" class="navbar-toggler" type="button">
+  <% if controller_name == "activities" && action_name == "index" %>
+    <button id="filter" class="navbar-toggler navbar-brand" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
+  <% end %>
 
   <% end %>
 
