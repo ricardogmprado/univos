@@ -2,3 +2,93 @@
     <%= f.input :content %>
     <%= f.button :submit, class: 'btn btn-outline-success' %>
   <% end %>
+
+
+<div class="phoneWrapper">
+  <div class="phone">
+    <div class="appWrapper">
+      <div class="header">
+        <div class="backWrapper">
+          <svg class="backIcon" viewBox="0 0 24 24">
+              <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+          </svg>
+        </div>
+
+        <div class="userWrapper">
+          <!--  <svg class="userIcon" viewBox="0 0 24 24">
+              <path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" />
+          </svg> -->
+
+          <img src="https://s.cdpn.io/profiles/user/673927/80.jpg?1526593398" alt="Usuario" class="userIcon">
+
+          <span class="userName">Inti Quiroga</span>
+        </div>
+
+        <div class="actionsWrapper">
+          <svg class="actionIcon" viewBox="0 0 24 24">
+              <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+          </svg>
+          <svg class="actionIcon" viewBox="0 0 24 24">
+              <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+          </svg>
+        </div>
+      </div>
+
+
+      <div class="chatWrapper">
+
+        <div class="messagesWrapper">
+          <div class="sentWrapper">
+            <div class="message">
+              <span class="messageText" data-date="3:50pm">Hola...</span>
+            </div>
+
+            <div class="message">
+              <span class="messageText" data-date="3:51pm">¿Con el delivery de lorem ipsum?</span>
+            </div>
+
+          </div>
+
+          <div class="receivedWrapper">
+            <div class="message">
+              <span class="messageText" data-date="3:56pm">Sí claro. Acá tiene:<br><br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi iure dolores ipsam dolorum aspernatur nihil.</span>
+            </div>
+          </div>
+
+          <div class="sentWrapper">
+            <!-- Acá vamos a wrapper todos los mensajes que se envíen -->
+            <div class="message">
+              <span class="messageText" data-date="3:56pm">Cinco mins tarde pero mil gracias.</span>
+            </div>
+          </div>
+
+          <div class="receivedWrapper">
+            <div class="message">
+              <span class="messageText" data-date="4:01pm">No, por favor.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="inputWrapper">
+          <div class="emojisWrapper">
+            <svg class="emojisIcon" viewBox="0 0 24 24">
+              <path d="M5.5,2C3.56,2 2,3.56 2,5.5V18.5C2,20.44 3.56,22 5.5,22H16L22,16V5.5C22,3.56 20.44,2 18.5,2H5.5M5.75,4H18.25A1.75,1.75 0 0,1 20,5.75V15H18.5C16.56,15 15,16.56 15,18.5V20H5.75A1.75,1.75 0 0,1 4,18.25V5.75A1.75,1.75 0 0,1 5.75,4M14.44,6.77C14.28,6.77 14.12,6.79 13.97,6.83C13.03,7.09 12.5,8.05 12.74,9C12.79,9.15 12.86,9.3 12.95,9.44L16.18,8.56C16.18,8.39 16.16,8.22 16.12,8.05C15.91,7.3 15.22,6.77 14.44,6.77M8.17,8.5C8,8.5 7.85,8.5 7.7,8.55C6.77,8.81 6.22,9.77 6.47,10.7C6.5,10.86 6.59,11 6.68,11.16L9.91,10.28C9.91,10.11 9.89,9.94 9.85,9.78C9.64,9 8.95,8.5 8.17,8.5M16.72,11.26L7.59,13.77C8.91,15.3 11,15.94 12.95,15.41C14.9,14.87 16.36,13.25 16.72,11.26Z" />
+            </svg>
+          </div>
+
+          <div class="textWrapper">
+            <input type="text" placeholder="Escribe algo..." class="textInput">
+          </div>
+
+          <div class="actionsWrapper">
+            <div class="sendButton">
+              <svg class="sendIcon" viewBox="0 0 24 24">
+                  <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

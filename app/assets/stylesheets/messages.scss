@@ -1,3 +1,303 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Variables
+// $palette: #ff3377;
+// $palette: #fe4a49;
+// $palette: #2ab7ca;
+// $palette: #f6cd61;
+$palette: #58CEBE;
+$mobile: 480px;
+
+$phoneWidth: 360px;
+$phoneHeight: 667px;
+
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+* { box-sizing: border-box; }
+
+.phoneWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+
+  .phone {
+    width: $phoneWidth;
+    height: $phoneHeight;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+
+    box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: height 0.3s ease-in-out, width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+
+    @media (max-width: $mobile), (max-height: ($phoneHeight + 50px)) {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+}
+
+.appWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+
+  @media (max-width: $mobile), (max-height: ($phoneHeight + 50px)) {
+    height: 100%;
+  }
+
+  .header {
+    flex: 0 0 auto;
+    height: 65px;
+    background-color: $palette;
+    background: linear-gradient(45deg, $palette, lighten($palette, 15));
+    display: flex;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+
+    .backWrapper {
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .backIcon {
+        fill: #FFF;
+        width: 35px;
+      }
+    }
+
+    .userWrapper {
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
+
+      .userIcon {
+        flex: 0 0 auto;
+        width: 40px;
+        heigth: 40px;
+        border-radius: 50%;
+        fill: #FFF;
+        margin-right: 10px;
+      }
+
+      .userName {
+        color: #FFF;
+        font-weight: bold;
+      }
+    }
+
+    .actionsWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+
+      .actionIcon {
+        fill: #FFF;
+        width: 25px;
+        height: 25px;
+        box-sizing: content-box;
+        padding: 10px;
+        border-radius: 50%;
+        margin-right: 5px;
+        transition: background-color 0.3s ease-in-out, fill 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #fff;
+          fill: $palette;
+        }
+      }
+    }
+  }
+
+  .chatWrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+
+    .messagesWrapper {
+      flex: 1 1 auto;
+      overflow: auto;
+
+      .message {
+        &:first-child {
+          .messageText:before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            top: 0;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+
+        .messageText {
+          display: inline-block;
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 10px;
+          position: relative;
+          line-height: 1.4rem;
+          max-width: 90%;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+
+          &:after {
+            content: attr(data-date);
+            display: block;
+            position: relative;
+            font-size: 0.8rem;
+            line-height: 1rem;
+            color: #aaa;
+            margin-top: 3px;
+          }
+        }
+      }
+
+      .sentWrapper, .receivedWrapper {
+        padding: 10px 15px;
+      }
+
+      .sentWrapper {
+        .message {
+          text-align: right;
+          $senderColor: lighten($palette, 32);
+
+          &:first-child {
+            .messageText {
+              border-top-right-radius: 0px;
+            }
+          }
+
+          .messageText {
+            background-color: $senderColor;
+          }
+
+          .messageText:before {
+            right: 0px;
+            transform: translateX(50%);
+            border-right: 20px solid transparent;
+            border-top: 20px solid $senderColor;
+          }
+        }
+      }
+
+      .receivedWrapper {
+        .message {
+          text-align: left;
+
+          &:first-child {
+            .messageText {
+              border-top-left-radius: 0px;
+            }
+          }
+
+          .messageText:before {
+            left: 0px;
+            transform: translateX(-50%);
+            border-left: 20px solid transparent;
+            border-top: 20px solid #fff;
+          }
+        }
+      }
+    }
+
+    .inputWrapper {
+      flex: 0 0 60px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      z-index: 10;
+
+      .emojisWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 100%;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $palette;
+
+          .emojisIcon {
+            fill: #FFF;
+          }
+        }
+
+        .emojisIcon {
+          width: 30px;
+          fill: $palette;
+
+          transition: fill 0.3s ease-in-out;
+        }
+      }
+
+      .textWrapper {
+        flex: 1 1 auto;
+
+        .textInput { // lol
+          display: block;
+          width: 100%;
+          border: 0;
+          padding: 15px 5px;
+          background-color: transparent;
+          outline: none;
+
+          &:hover {
+
+          }
+        }
+      }
+    }
+
+    .actionsWrapper {
+      width: 50px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+
+      .sendButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $palette;
+
+          .sendIcon {
+            fill: #FFF;
+          }
+        }
+
+        .sendIcon {
+          width: 30px;
+          fill: $palette;
+          transition: fill 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .pages-button {
-  padding: 800px;
-  margin: 100px;
-  display:block;
+  padding: 100px;
+  display: block;
+  padding-left: 180px;
+  padding-right: 180px;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.pages-button-dark {
+  padding: 100px;
+  padding-left: 180px;
+  padding-right: 180px;
+  display: block;
+  background-color: black;
+  color: white;
+   padding-top: 140px;
+  padding-bottom: 140px;
 }
