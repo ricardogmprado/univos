@@ -1,5 +1,15 @@
-<button type="button" class="btn btn-light">Create Event</button>
-<button type="button" class="btn btn-dark">Join Event</button>
-
-<button class="btn btn-primary">clickme</button>
+    <%= link_to new_activity_path do %>
+<div class="homebanner" style="background-color: white">
+  <div class="create-container">
+    <h1> Create an activity </h1>
+  </div>
+</div>
+    <% end %>
+    <%= link_to activities_path do %>
+<div class="homebanner" style="background-color: #4BFFA5">
+  <div class="explore-container">
+   <h1>  Explore activities </h1>
+  </div>
+</div>
+   <% end %>
 
