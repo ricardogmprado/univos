@@ -1,10 +1,20 @@
 <%= form_tag activities_path, method: :get do %>
-<% @categories.each do |category| %>
 
-<%= check_box_tag 'category[]', category, @selected_categories.include?(category)  %>
-  <label for=""><%= category %></label>
+<div class="filter-show">
+  <h3 class="text-left m-4">Filters</h3>
+  <% @categories.each do |category| %>
+
+  <p id="category-check" class="m-4">
+    <label for=""><%= category %></label><%= check_box_tag 'category[]', category, @selected_categories.include?(category), class:"mr-4"  %>
+    <% end %>
+
+  </p>
+    <div id="category-check" class="m-4">
+    <input value="<%= @selected_dates %>" type="date" name="date" id="activity_date" class="date-picker">
+
+    <%= submit_tag 'Filter', class: 'btn btn-outline-primary' %>
+    </div>
+
   <% end %>
-  <input value="<%= @selected_dates %>" type="date" name="date" id="activity_date">
 
-  <%= submit_tag 'Filter' %>
-<% end %>
+</div>

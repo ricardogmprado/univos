@@ -1,8 +1,13 @@
 .navbar {
+  padding: 8px 10px;
+  display: flex;
   justify-content: space-between;
   background: white;
-  display: flex;
 
+}
+.navbar-brand {
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,4 +25,12 @@
   max-height: 66px;
   z-index: 100;
   width: 100%;
+}
+
+.navbar-toggler {
+  border-style: none;
+  padding: 0;
+  button {
+    padding: 0px;
+  }
 }

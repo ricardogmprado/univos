@@ -1,36 +1,21 @@
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "index-navbar" if params[:action] == "index" && params[:controller] == "activities" %>">
-  <%= link_to user_path(current_user), id: "profile", class: "navbar-brand" do %>
-  
-    <%= cl_image_tag current_user.photo, class: "rounded-circle" %>
+  <%= link_to "#", class: "navbar-brand" do %>
 
-    <% end %>
+    <button id="filter" class="navbar-toggler" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <% end %>
 
   <%= link_to dashboard_path, id: "dashboard", class: "navbar-brand" do %>
     <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Gqc4Ch5MYwqhlcqs3ihuynFO0oAeFxixRMsyd3FmTIhdhJoarw" %>
-    <% end %>
+  <% end %>
 
+    <button id="profile" class="navbar-toggler" type="button"><span class="navbar-brand"><%= cl_image_tag current_user.photo, id: "profile", class: "rounded-circle" %></span></button>
 
-  <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item dropdown">
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
 </div>
+
+<% if user_signed_in? %>
+  <%= render 'profileshow' %>
+<% end %>
