@@ -21,3 +21,19 @@
   z-index: 100;
   width: 100%;
 }
+
+
+.nav-link {
+  color: #040F3D;
+  // font-weight: bold;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #E1E2E2;
+  color: #040F3D;
+  border-color: #E1E2E2;
+}
+
+.nav-item {
+  text-align: center;
+}
