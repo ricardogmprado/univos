@@ -1,46 +1,71 @@
-.card-activity .card-activity-infos {
-  padding: 20px;
-}
+// .card-activity .card-activity-infos {
+//   padding: 10px;
+// }
 
 .card-activity {
   overflow: hidden;
-  height: 120px;
+  height: 168px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
 }
 
-.card-activity img {
+.card-activity-img-link {
   height: 100%;
-  width: 120px;
-  object-fit: cover;
+  width: 60%;
+}
+
+.card-activity-img {
+  height: 100%;
+  width: 100%;
+    background-size: cover;
+  background-position: center
+
 }
 
 .card-activity-infos {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 16px;
+    padding-right: 16px;
+    border-top: 1px solid #80808029;
+  h5 {
+    color: #040F3D;
+    font-weight: bold;
+  }
 }
 
 .card-activity-buttons {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+
+    margin-top: 8px;
+
+}
+
+.card-activity-infos-details a {
+  color: #040F3D;
+    font-weight: bold;
 }
 
 .card-activity-infos-details {
-
+ text-align: center;
 }
 
 .card-activity p {
   font-size: 12px;
   line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
+  // opacity: .7;
+  margin-bottom: 8px;
   margin-top: 8px;
+  color: #040F3D;
 }
 
-.card-product h5 {
-  font-size: 4px;
-  font-weight: bold;
-  margin: 0;
+.card-create-activity {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
