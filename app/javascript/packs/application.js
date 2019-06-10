@@ -21,7 +21,15 @@ import 'bootstrap';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 
+import { displayFilter } from 'components/toggle_navbar_links';
+import { displayProfile } from 'components/toggle_navbar_links';
 
+const indexPage = document.querySelector('.activities.index');
+if (indexPage != null){
+  document.querySelector("#filter").addEventListener("click", displayFilter);
+
+}
+  document.querySelector("#profile").addEventListener("click", displayProfile);
 
 initMapbox();
 initAutocomplete();

@@ -1,7 +1,10 @@
+<%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary" %>
+
 <%= link_to "Go to Dashboard", dashboard_path, class: 'btn btn-outline-primary' %>
 <% if @user == current_user %>
   <%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-outline-secondary ml-3" %>
 <% end %>
+
 
 <% if !@user.photo.blank? %>
 <div class="user-profile"><%= cl_image_tag @user.photo%></div>
