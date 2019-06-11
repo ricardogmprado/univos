@@ -1,0 +1,39 @@
+.edit-profile {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+ flex-direction: column;
+
+ h1 {
+  margin-bottom: 32px;
+  margin-top: 32px;
+  color: #040F3D;
+  font-weight: bold;
+ }
+}
+
+form #edit_user {
+display: flex;
+align-items: center;
+justify-content: center;
+align-text: center;
+// width: 100%;
+}
+
+.form-inputs {
+  margin: 0 auto;
+}
+
+#delete-account-btn {
+    width: 248px;
+    border-radius: 16px;
+    border-color: #b51f1f;
+    background-color: #b51f1f;
+    color: white;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    font-size: 18px;
+}
+

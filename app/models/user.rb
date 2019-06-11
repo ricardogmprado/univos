@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :appointments, dependent: :destroy
   has_many :activities, dependent: :destroy #activities that the user created
-  has_many :messages
+  has_many :messages, dependent: :destroy
   validates :name, presence: true, on: :update
   validates :location, presence: true, on: :update
   validates :gender, presence: true, on: :update

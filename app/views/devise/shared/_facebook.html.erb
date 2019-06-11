@@ -1,0 +1,5 @@
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <%= link_to raw('<i class=" mr-3 fab fa-facebook"></i>Continue with facebook'), omniauth_authorize_path(resource_name, provider), class: "btn", id: "facebook-btn" %>
+  <% end %>
+<% end %>
