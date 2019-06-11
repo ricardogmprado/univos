@@ -1,6 +1,7 @@
 .login-page {
 background-color: #4BFFA5;
-height: 100vh;
+min-height: 100vh;
+height: 100%;
 width: 100%;
 h1 {
   color: white;
@@ -25,8 +26,10 @@ font-size: 26px;
   align-items: center;
   display: flex;
   width: 100%;
-  bottom: 88px;
-  position: absolute;
+  padding-top: 5vh;
+  p {
+    margin-bottom: 0px;
+  }
 }
 
 .form-inputs {
@@ -46,18 +49,17 @@ font-size: 26px;
   color: white;
   border-color: #040F3D;
   background-color: #040F3D;
-  width: 320px;
   font-weight: bold;
   height: 48px;
-  margin-bottom: 32px;
-  font-size: 22px;
+  margin-bottom: 2vh;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .facebook-login {
-  margin-bottom: 32px;
+
 }
 
 input.btn {
@@ -80,16 +82,12 @@ input.btn {
 }
 
 .title-login {
-//   position: absolute;
-  padding-top: 72px;
 //   h3 {
 //     text-align: right;
 //   }
 }
 
 .signin-links {
-    bottom: 32px;
-  position: absolute;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -98,6 +96,9 @@ input.btn {
   color: white;
   font-weight: bold;
   font-size: 18px }
+  p {
+    margin-bottom: 0px;
+  }
 }
 
 .form-check-label.boolean.optional {
