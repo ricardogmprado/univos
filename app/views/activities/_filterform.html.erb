@@ -2,19 +2,17 @@
 
 <div class="filter-show">
   <h3 class="text-left m-4">Filters</h3>
-  <% @categories.each do |category| %>
+  <% @categories.each_with_index do |category, index| %>
 
-  <p id="category-check" class="m-4">
-    <label for=""><%= category %></label><%= check_box_tag 'category[]', category, @selected_categories.include?(category), class:"mr-4"  %>
-    <% end %>
-
-  </p>
+    <p id="category-check" class="m-4">
+      <label for=""><%= category %></label><%= check_box_tag 'category[]', category, @selected_categories.include?(category), class:"mr-4"  %>
+      <i class="<%= @category_icons[index] %>"></i>
+    </p>
+  <% end %>
     <div id="category-check" class="m-4">
     <input value="<%= @selected_dates %>" type="date" name="date" id="activity_date" class="date-picker">
-
     <%= submit_tag 'Filter', class: 'btn btn-outline-primary' %>
     </div>
-
-  <% end %>
-
 </div>
+<% end %>
+
