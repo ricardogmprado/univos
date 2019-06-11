@@ -81,9 +81,10 @@
 <div class="tab-pane fade" id="created" role="tabpanel" aria-labelledby="created-tab"><% @created_activities.each do |activity| %>
   <div class="card-activity d-flex">
      <%= link_to activity_path(activity), class: "card-activity-img-link" do %>
-      <div class="card-activity-img" style="background-image: url('<%= cl_image_path activity.photo %>')">
-
-      </div>
+      <% if activity.photo.file  %>
+        <div class="card-activity-img" style="background-image: url('<%= cl_image_path activity.photo %>')">
+        </div>
+      <% end %>
       <% end %>
     <div class="card-activity-infos">
       <div class="card-activity-infos-details">
