@@ -9,17 +9,17 @@
   <% else %>
     <img src="<%= current_user.facebook_picture_url %> " alt="" >
   <% end %>
-
-  <ul>
-    <li><%= current_user.name %></li>
-    <li><%= current_user.gender %></li>
+<div class="profile-div">
+  <ul style="text-align:center;" >
+    <li class="profile-info"><strong><%= current_user.name %></strong></li>
+    <li ><%= current_user.gender %></li>
     <li><%= current_user.age %></li>
   </ul>
-
+</div>
   <div class="buttons m-4">
-    <%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-outline-secondary" %>
+    <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-outline-secondary edit-profile-btn" %>
 
-    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary" %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary log-out-btn" %>
 
   </div>
 </div>
