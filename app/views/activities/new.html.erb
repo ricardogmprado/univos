@@ -1,7 +1,5 @@
-<div class="container">
-  <h1>Activities#new</h1>
-  <%= link_to "Back to Activities", activities_path, class: 'btn btn-outline-primary' %>
-  <h3>Create your Activity</h3>
+<div class="create-activity-form">
+  <h1>Create your activity</h1>
   <%= simple_form_for @activity do |f| %>
     <%= f.input :title %>
     <%= f.input :description %>
@@ -15,4 +13,5 @@
     <%= f.input :photo %>
     <%= f.button :submit, class: 'btn btn-outline-success' %>
   <% end %>
+  <%= link_to "Back to Activities", activities_path, class: 'btn', id:'back-to-activity' %>
 </div>

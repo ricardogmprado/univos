@@ -1,5 +1,13 @@
-<h2>Log in</h2>
-
+<div class="login-page">
+<!-- <div class="card-login-img" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%#=# image_url "rockclimbing.png" %>')"> -->
+<div class="title-login">
+<h1>UNIVOS</h1>
+<h3>Do sh*t together</h3>
+</div>
+<div class="login-form">
+<div class="facebook-login"  >
+<%= render "devise/shared/facebook" %>
+</div>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
@@ -16,5 +24,10 @@
     <%= f.button :submit, "Log in" %>
   </div>
 <% end %>
-
+</div>
+<div class="signin-links">
 <%= render "devise/shared/links" %>
+</div>
+</div>
+</div>
+
