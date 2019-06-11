@@ -7,7 +7,7 @@
   <% if !current_user.photo.blank? %>
     <div class="user-profile"><%= cl_image_tag current_user.photo%></div>
   <% else %>
-    <img src="<%= current_user.facebook_picture_url %> " alt="" >
+  <div class="user-profile"><<%= current_user.facebook_picture_url %></div>
   <% end %>
 <div class="profile-div">
   <ul style="text-align:center;" >
