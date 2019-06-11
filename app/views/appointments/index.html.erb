@@ -1,23 +1,18 @@
-<h5>All Participants</h5>
-
     <%#= link_to "View Profile", user_session_path, class: 'btn btn-outline-primary' %>
+<%= render 'shared/navbar' %>
   <% @activity.users.each do |user| %>
     <div class="card-product">
         <%= cl_image_tag user.photo %>
       <div class="card-product-infos">
       <%= link_to user_path(user) do %>
-        <h2><%= user.name %></h2>
+        <h2 class ="user-link"><%= user.name %></h2>
       <% end %>
 
      <% if policy(@activity).destroy? %>
-     <% if !(current_user == user)  %>
-      <%= link_to 'Delete User', activity_appointment_path(@activity, Appointment.where(activity_id: @activity.id, user_id: user.id)[0]), method: :delete,class: 'btn btn-outline-primary' %>
+     <% if (current_user == user)  %>
+      <%= link_to 'Delete User', activity_appointment_path(@activity, Appointment.where(activity_id: @activity.id, user_id: user.id)[0]), method: :delete, class: 'btn btn-outline-primary delete-user' %>
     <% end %>
     <% end %>
-
-      <% if DateTime.now > @activity.date && @activity.user %>
-        <%= link_to "Mark Absent",class: 'btn btn-outline-primary' %>
-      <% end %>
       </div>
     </div>
   <% end %>
