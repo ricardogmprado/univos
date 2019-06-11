@@ -9,7 +9,6 @@ class Activity < ApplicationRecord
   validates :meeting_point, presence: true
   validates :number_of_people, presence: true
   validates :category, presence: true
-  validates :photo, presence: true
 
   mount_uploader :photo, PhotoUploader
 

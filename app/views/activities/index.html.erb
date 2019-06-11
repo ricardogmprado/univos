@@ -1,19 +1,19 @@
 
 <%= render 'shared/navbar' %>
-<div class="maincard">
+<div class="maincard text-center">
 
  <%= render 'filterform' %>
 
   <% if @activity.nil?%>
     <%= "There are no activities" %>
   <% else %>
-      <%= link_to activity_path(@activity) do %>
-        <div class="card-trip card-trip-index">
+  <%= link_to activity_path(@activity) do %>
+    <div class="card-trip card-trip-index">
 
-        <div style="background-image:
+      <div style="background-image:
     url('<%= cl_image_path @activity.photo %> ')" class="index-picture" >
-        </div>
-      <% end %>
+      </div>
+        <% end %>
 
       <div class="card-trip-infos">
         <div>
@@ -24,9 +24,9 @@
             <p><%= @activity.description[0..50] %>...</p>
           </div>
           <div class="icon-info">
-            <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
-            <p><i class=" far fa-clock"></i> <%= @activity.date.strftime("%b %e, %l:%M %p") %></p>
             <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
+            <p><i class=" far fa-clock"></i> <%= @activity.date %></p>
+            <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
           </div>
         </div>
       </div>

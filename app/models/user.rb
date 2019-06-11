@@ -10,7 +10,6 @@ class User < ApplicationRecord
   validates :location, presence: true, on: :update
   validates :gender, presence: true, on: :update
   validates :age, presence: true, on: :update
-  validates :photo, presence: true, on: :update
   mount_uploader :photo, UserPhotoUploader
   devise :omniauthable, omniauth_providers: [:facebook]
   before_save :set_full_name
