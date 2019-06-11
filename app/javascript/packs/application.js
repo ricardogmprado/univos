@@ -29,11 +29,7 @@ if (indexPage != null){
   document.querySelector("#filter").addEventListener("click", displayFilter);
 
 }
-  const profile = document.querySelector("#profile")
-  if (profile){
-    profile.addEventListener("click", displayProfile);
-
-  }
+  document.querySelector("#profile").addEventListener("click", displayProfile);
 
 
 initMapbox();

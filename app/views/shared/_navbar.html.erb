@@ -1,11 +1,13 @@
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "index-navbar" if params[:action] == "index" && params[:controller] == "activities" %>">
+  <%= link_to "#", class: "navbar-brand", style: "width: 40px" do %>
 
-  <% unless controller_name == "activities" && action_name == "index" %>
+<!--   <% if !current_user.photo.blank? %>
+  <div class="rounded-circle"><%= cl_image_tag current_user.photo%></div>
+  <% else %>
+  <img src="<%= current_user.facebook_picture_url %> " alt="" class="rounded-circle">
+  <% end %> -->
 
-  <button action="action" onclick="window.history.go(-1); return false;" type="button" value="" class="arrow" /><i class="fas fa-chevron-left"></i></button>
-
-  <% end %>
 
   <% if controller_name == "activities" && action_name == "index" %>
     <button id="filter" class="navbar-toggler navbar-brand" type="button">
@@ -13,6 +15,7 @@
     </button>
   <% end %>
 
+  <% end %>
 
   <%= link_to dashboard_path, id: "dashboard", class: "navbar-brand" do %>
     <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Gqc4Ch5MYwqhlcqs3ihuynFO0oAeFxixRMsyd3FmTIhdhJoarw" %>
@@ -25,4 +28,3 @@
 <% if user_signed_in? %>
   <%= render 'activities/profileshow' %>
 <% end %>
-
