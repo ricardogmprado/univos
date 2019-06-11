@@ -18,6 +18,56 @@ body {
     box-shadow: 0px 0px 100px -33px #0000003d;
 }
 
+body .chatHeader {
+    background-color: #fff;
+    position: relative;
+    padding: 11px;
+    padding-left: 40px;
+    box-shadow: 0 6px 34px -6px #e0e0e0a6;
+}
+
+body .chatHeader > .BackBtn {
+    position: absolute;
+    color: #4BFFA5;
+    font-size: 28px;
+    width: 40px;
+    height: 56px;
+    line-height: 53px;
+    text-align: center;
+    left: 0;
+    top: 0;
+}
+
+body .chatHeader > .headerTitle {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #2f323ab0;
+}
+
+
+.activity-icon {
+    width: 28px;
+    height: 28px;
+
+    img {
+    width: 28px;
+    height: 28px;
+    text-align: right;
+    }
+}
+
+body .chatHeader > .headerTitle > .Txt {
+    flex: auto;
+    margin-left: 10px;
+}
+
+body .chatHeader > .headerTitle > .Txt > div {
+    font-size: 11px;
+    margin: 2px 0;
+
+}
+
  body  .chatSend {
     height: 48px;
   position:relative;
@@ -187,6 +237,6 @@ body .chatContent .chat-column.company > .item > .chat-message {
 }
 
 .chat-container {
-  height: 83vh
+  height: 75vh
 }
 

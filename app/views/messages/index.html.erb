@@ -1,8 +1,28 @@
 
 <%= render 'shared/navbar' %>
+  <!-- BEGIN : chatHeader -->
+  <div class="chatHeader">
+    <div class="headerTitle ">
+      <%= link_to dashboard_path do %>
+<%= image_tag "http://www.vogelphoto.com/Photos/Backbutton.png", class: "activity-icon"%>
 
+<% end %>
+      <div class="Txt">
+        <div><strong><%= @activity.title %></strong></div>
+        <div>Chat room</div>
+      </div>
+      <%= link_to activity_appointments_path id: "See All Participants" do %>
+    <%= image_tag "https://cdn4.iconfinder.com/data/icons/silky-icon-user/60/users1-512.png", class: "activity-icon"%>
+     <% end %>
+    </div>
 
-<div class="container chat-container">
+</div>
+  </div>
+  <!-- END : chatHeader -->
+
+<div class="container">
+
+  <div class="chat-container">
   <div class="chatContent">
   <% @activity.messages.each do |message| %>
 
@@ -34,7 +54,19 @@
         </div>
     <% end %>
 
+    <div class="user_name text-left">
+        Jessie J
+      </div>
+        <div class="chat-column customer">
+          <div class="item">
+            <div class="chat-message text-left">Hello lsjdfnv kdjn kdhsk jdbjsd kjsd ij sdbsbd ajhsdbcjha dj skhd jsd sdb kdhbc bsdj?
 
+            </div>
+            <div class="message-date text-left"><%= message.created_at.strftime("%b %e, %l:%M %p") %>
+
+            </div>
+          </div>
+        </div>
 <!--             <div class="chat-message">
  -->
 <!-- <p><%#= message.user.name %></p> -->
@@ -54,6 +86,7 @@
   <!-- BEGIN : chatSend -->
 
   <!-- END : chatSend -->
+</div>
 </div>
 
   <%= simple_form_for [@activity, @message], wrapper: :inline_form, html: { class: 'form-inline' }  do |f| %>
