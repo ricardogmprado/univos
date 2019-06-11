@@ -1,0 +1,39 @@
+.create-activity-form {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+ flex-direction: column;
+
+ h1 {
+  margin-bottom: 32px;
+  margin-top: 32px;
+  color: #040F3D;
+  font-weight: bold;
+  text-align: center;
+ }
+}
+
+#new_activity {
+  width: 248px;
+  input {
+  border-radius: 16px;
+  border-color: #040F3D;
+  border-width: 1px; }
+  label {
+  color: #040F3D;
+  font-weight: bold;
+  font-size: 16px;
+}
+}
+
+#back-to-activity {
+  color: #040F3D;
+  border-color: #4BFFA5;
+  background-color: #4BFFA5;
+  width: 248px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  font-weight: bold;
+  font-size: 18px;
+}
