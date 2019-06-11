@@ -25,6 +25,10 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "location" }%>
+    <%= f.input :about_me,
+                as: :text,
+                autofocus: true,
+                input_html: { autocomplete: "about_me" } %>
                 <% if !(resource.provider == "facebook") %>
     <%= f.input :current_password,
                 hint: "we need your current password to confirm your changes",
