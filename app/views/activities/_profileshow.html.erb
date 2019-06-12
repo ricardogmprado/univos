@@ -15,10 +15,10 @@
       <p><%= current_user.about_me %></p>
   </div>
   <div class="user-div">
-    <% if @user == current_user %>
+
     <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-outline-secondary edit-profile-btn" %>
 
     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary log-out-btn" %>
-    <% end %>
+
   </div>
 </div>
