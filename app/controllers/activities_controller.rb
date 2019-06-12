@@ -4,6 +4,7 @@ class ActivitiesController < ApplicationController
   skip_after_action :verify_authorized, only: :index
 
   def index
+    # raise
     if request.location.longitude
       @activities = policy_scope(Activity).near([request.location.latitude, request.location.longitude], 200)
       # need all activities that do not have an appointment with current user
@@ -81,7 +82,28 @@ class ActivitiesController < ApplicationController
   private
 
   def set_categories
-    @categories = ['sports', 'food & drinks', 'nature', 'art & culture', 'Music & Dance', 'Hobbies', 'LGBTQ', 'Nightlife', 'Outdoors', 'Health & Wellness']
+    @categories = [
+     'Sports & Fitness',
+     'Food & Drinks',
+     'Art & Culture',
+     'Music & Dance',
+     'Hobbies',
+     'Nightlife',
+     'Outdoors & Adventure',
+     'Social Impact',
+     'Pets'
+   ]
+    @category_icons = [
+     'fas fa-futbol',
+     'fas fa-utensils',
+     'fas fa-palette',
+     'fas fa-music',
+     'fas fa-book',
+     'fas fa-glass-cheers',
+     'fas fa-mountain',
+     'fas fa-users',
+     'fas fa-dog'
+   ]
   end
 
   def set_activity

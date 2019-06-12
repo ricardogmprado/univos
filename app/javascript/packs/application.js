@@ -24,6 +24,10 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 import { displayFilter } from 'components/toggle_navbar_links';
 import { displayProfile } from 'components/toggle_navbar_links';
 
+import { clickCheckbox } from 'components/filterform';
+
+import { keepSelected } from 'components/filterform';
+
 const indexPage = document.querySelector('.activities.index');
 if (indexPage != null){
   document.querySelector("#filter").addEventListener("click", displayFilter);
@@ -38,4 +42,6 @@ if (profile){
 
 initMapbox();
 initAutocomplete();
+clickCheckbox();
+keepSelected();
 

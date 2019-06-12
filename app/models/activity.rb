@@ -4,7 +4,7 @@ class Activity < ApplicationRecord
   has_many :users, through: :appointments
   has_many :messages, dependent: :destroy
   validates :title, presence: true
-  validates :description, presence: true, length: {minimum: 40}
+  validates :description, presence: true, length: {minimum: 60}
   validates :date, presence: true
   validates :meeting_point, presence: true
   validates :number_of_people, presence: true

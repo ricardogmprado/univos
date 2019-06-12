@@ -34,7 +34,7 @@
           <% end %>
 
           </div>
-           <p><%= appointment.activity.description[0..90] %>...</p>
+           <p><%= appointment.activity.description[0..50] %>...</p>
           <p><%= appointment.activity.date.strftime("%b %e, %l:%M %p") %></p>
         </div>
         <div class="card-activity-buttons">
@@ -64,7 +64,7 @@
             <i class=" ml-3 fas fa-search-plus"></i>
           <% end %>
           </div>
-           <p><%= activity.description[0..80] %>...</p>
+           <p><%= activity.description[0..50] %>...</p>
           <p><%= activity.date.strftime("%b %e, %l:%M %p") %></p>
         </div>
         <div class="card-activity-buttons">
@@ -91,7 +91,7 @@
             <i class=" ml-3 fas fa-search-plus"></i>
           <% end %>
         </div>
-          <p><%= activity.description[0..80] %>...</p>
+          <p><%= activity.description[0..50] %>...</p>
           <p><%= activity.date.strftime("%b %e, %l:%M %p") %></p>
       </div>
       <div class="card-activity-buttons">
