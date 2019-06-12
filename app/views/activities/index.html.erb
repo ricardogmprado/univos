@@ -24,9 +24,9 @@
             <p><%= @activity.description[0..50] %>...</p>
           </div>
           <div class="icon-info">
-            <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
-            <p><i class=" far fa-clock"></i> <%= @activity.date %></p>
             <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
+            <p><i class=" far fa-clock"></i> <%= @activity.date.strftime("%b %e, %l:%M %p") %></p>
+            <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
           </div>
         </div>
       </div>
