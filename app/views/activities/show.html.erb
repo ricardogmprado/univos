@@ -1,36 +1,61 @@
-  <%= render 'shared/navbar' %>
-<div style="background-image:
-    url('<%= cl_image_path @activity.photo %> ')" class="index-picture" >
+<%= render 'shared/navbar' %>
+<div class="maincard">
+  <div class="card-trip">
+    <div style="background-image:
+      url('<%= cl_image_path @activity.photo %> ')" class="index-picture" >
+    </div>
+
+    <div class="card-trip-infos">
+      <div>
+        <div class="activity-info">
+          <h6 class="location-category text-center">
+            <%= @activity.meeting_point %> • <%= @activity.category %></h6>
+        <div class="d-flex justify-content-between">
+          <h2><%= @activity.title %></h2>
+          <div class="admin-button">
+            <% if policy(@activity).edit? %>
+            <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary', id: 'edit-btn' %>
+            <% end %>
+
+            <% if policy(@activity).destroy? %>
+              <%= link_to "Delete", activity_path(@activity), method: :delete, class: 'btn btn-outline-danger', data: {confirm: "Are you sure?"} , id: 'delete-btn' %>
+            <% end %>
+          </div>
+
+        </div>
+        </div>
+        <div class="icon-info">
+          <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
+          <p><i class=" far fa-clock"></i> <%= @activity.date.strftime("%b %e, %l:%M %p") %></p>
+          <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
+        </div>
+        <div class="description">
+          <p><%= @activity.description %></p>
+
+        </div>
+        <div class="my-3">
+          <h2 class="pt-2">About the Uniter</h2>
+          <div class="d-flex justify-content-between">
+            <p><strong><%= @activity.user.name %></strong></p>
+            <div><%= cl_image_tag @activity.user.photo, class: "avatar" %></div>
+
+          </div>
+          <div class="pt-2">
+            <p><%= @activity.user.about_me %></p>
+
+          </div>
+        </div>
+
+        <div class="buttons">
+          <% if policy(@activity).confirmed? %>
+            <%= link_to "see messages", activity_messages_path(@activity), class: 'btn', id: 'bottom-button' %>
+            <% else %>
+            <%= link_to "Join Activity", activity_appointments_path(@activity, show: "show", status: 'confirmed'), method: :post, class: 'btn', id: 'bottom-button'%>
+          <% end %>
+        </div>
       </div>
-
-  <p><%= link_to "Browse Activities", activities_path, class: 'btn btn-outline-primary' %></p>
-
-  <h3><%= @activity.title %></h3>
-
-  <ul>
-    <li><%= @activity.description %></li>
-    <li><%= @activity.category %></li>
-    <li><%= @activity.date %></li>
-    <li><%= @activity.number_of_people %></li>
-    <li><%= @activity.meeting_point %></li>
-    <li><%= @activity.gender %></li>
-    <li><%= @activity.min_age %></li><li><%= @activity.max_age %></li>
-  </ul>
-
-  <% if policy(@activity).edit? %>
-    <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary' %>
-  <% end %>
-
-  <% if policy(@activity).destroy? %>
-    <%= link_to "Delete", activity_path(@activity), method: :delete, class: 'btn btn-outline-danger', data: {confirm: "Are you sure?"}  %>
-  <% end %>
-
-  <% if policy(@activity).confirmed? %>
-    <%= link_to "see messages", activity_messages_path(@activity), class: 'btn btn-outline-primary' %>
-    <% else %>
-    <%= link_to "Join Activity", activity_appointments_path(@activity, show: "show", status: 'confirmed'), method: :post, class: 'btn btn-outline-primary'%>
-  <% end %>
-
+    </div>
+  </div>
   <div
   id="map"
   style="width: 100%;
@@ -38,6 +63,4 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
-
-
-
+</div>
