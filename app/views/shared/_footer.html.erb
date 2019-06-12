@@ -1,9 +1,9 @@
 <div class="footer">
   <%= link_to activity_appointments_path(@activity, status: 'declined', date: params[:date], category: params[:category],checked: true), method: :post do %>
-    <button type="submit"><img src="https://image.flaticon.com/icons/svg/148/148766.svg" class="footer-button"></button>
+    <button type="submit"><img src="https://image.flaticon.com/icons/svg/148/148766.svg" class="footer-button" id="decline"></button>
   <% end %>
   <%= link_to activity_appointments_path(@activity, status: 'saved', date: params[:date],  category: params[:category], checked: true), method: :post do %>
-    <button type="submit"><img src="https://image.flaticon.com/icons/svg/148/148767.svg" class="footer-button"></button>
+    <button type="submit"><img src="https://image.flaticon.com/icons/svg/19/19973.svg" class="footer-button" id="save"></button>
   <% end %>
 </div>
 
