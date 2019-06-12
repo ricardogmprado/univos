@@ -26,17 +26,15 @@ padding-right: 50px;
 }
 
 .user-profile {
+  display: flex;
+  justify-content: center;
   background-repeat: no-repeat;
   img {
-    height: 280px;
-    width: 280px;
+    height: 240px;
+    width: 240px;
     object-fit: cover;
     background-position: center;
     border-radius: 50%;
-    padding: 28px;
-    margin-left: 63px;
-    margin-right: 63px;
-    margin-bottom: 9px;
-    margin-top: 20px;
+
   }
 }

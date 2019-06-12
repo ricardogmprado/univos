@@ -18,7 +18,12 @@
     <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Gqc4Ch5MYwqhlcqs3ihuynFO0oAeFxixRMsyd3FmTIhdhJoarw" %>
   <% end %>
 
+  <% if !current_user.photo.blank? %>
     <button id="profile" class="navbar-toggler" type="button"><span class="navbar-brand"><%= cl_image_tag current_user.photo, id: "profile", class: "rounded-circle" %></span></button>
+  <% else %>
+    <button id="profile" class="navbar-toggler" type="button"><span class="navbar-brand"><%= current_user.facebook_picture_url, id: "profile", class: "rounded-circle" %></span></button>
+  <% end %>
+
 
 </div>
 

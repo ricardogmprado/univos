@@ -51,6 +51,7 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new(activity_params)
     authorize @activity
     @activity.user = current_user
+    raise
     if @activity.save
       redirect_to activity_path(@activity), notice: 'Your activity is now visible for awesome people.'
     else
@@ -88,6 +89,6 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    params.require(:activity).permit(:title, :description, :date, :meeting_point, :category, :number_of_people, :body, :photo)
+    params.require(:activity).permit(:title, :description, :date, :meeting_point, :latitude, :longitude, :category, :number_of_people, :body, :photo)
   end
 end
