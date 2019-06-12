@@ -21,7 +21,7 @@
   <% if !current_user.photo.blank? %>
     <button id="profile" class="navbar-toggler" type="button"><span class="navbar-brand"><%= cl_image_tag current_user.photo, id: "profile", class: "rounded-circle" %></span></button>
   <% else %>
-    <button id="profile" class="navbar-toggler" type="button"><span class="navbar-brand"><%= current_user.facebook_picture_url, id: "profile", class: "rounded-circle" %></span></button>
+    <button id="profile" class="navbar-toggler" type="button"><span class="navbar-brand"><%= cl_image_tag current_user.facebook_picture_url, id: "profile", class: "rounded-circle" %></span></button>
   <% end %>
 
 
