@@ -10,22 +10,20 @@
         <div class="activity-info">
           <h6 class="location-category text-center">
             <%= @activity.meeting_point %> • <%= @activity.category %></h6>
-        <div class="d-flex justify-content-between mt-3">
-          <h2><%= @activity.title %></h2>
+          <div class="d-flex justify-content-between mt-3">
+            <h2><%= @activity.title %></h2>
 
-
+          </div>
+          <div class="icon-info">
+            <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
+            <p><i class=" far fa-clock"></i> <%= @activity.date.strftime("%b %e, %l:%M %p") %></p>
+            <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
+          </div>
+          <div class="description">
+            <p><%= @activity.description %></p>
+          </div>
         </div>
-        </div>
-        <div class="icon-info">
-          <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
-          <p><i class=" far fa-clock"></i> <%= @activity.date.strftime("%b %e, %l:%M %p") %></p>
-          <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
-        </div>
-        <div class="description">
-          <p><%= @activity.description %></p>
-
-        </div>
-        <div class="uniter-section my-3">
+        <div class="uniter-section">
           <h2 class="pt-2">About the Uniter</h2>
           <div class="d-flex justify-content-between align-items-center">
             <p><strong><%= link_to @activity.user.name, user_path(@activity.user) %></strong></p>
@@ -38,7 +36,7 @@
           </div>
         </div>
 
-        <div class="buttons">
+        <div>
           <% if policy(@activity).confirmed? %>
             <div class="card-activity-buttons">
               <%= link_to raw('<i class="far fa-comments"></i> Messages'), activity_messages_path(@activity), class: 'btn-sm btn btn-outline-primary', id: "messages-btn"%>
