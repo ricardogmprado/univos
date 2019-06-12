@@ -1,18 +1,29 @@
-<%= form_tag activities_path, method: :get do %>
+<%= form_tag activities_path, id:"category-form", method: :get do %>
 
 <div class="filter-show">
-  <h3 class="text-left m-4">Filters</h3>
-  <% @categories.each_with_index do |category, index| %>
-
-    <p id="category-check" class="m-4">
-      <label for=""><%= category %></label><%= check_box_tag 'category[]', category, @selected_categories.include?(category), class:"mr-4"  %>
-      <i class="<%= @category_icons[index] %>"></i>
-    </p>
-  <% end %>
+  <h3>Filters</h3>
+  <div class="filter-grid text-center">
+    <% @categories.each_with_index do |category, index| %>
+        <div class="category-btn select-category" data-category ="<%= category.split(" ").join.delete("&") %>" id= "<%= category.split(" ").join.delete("&") %>cnt">
+          <p id="category-check" data-category ="<%= category.split(" ").join.delete("&") %>">
+            <i class="<%= @category_icons[index] %>" data-category ="<%= category.split(" ").join.delete("&") %>"></i>
+            <label data-category ="<%= category.split(" ").join.delete("&") %>" for=""><%= category%></label>
+            <%= check_box_tag 'category[]', category, @selected_categories.include?(category), class:"mr-4", hidden: true , id: "#{category.split(" ").join.delete("&")}"%>
+          </p>
+        </div>
+      <% end %>
+  </div>
     <div id="category-check" class="m-4">
-    <input value="<%= @selected_dates %>" type="date" name="date" id="activity_date" class="date-picker">
-    <%= submit_tag 'Filter', class: 'btn btn-outline-primary' %>
+      <div class="calendar">
+        <input value="<%= @selected_dates %>" type="date" name="date" id="activity_date" class="date-picker">
+      </div>
+      <div class="filter-btn">
+        <%= submit_tag 'Show activities', class: 'btn btn-outline-primary'%>
+      </div>
     </div>
 </div>
 <% end %>
+
+
+
 

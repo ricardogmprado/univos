@@ -4,6 +4,7 @@ class ActivitiesController < ApplicationController
   skip_after_action :verify_authorized, only: :index
 
   def index
+    # raise
     if request.location.longitude
       @activities = policy_scope(Activity).near([request.location.latitude, request.location.longitude], 200)
       # need all activities that do not have an appointment with current user
