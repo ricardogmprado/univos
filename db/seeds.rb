@@ -171,6 +171,8 @@ photo_urls = {
       },
   ]
 
+}
+
 
 avatars = [
  "https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg",
@@ -200,7 +202,8 @@ avatars.each do |avatar|
     password: "password",
     location: Faker::Address.street_address,
     gender: gender.sample,
-    age:  age.sample
+    age:  age.sample,
+    about_me: "none"
     )
     user.remote_photo_url = avatar
     user.save
