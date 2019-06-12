@@ -1,106 +1,52 @@
 
 <%= render 'shared/navbar' %>
-  <!-- BEGIN : chatHeader -->
-  <div class="chatHeader">
+<div class="chatHeader">
     <div class="headerTitle ">
       <%= link_to dashboard_path do %>
-<%= image_tag "http://www.vogelphoto.com/Photos/Backbutton.png", class: "activity-icon"%>
-
-<% end %>
-      <div class="Txt">
-        <div><strong><%= @activity.title %></strong></div>
-        <div>Chat room</div>
-      </div>
-      <%= link_to activity_appointments_path id: "See All Participants" do %>
-    <%= image_tag "https://cdn4.iconfinder.com/data/icons/silky-icon-user/60/users1-512.png", class: "activity-icon"%>
-     <% end %>
+      <%= image_tag "http://www.vogelphoto.com/Photos/Backbutton.png", class: "activity-icon"%>
+      <% end %>
+    <div class="Txt">
+      <h5><strong><%= @activity.title %></strong></h5>
+      <p>Chat room</p>
     </div>
-
+      <%= link_to activity_appointments_path id: "See All Participants" do %>
+        <%= image_tag "https://cdn4.iconfinder.com/data/icons/silky-icon-user/60/users1-512.png", class: "activity-icon"%>
+      <% end %>
+    </div>
 </div>
-  </div>
-  <!-- END : chatHeader -->
-
 <div class="container">
-
   <div class="chat-container">
-  <div class="chatContent">
-  <% @activity.messages.each do |message| %>
-
-    <% if message.user == current_user %>
-      <div class="user_name text-right">
-        <%= message.user.name %>
-      </div>
-      <div class="chat-column company">
-        <div class="item">
-          <div class="chat-message text-right"><%= message.content %>
+    <div class="chatContent">
+      <% @activity.messages.each do |message| %>
+        <% if message.user == current_user %>
+          <div class="user_name text-right">
+            <%= message.user.name %>
           </div>
-          <div class="message-date text-right"><%= message.created_at.strftime("%b %e, %l:%M %p") %>
+          <div class="chat-column company">
+            <div class="item">
+              <div class="chat-message text-right"><%= message.content %></div>
+              <div class="message-date text-right"><%= message.created_at.strftime("%b %e, %l:%M %p") %>
+              </div>
+            </div>
           </div>
+      <% else %>
+        <div class="user_name text-left">
+          <%= message.user.name %>
         </div>
-      </div>
-    <% else %>
-      <div class="user_name text-left">
-        <%= message.user.name %>
-      </div>
         <div class="chat-column customer">
           <div class="item">
-            <div class="chat-message text-left"><%= message.content %>
-
-            </div>
-            <div class="message-date text-left"><%= message.created_at.strftime("%b %e, %l:%M %p") %>
-
-            </div>
+            <div class="chat-message text-left"><%= message.content %></div>
+            <div class="message-date text-left"><%= message.created_at.strftime("%b %e, %l:%M %p") %></div>
           </div>
         </div>
-    <% end %>
-
-    <div class="user_name text-left">
-        Jessie J
-      </div>
-        <div class="chat-column customer">
-          <div class="item">
-            <div class="chat-message text-left">Hello lsjdfnv kdjn kdhsk jdbjsd kjsd ij sdbsbd ajhsdbcjha dj skhd jsd sdb kdhbc bsdj?
-
-            </div>
-            <div class="message-date text-left"><%= message.created_at.strftime("%b %e, %l:%M %p") %>
-
-            </div>
-          </div>
-        </div>
-<!--             <div class="chat-message">
- -->
-<!-- <p><%#= message.user.name %></p> -->
-            <!--   <p><%#= message.content %></p>
-            </div>
-
-            <div class="message-date"><%#= message.created_at.strftime("%b %e, %l:%M %p") %></div>
- -->
-          <% end %>
-
-<!--       </div>
- -->
+      <% end %>
+    </div>
+  </div>
+      <% end %>
 </div>
-
-  <!-- END : chatContent -->
-
-  <!-- BEGIN : chatSend -->
-
-  <!-- END : chatSend -->
-</div>
-</div>
-
-  <%= simple_form_for [@activity, @message], wrapper: :inline_form, html: { class: 'form-inline' }  do |f| %>
+<div class="textmsg-box">
+<%= simple_form_for [@activity, @message], wrapper: :inline_form, html: { class: 'form-inline' }  do |f| %>
     <%= f.input :content, label: false, placeholder: "Write message..." %>
-    <%= f.button :submit , "send" , class: 'btn btn-outline-success' %>
+    <%= f.button :submit , "send" , id:"send-btn" %>
   <% end %>
-
-<!--   <div class="participants_button"> -->
-
-<!-- </div>
- -->
-
-
-
-<!--
-<input type="text" class="sendText" placeholder="Write Message...">
-    <div id="send-message"> -->
+</div>
