@@ -12,9 +12,10 @@
     width: 30vh;
     margin-bottom: 3vh;
     height: 5vh;
-    border-color: #040F3D;
+    border-color: #C6C4C5;
     color: #040F3D;
     text-align: center;
+    background-color: white;
   }
 }
 
@@ -32,15 +33,15 @@ flex-direction: column;
   color: #040F3D;
   display:flex;
   justify-content: center;
-  border: solid;
-  border-width: 1px;
+  border: solid #C6C4C5 1px;
   p {
   margin: 0px !important;
 }
 }
 
-.selected {
+.category-btn.select-category.selected {
   background-color: #4BFFA5;
+  border: none;
 }
 
 .filter-grid {
