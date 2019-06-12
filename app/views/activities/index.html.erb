@@ -17,13 +17,16 @@
 
       <div class="card-trip-infos">
         <div>
-          <h6 class="location-category"><%= @activity.meeting_point %> • <%= @activity.category %></h6>
-          <h2><%= @activity.title %></h2>
-          <p><%= @activity.description %></p>
+          <div class="activity-info">
+            <h6 class="location-category text-center">
+              <%= @activity.meeting_point %> • <%= @activity.category %></h6>
+            <h2><%= @activity.title %></h2>
+            <p><%= @activity.description[0..50] %>...</p>
+          </div>
           <div class="icon-info">
-            <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
-            <p><i class=" far fa-clock"></i> <%= @activity.date %></p>
             <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
+            <p><i class=" far fa-clock"></i> <%= @activity.date.strftime("%b %e, %l:%M %p") %></p>
+            <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
           </div>
         </div>
       </div>

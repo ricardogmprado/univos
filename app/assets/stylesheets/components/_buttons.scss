@@ -3,6 +3,12 @@
   width: 85px;
 }
 
+// in activity show
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
 #regular-button {
   color: #040F3D;
   border-color: #4BFFA5;
@@ -41,3 +47,41 @@
   background-color: #4BFFA5;
   width: 150px;
 }
+
+#bottom-button {
+  margin-top: 8px;
+  width: 150px;
+  color: #040F3D;
+  border-color: #4BFFA5;
+  background-color: #4BFFA5;
+}
+
+.delete-user {
+    color: white;
+  border-color: #b51f1f;
+  background-color: #b51f1f;
+  width: 115px;
+  font-size:15px;
+  }
+
+
+  .edit-profile-btn {
+    color: white;
+  border-color: #e8873a;
+  background-color: #e8873a;
+  width: 108px;
+  }
+
+  .log-out-btn {
+    color: white;
+    background-color: #040F3D;
+    width: 108px;
+    font-size: 15px;
+  }
+#facebook-btn {
+  color: #040F3D;
+  border-color: #4BFFA5;
+  background-color: #4BFFA5;
+  width: 245px;
+}
+
