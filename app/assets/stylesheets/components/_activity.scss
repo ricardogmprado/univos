@@ -40,7 +40,6 @@
 
 .card-trip .location-category {
   text-transform: uppercase;
-  color: gray;
   font-size: 13px;
   font-weight: bold;
 }
@@ -85,4 +84,13 @@
 
 .description {
   padding-top: 8px;
+}
+
+.uniter-section {
+  border-top: 1px solid rgba(4,15,61,0.1);
+  padding-top: 4px;
+  a {
+    color: #040F3D;
+
+  }
 }

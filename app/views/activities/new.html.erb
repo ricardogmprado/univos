@@ -7,9 +7,12 @@
     <%= f.input :number_of_people %>
     <%= f.input :date %>
     <%= f.input :meeting_point %>
+    <%= f.input :latitude, as: :hidden %>
+    <%= f.input :longitude, as: :hidden %>
     <%#= f.input :gender %>
     <%#= f.input :min_age %>
     <%#= f.input :max_age %>
+
     <%= f.input :photo %>
     <%= f.button :submit, class: 'btn btn-outline-success' %>
   <% end %>
