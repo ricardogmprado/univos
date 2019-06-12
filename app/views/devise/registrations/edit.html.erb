@@ -18,6 +18,7 @@
                 autofocus: true,
                 input_html: { autocomplete: "age" }%>
     <%= f.input :gender,
+                as: :radio_buttons, collection: [['0', 'female'], ['1', 'male']], label_method: :second, value_method: :first,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "gender" }%>
