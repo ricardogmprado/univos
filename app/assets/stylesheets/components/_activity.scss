@@ -46,15 +46,14 @@
 
 .card-trip-infos {
   padding: 3vh 3vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+
   position: relative;
+    height: 40vh;
 }
 
 .card-trip-infos .card-trip-user {
   position: absolute;
-  height: 42vh;
+
 
 }
 
