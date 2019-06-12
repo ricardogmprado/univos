@@ -10,34 +10,24 @@
         <div class="activity-info">
           <h6 class="location-category text-center">
             <%= @activity.meeting_point %> • <%= @activity.category %></h6>
-        <div class="d-flex justify-content-between">
-          <h2><%= @activity.title %></h2>
-          <div class="admin-button">
-            <% if policy(@activity).edit? %>
-            <%= link_to "Edit", edit_activity_path(@activity), class: 'btn btn-outline-primary', id: 'edit-btn' %>
-            <% end %>
+          <div class="d-flex justify-content-between mt-3">
+            <h2><%= @activity.title %></h2>
 
-            <% if policy(@activity).destroy? %>
-              <%= link_to "Delete", activity_path(@activity), method: :delete, class: 'btn btn-outline-danger', data: {confirm: "Are you sure?"} , id: 'delete-btn' %>
-            <% end %>
           </div>
-
+          <div class="icon-info">
+            <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
+            <p><i class=" far fa-clock"></i> <%= @activity.date.strftime("%b %e, %l:%M %p") %></p>
+            <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
+          </div>
+          <div class="description">
+            <p><%= @activity.description %></p>
+          </div>
         </div>
-        </div>
-        <div class="icon-info">
-          <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
-          <p><i class=" far fa-clock"></i> <%= @activity.date.strftime("%b %e, %l:%M %p") %></p>
-          <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
-        </div>
-        <div class="description">
-          <p><%= @activity.description %></p>
-
-        </div>
-        <div class="my-3">
+        <div class="uniter-section">
           <h2 class="pt-2">About the Uniter</h2>
-          <div class="d-flex justify-content-between">
-            <p><strong><%= @activity.user.name %></strong></p>
-            <div><%= cl_image_tag @activity.user.photo, class: "avatar" %></div>
+          <div class="d-flex justify-content-between align-items-center">
+            <p><strong><%= link_to @activity.user.name, user_path(@activity.user) %></strong></p>
+            <div class="pr-3"><%= cl_image_tag @activity.user.photo, class: "avatar" %></div>
 
           </div>
           <div class="pt-2">
@@ -46,11 +36,15 @@
           </div>
         </div>
 
-        <div class="buttons">
+        <div>
           <% if policy(@activity).confirmed? %>
-            <%= link_to "see messages", activity_messages_path(@activity), class: 'btn', id: 'bottom-button' %>
+            <div class="card-activity-buttons">
+              <%= link_to raw('<i class="far fa-comments"></i> Messages'), activity_messages_path(@activity), class: 'btn-sm btn btn-outline-primary', id: "messages-btn"%>
+            </div>
             <% else %>
-            <%= link_to "Join Activity", activity_appointments_path(@activity, show: "show", status: 'confirmed'), method: :post, class: 'btn', id: 'bottom-button'%>
+            <div class="card-activity-buttons">
+              <%= link_to "Join Activity", activity_appointments_path(@activity, show: "show", status: 'confirmed'), method: :post, class: 'btn-sm btn btn-outline-primary', id: "messages-btn"%>
+            </div>
           <% end %>
         </div>
       </div>
@@ -59,7 +53,7 @@
   <div
   id="map"
   style="width: 100%;
-  height: 600px;"
+  height: 400px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>

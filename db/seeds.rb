@@ -42,6 +42,7 @@ photo_urls = {
       },
   ],
 
+
   "art & culture" => [
       {
         image: "https://images.pexels.com/photos/1313814/pexels-photo-1313814.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&w=300",
@@ -59,6 +60,7 @@ photo_urls = {
         description: "Who wants to join the colour run?"
       },
   ],
+
 
   "Music & Dance" => [
     {
@@ -95,6 +97,7 @@ photo_urls = {
         description: "I'll take you to my favourite spots to do tricks around the area and we can stop for hot chocolate after"
       },
   ],
+
 
   "Nightlife" => [
      {
@@ -167,7 +170,7 @@ photo_urls = {
         description: "Starting to socialise my puppy and I want to get to know other dog owners to share tips in being a new puppy mom!",
       },
   ]
-}
+
 
 avatars = [
  "https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg",
@@ -185,7 +188,9 @@ avatars = [
 gender = ["male", "female"]
 age = (25..45).to_a
 status = ["confirmed", "rejected", "saved"]
+
 categories = ['sports', 'food & drinks', 'art & culture', 'Music & Dance', 'Hobbies',  'Nightlife', 'Outdoors', "Pets"]
+
 
 puts "seeding Users"
 avatars.each do |avatar|

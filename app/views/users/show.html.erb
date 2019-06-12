@@ -1,27 +1,30 @@
-<%= link_to dashboard_path do %>
-<%= image_tag "http://www.vogelphoto.com/Photos/Backbutton.png", class: "activity-icon"%>
-
-<% end %>
+<%= render 'shared/navbar' %>
 
 <% if !@user.photo.blank? %>
-<div class="user-profile"><%= cl_image_tag @user.photo%></div>
+  <div class="user-profile"><%= cl_image_tag @user.photo%></div>
 <% else %>
-<img src="<%= @user.facebook_picture_url %> " alt="" >
+  <img src="<%= @user.facebook_picture_url %> " alt="" >
 <% end %>
 
-<div class="user-profile-div">
-  <ul style="text-align:center;" >
-    <li class="profile-info"><strong><%= @user.name %></strong></li>
-    <li ><%= @user.gender %></li>
-    <li><%= @user.age %></li>
-  </ul>
+<div class="profile-div">
+    <div class="basic-info-section">
+      <p><strong><%= @user.name %></strong>, <%= @user.age %></p>
+      <p><%= @user.gender %></p>
+    </div>
+    <% if !@user.about_me.blank? %>
+      <div class="about-me-section">
+        <p><strong>About me</strong></p>
+        <div>
+          <p><%= @user.about_me %></p>
+        </div>
+      </div>
+    <% end %>
 </div>
 
- <div class="user-div" style="text-align:center;">
+  <div class="user-div">
     <% if @user == current_user %>
     <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-outline-secondary edit-profile-btn" %>
-    <% end %>
 
     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary log-out-btn" %>
+    <% end %>
   </div>
-

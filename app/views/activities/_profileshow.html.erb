@@ -1,25 +1,24 @@
 
 <div class="profile-show">
-
-<!--   <% if @user.nil? && @user == current_user %>
-  <% end %> -->
-
   <% if !current_user.photo.blank? %>
-    <div class="user-profile"><%= cl_image_tag current_user.photo%></div>
+    <div class="user-profile">
+      <%= cl_image_tag current_user.photo%>
+    </div>
   <% else %>
-    <img src="<%= current_user.facebook_picture_url %> " alt="" >
+    <div class="user-profile">
+      <%= cl_image_tag current_user.facebook_picture_url %>
+    </div>
   <% end %>
-<div class="profile-div">
-  <ul style="text-align:center;" >
-    <li><strong><%= current_user.name %></strong></li>
-    <li><%= current_user.age %></li>
-    <li><%= current_user.about_me %></li>
-  </ul>
-</div>
-  <div class="buttons m-4">
+  <div class="profile-div">
+      <p><strong><%= current_user.name %></strong></p>
+      <p><%= current_user.age %></p>
+      <p><%= current_user.about_me %></p>
+  </div>
+  <div class="user-div">
+    <% if @user == current_user %>
     <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-outline-secondary edit-profile-btn" %>
 
     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary log-out-btn" %>
-
+    <% end %>
   </div>
 </div>

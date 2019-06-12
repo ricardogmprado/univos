@@ -34,7 +34,7 @@
           <% end %>
 
           </div>
-           <p><%= appointment.activity.description[0..90] %>...</p>
+           <p><%= appointment.activity.description[0..50] %>...</p>
           <p><%= appointment.activity.date.strftime("%b %e, %l:%M %p") %></p>
         </div>
         <div class="card-activity-buttons">
@@ -56,7 +56,7 @@
 
       </div>
      <% end %>
-     <div class="card-activity-infos">
+    <div class="card-activity-infos">
       <div class="card-activity-infos-details">
           <div class="d-flex justify-content-center">
               <h5 class="mb-0"><%= activity.title %></h5>
@@ -64,12 +64,12 @@
             <i class=" ml-3 fas fa-search-plus"></i>
           <% end %>
           </div>
-           <p><%= activity.description[0..80] %>...</p>
+           <p><%= activity.description[0..50] %>...</p>
           <p><%= activity.date.strftime("%b %e, %l:%M %p") %></p>
         </div>
-             <div class="card-activity-buttons">
+        <div class="card-activity-buttons">
            <%= link_to raw('<i class="far fa-comments"></i> Messages'), activity_messages_path( activity), class: 'btn-sm btn btn-outline-primary', id: "messages-btn"%>
-      </div>
+        </div>
     </div>
   </div>
   <% end %>
@@ -91,7 +91,7 @@
             <i class=" ml-3 fas fa-search-plus"></i>
           <% end %>
         </div>
-          <p><%= activity.description[0..80] %>...</p>
+          <p><%= activity.description[0..50] %>...</p>
           <p><%= activity.date.strftime("%b %e, %l:%M %p") %></p>
       </div>
       <div class="card-activity-buttons">

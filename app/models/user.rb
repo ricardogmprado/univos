@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :activities, dependent: :destroy #activities that the user created
   has_many :messages, dependent: :destroy
   validates :name, presence: true, on: :update
-  validates :location, presence: true, on: :update
+  # validates :location, presence: true, on: :update
   validates :gender, presence: true, on: :update
   validates :age, presence: true, on: :update
   mount_uploader :photo, UserPhotoUploader

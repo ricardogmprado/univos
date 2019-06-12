@@ -4,11 +4,6 @@
   &.show {
     height: 100%;
   }
-  ul {
-    list-style-type: none;
-    padding-left: 50px;
-    text-align: left;
-  }
   .buttons {
     display: flex;
     justify-content: space-around;
@@ -22,34 +17,41 @@
 }
 
 .profile-div {
-padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
 }
 
 .user-profile {
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
   background-repeat: no-repeat;
   img {
-    height: 280px;
-    width: 280px;
+    height: 240px;
+    width: 240px;
     object-fit: cover;
     background-position: center;
     border-radius: 50%;
-    padding: 28px;
-    margin-left: 63px;
-    margin-right: 63px;
-    margin-bottom: 9px;
-    margin-top: 20px;
-  }
-}
 
-.user-profile-div {
-   list-style-type:none;
-   padding-right: 40px;
-  ul {
-  list-style-type: none;
   }
 }
 
 .user-div {
   justify-content: space-around;
   display: flex;
+}
+
+
+.about-me-section {
+  padding: 32px 8px;
+  padding-bottom: 0;
+  border-top: 1px solid rgba(4,15,61,0.1);
+
+}
+
+.basic-info-section {
+  padding-bottom: 16px;
 }
