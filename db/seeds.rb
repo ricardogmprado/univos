@@ -267,7 +267,7 @@ puts "seeding Female Users"
       location: Faker::Address.street_address,
       gender: "Female",
       age:  age.sample,
-      about_me: "none",
+      about_me: avatar[:about_me],
       remote_photo_url: avatar[:image]
       )
       user.save
