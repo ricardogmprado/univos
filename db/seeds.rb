@@ -174,39 +174,103 @@ photo_urls = {
 }
 
 
-avatars = [
- "https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg",
- "https://bittaxer.com/wp-content/uploads/2018/03/danielle-profile-bittaxer.jpg",
- "https://www.drupal.org/files/user-pictures/picture-2214664-1548465769.png",
- "https://i.dailymail.co.uk/i/pix/2016/05/23/22/348B850600000578-3605456-image-m-32_1464040491071.jpg",
- "https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg",
- "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiIw7W2uuPiAhUTEnIKHe-QB8MQjRx6BAgBEAU&url=https%3A%2F%2Fwww.blinkinc.com%2Fprofessional-profile-photography&psig=AOvVaw0kubyYcK534w7KV6u7WN9x&ust=1560412105926234",
- "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg",
- "https://www.portraitprofessional.com/img/page-images/homepage/v18/slider/layers-B.jpg",
- "https://www.keatleyphoto.com/wp-content/uploads/2016/06/IMG_2589.jpg"
+male_avatars = [
+  {
+ image: "https://meiro.io/wp-content/uploads/2019/05/profile-picture-Pavel-Bulowski-small-for-internet.jpg",
+ name: "Noah Reed",
+ about_me: " I was working as strategy consultant in Switzerland."
+
+},
+
+{
+ image: "https://www.drupal.org/files/user-pictures/picture-2214664-1548465769.png",
+ name: "Callum Brown",
+ about_me: "I'm from Florida, where I've been working in Emergency Management for the past couple of years since coming back from teaching English in South Korea."
+},
+
+ {
+  image: "https://www.face-agency.co.uk/images/uploads/models/large/1498810136-21.jpg",
+ name: "Liam Dill",
+ about_me: "I have a lot of time off, and in that free time I travel (often by bicycle) and try to skill up in programming."
+},
+
+{
+ image: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg",
+ name: "Mason Alexander",
+ about_me: "Worked in restaurant for 10 years but got tired of working same job, want to change career and work in different countries."
+},
+
+{
+ image: "https://www.keatleyphoto.com/wp-content/uploads/2016/06/IMG_2589.jpg",
+ name: "Ben Summers",
+ about_me:"Worked as a financial analyst and decided to learn coding for more freedom at work. "
+  }
+]
+
+female_avatars = [
+  {
+image:"https://bittaxer.com/wp-content/uploads/2018/03/danielle-profile-bittaxer.jpg",
+name: "Jessica Matthews",
+about_me: "I'm from Oklahoma City in the United States of America. Most recently worked as a waitress."
+},
+
+{
+image:"https://i.dailymail.co.uk/i/pix/2016/05/23/22/348B850600000578-3605456-image-m-32_1464040491071.jpg",
+name: "Bella Jennings",
+about_me: "Hi! I'm from Minnesota, United States. I am currently in a graduate school program studying special education/speech-language pathology."
+},
+
+{
+image:"https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg",
+name: "Hailey Brown",
+about_me: "Product manager from New York"
+},
+
+{
+image: "https://www.portraitprofessional.com/img/page-images/homepage/v18/slider/layers-B.jpg",
+name: "Kelly Fox",
+about_me: "I finished school and started my gap year. I was working for a few months now and decided it is time to learn something new."
+}
+
 ]
 
 
 gender = ["male", "female"]
-age = (25..45).to_a
+age = (25..39).to_a
 status = ["confirmed", "rejected", "saved"]
 
 categories = ['sports', 'food & drinks', 'art & culture', 'Music & Dance', 'Hobbies',  'Nightlife', 'Outdoors', "Pets"]
 
 
-puts "seeding Users"
-avatars.each do |avatar|
-  user = User.new(
-    name: Faker::FunnyName.name,
-    email: Faker::Internet.email,
-    password: "password",
-    location: Faker::Address.street_address,
-    gender: gender.sample,
-    age:  age.sample,
-    about_me: "none"
-    )
-    user.remote_photo_url = avatar
-    user.save
+puts "seeding Male Users"
+  male_avatars.each do |avatar|
+    p avatar
+    user = User.new(
+      name: avatar[:name],
+      email: Faker::Internet.email,
+      password: "password",
+      location: Faker::Address.street_address,
+      gender: "Male",
+      age:  age.sample,
+      about_me: avatar[:about_me],
+      remote_photo_url: avatar[:image]
+      )
+      user.save
+end
+
+puts "seeding Female Users"
+  female_avatars.each do |avatar|
+    user = User.new(
+      name: avatar[:name],
+      email: Faker::Internet.email,
+      password: "password",
+      location: Faker::Address.street_address,
+      gender: "Female",
+      age:  age.sample,
+      about_me: "none",
+      remote_photo_url: avatar[:image]
+      )
+      user.save
 end
 
 puts "seeding Activities"
