@@ -7,17 +7,14 @@ h1 {
   color: white;
   font-weight: bold;
   font-size: 64px;
- padding-left: 32px;
- padding-top: 32px;
  margin: 0;
+ text-align: center;
 }
 h3 {
   color:#040F3D;
   font-weight:bold;
-  text-align: right;
-  justify-content: center;
- padding-right: 32px;
-font-size: 26px;
+font-size: 24px;
+ text-align: center;
 }
 }
 
@@ -26,14 +23,14 @@ font-size: 26px;
   align-items: center;
   display: flex;
   width: 100%;
-  padding-top: 5vh;
+  padding-top: 2vh;
   p {
     margin-bottom: 0px;
   }
 }
 
 .form-inputs {
-  width: 248px;
+  width: 260px;
   input {
   border-radius: 16px;
   border-color: #040F3D;
@@ -51,7 +48,8 @@ font-size: 26px;
   background-color: #040F3D;
   font-weight: bold;
   height: 48px;
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
+  margin-top: 2vh;
   font-size: 16px;
   display: flex;
   justify-content: center;
@@ -63,7 +61,7 @@ font-size: 26px;
 }
 
 input.btn {
-  width: 248px;
+  width: 260px;
   border-radius: 16px;
   border-color: #040F3D;
   background-color:#040F3D;
@@ -82,9 +80,9 @@ input.btn {
 }
 
 .title-login {
-//   h3 {
-//     text-align: right;
-//   }
+  display: flex;
+  flex-direction: column;
+  padding-top: 2vh;
 }
 
 .signin-links {
@@ -103,4 +101,22 @@ input.btn {
 
 .form-check-label.boolean.optional {
 color: #040F3D;
+}
+
+.logo-login {
+  display: flex;
+  justify-content: center;
+  padding-top: 6vh;
+  img {
+  height: 13vh;
+  width: 13vh; }
+}
+
+.division {
+text-align: center;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
 }
