@@ -1,49 +1,39 @@
 // Place all the styles related to the appointments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.card-product {
+.card-participants {
   overflow: hidden;
-  height: 120px;
+  height: 16vh;
   background: white;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
+.card-participants img {
+  height: 12vh;
+  width: 12vh;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: 40px;
-  margin-right: 35px;
+  // margin: 24px;
   padding: 5px;
+  margin-left: 32px;
 }
 
-.card-product h2 {
+.card-participants h2 {
   font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+  // font-weight: bold;
+  margin-left: 24px;
+  // text-align: center;
+  color: #040F3D;
+}
+
+h1 {
+  color: #040F3D;
   text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  margin: 24px;
 }
-
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
-}
-
-.user-link{
-  padding-bottom: 8px;
-  color:#040f3dc4;
-
-}
-
-
