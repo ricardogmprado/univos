@@ -40,13 +40,13 @@
           </div>
         </div>
       <% end %>
+      <% end %>
     </div>
   </div>
-      <% end %>
 </div>
 <div class="textmsg-box">
 <%= simple_form_for [@activity, @message], wrapper: :inline_form, html: { class: 'form-inline' }  do |f| %>
     <%= f.input :content, label: false, placeholder: "Write message..." %>
-    <%= f.button :submit , "send" , id:"send-btn" %>
+    <%= f.button :submit , "send", id:"send-btn" %>
   <% end %>
 </div>
