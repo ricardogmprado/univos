@@ -4,7 +4,11 @@
 <h1>All participants</h1>
   <% @activity.users.each do |user| %>
     <div class="card-participants">
+      <% if !current_user.photo.blank? %>
         <%= cl_image_tag user.photo %>
+      <% else %>
+        <%= cl_image_tag user.facebook_picture_url %>
+      <% end %>
       <div class="card-participants-infos">
       <%= link_to user_path(user) do %>
         <h2><strong><%= user.name %></strong>,  <%= user.age %></h2>
