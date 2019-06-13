@@ -7,7 +7,7 @@
     <a class="nav-link" id="Joining-tab" data-toggle="tab" href="#joining" role="tab" aria-controls="joining" aria-selected="false">Confirmed</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="created-tab" data-toggle="tab" href="#created" role="tab" aria-controls="created" aria-selected="false">Created by you</a>
+    <a class="nav-link" id="created-tab" data-toggle="tab" href="#created" role="tab" aria-controls="created" aria-selected="false">Yours</a>
   </li>
 </ul>
 
@@ -34,7 +34,7 @@
           <% end %>
 
           </div>
-           <p><%= appointment.activity.description[0..50] %>...</p>
+
           <p><%= appointment.activity.date.strftime("%b %e, %l:%M %p") %></p>
         </div>
         <div class="card-activity-buttons">
@@ -64,7 +64,7 @@
             <i class=" ml-3 fas fa-search-plus"></i>
           <% end %>
           </div>
-           <p><%= activity.description[0..50] %>...</p>
+
           <p><%= activity.date.strftime("%b %e, %l:%M %p") %></p>
         </div>
         <div class="card-activity-buttons">
@@ -91,7 +91,7 @@
             <i class=" ml-3 fas fa-search-plus"></i>
           <% end %>
         </div>
-          <p><%= activity.description[0..50] %>...</p>
+
           <p><%= activity.date.strftime("%b %e, %l:%M %p") %></p>
       </div>
       <div class="card-activity-buttons">

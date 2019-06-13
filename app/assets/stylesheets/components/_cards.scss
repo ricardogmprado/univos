@@ -1,10 +1,7 @@
-// .card-activity .card-activity-infos {
-//   padding: 10px;
-// }
 
 .card-activity {
   overflow: hidden;
-  height: 21vh;
+  height: 20vh;
   background: white;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -16,9 +13,9 @@
 }
 
 .card-activity-img {
-  height: 21vh;
-  width: 19vh;
-    background-size: cover;
+  height: 20vh;
+  width: 20vh;
+  background-size: cover;
   background-position: center
 
 }
@@ -30,7 +27,7 @@
   flex-direction: column;
   padding-left: 2vh;
     padding-right: 2vh;
-    border-top: 1px solid #80808029;
+    border-bottom: 1px solid #80808029;
   h5 {
     color: #040F3D;
     font-weight: bold;
@@ -40,7 +37,7 @@
 .card-activity-buttons {
     display: flex;
     justify-content: center;
-    padding-bottom: 8px;
+
 }
 
 .card-activity-infos-details a {

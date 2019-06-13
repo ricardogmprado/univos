@@ -3,6 +3,10 @@
   overflow: hidden;
   &.show {
     height: 100%;
+    position: sticky;
+    top: 66px;
+    background-color: white;
+    z-index: 100;
   }
   .buttons {
     display: flex;

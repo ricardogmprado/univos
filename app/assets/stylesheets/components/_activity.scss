@@ -7,7 +7,7 @@
 }
 
 .card-trip > img {
-  height: 480px;
+
   width: 100%;
   object-fit: cover;
 }
@@ -16,7 +16,7 @@
   font-size: 24px;
   font-weight: bold;
   margin: 0;
-  padding-bottom: 8px;
+  padding: 8px 0;
 
   a {
     text-decoration: none;
@@ -44,27 +44,29 @@
   font-weight: bold;
 }
 
-.card-trip .card-trip-infos {
-  padding: 24px 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+#index {
+  height: 40vh;
   position: relative;
+
+}
+
+
+.card-trip-infos {
+  padding: 24px;
+
+  position: relative;
+
 }
 
 .card-trip-infos .card-trip-user {
   position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+
+
 }
 
-.card-trip-index {
-  height: 84vh;
-}
 
 .index-picture {
-  height: 50vh;
+  height: 42vh;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -79,12 +81,19 @@
 
 .activity-info {
   text-align: left;
-  padding-bottom: 2vh;
+  padding-bottom: 24px;
 
 }
 
+.activity-picture {
+  height: 50vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
 .description {
-  padding-top: 8px;
+  padding: 8px 0 16px 0;
 }
 
 .uniter-section {
