@@ -3,7 +3,7 @@
 
   <% unless controller_name == "activities" && action_name == "index" %>
 
-  <button action="action" onclick="window.history.go(-1); return false;" type="button" value="" class="arrow" /><i class="fas fa-chevron-left"></i></button>
+  <button action="action" onclick="window.history.go(-1); return false;" type="button" value="" class="arrow" /><i class="fas fa-chevron-left fa-2x" style="color: color: #040F3DS;"></i></button>
 
   <% end %>
 
@@ -15,7 +15,7 @@
 
 
   <%= link_to dashboard_path, id: "dashboard", class: "navbar-brand" do %>
-    <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Gqc4Ch5MYwqhlcqs3ihuynFO0oAeFxixRMsyd3FmTIhdhJoarw" %>
+    <%= image_tag "u.png" %>
   <% end %>
 
   <% if !current_user.photo.blank? %>

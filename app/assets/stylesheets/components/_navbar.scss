@@ -4,7 +4,9 @@
   justify-content: space-between;
   background: white;
   height: 66px;
-
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 .navbar-brand {
   margin: 0;
@@ -16,7 +18,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 48px;
 }
 
 .index-navbar {
@@ -37,25 +39,38 @@
   }
 }
 .nav-link {
+  width: 112px;
   color: #040F3D;
   // font-weight: bold;
 }
 
 .nav-tabs .nav-link.active {
-  background-color: #E1E2E2;
-  color: #040F3D;
-  border-color: #E1E2E2;
+  background-color: #040F3D;
+  color: white;
+  font-weight: bold;
+  border-color: #040F3D;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+
 }
 
 .nav-item {
   text-align: center;
+  padding: 0;
 
+}
+.nav-tabs {
+  margin-top: 16px;
+  position: sticky;
+  top: 66px;
+  background-color: white;
+  z-index: 100;
 }
 
 .arrow {
   padding: 0;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: transparent;
   border-style: none;
 }

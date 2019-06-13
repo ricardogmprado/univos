@@ -16,7 +16,7 @@
   font-size: 24px;
   font-weight: bold;
   margin: 0;
-  padding-bottom: 8px;
+  padding: 8px 0;
 
   a {
     text-decoration: none;
@@ -44,11 +44,18 @@
   font-weight: bold;
 }
 
+#index {
+  height: 40vh;
+  position: relative;
+
+}
+
+
 .card-trip-infos {
-  padding: 3vh 3vh;
+  padding: 24px;
 
   position: relative;
-    height: 40vh;
+
 }
 
 .card-trip-infos .card-trip-user {
@@ -59,7 +66,7 @@
 
 
 .index-picture {
-  height: 40vh;
+  height: 42vh;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -74,12 +81,19 @@
 
 .activity-info {
   text-align: left;
-  padding-bottom: 2vh;
+  padding-bottom: 24px;
 
 }
 
+.activity-picture {
+  height: 50vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
 .description {
-  padding-top: 8px;
+  padding: 8px 0 16px 0;
 }
 
 .uniter-section {

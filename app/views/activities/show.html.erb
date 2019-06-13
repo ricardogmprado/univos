@@ -2,7 +2,7 @@
 <div class="maincard">
   <div class="card-trip">
     <div style="background-image:
-      url('<%= cl_image_path @activity.photo %> ')" class="index-picture" >
+      url('<%= cl_image_path @activity.photo %> ')" class="activity-picture" >
     </div>
 
     <div class="card-trip-infos">
@@ -50,6 +50,7 @@
       </div>
     </div>
   </div>
+</div>
   <div
   id="map"
   style="width: 100%;
@@ -57,4 +58,3 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
-</div>
