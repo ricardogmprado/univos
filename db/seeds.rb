@@ -239,7 +239,7 @@ gender = ["male", "female"]
 age = (25..39).to_a
 status = ["confirmed", "rejected", "saved"]
 
-categories = ['sports', 'food & drinks', 'art & culture', 'Music & Dance', 'Hobbies',  'Nightlife', 'Outdoors', "Pets"]
+categories = ['sports', 'food & drinks', 'art & culture', 'Music & Dance', 'Hobbies',  'Nightlife', 'Outdoors', "Pets", "Social Impact"]
 
 
 puts "seeding Male Users"
