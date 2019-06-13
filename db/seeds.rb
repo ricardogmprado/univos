@@ -237,6 +237,7 @@ about_me: "I finished school and started my gap year. I was working for a few mo
 
 gender = ["male", "female"]
 age = (25..39).to_a
+no_people = (3..10).to_a
 status = ["confirmed", "rejected", "saved"]
 
 categories = ['sports', 'food & drinks', 'art & culture', 'Music & Dance', 'Hobbies',  'Nightlife', 'Outdoors', "Pets", "Social Impact"]
@@ -282,7 +283,7 @@ categories.each do |category|
     description: activity[:description],
     date: Faker::Time.forward(2, :morning),
     meeting_point: ["Denpasar, Bali", "Singapore"].sample,
-    number_of_people: age.sample,
+    number_of_people: no_people.sample,
     category: category,
     remote_photo_url: activity[:image],
     user: User.all.sample)
