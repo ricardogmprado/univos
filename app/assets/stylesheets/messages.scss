@@ -2,126 +2,115 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* Setting */
-@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700&subset=latin-ext');
-*:focus {outline:none;}
-body {
-    font-family: 'Oxygen', sans-serif;
-    background-color: white;
-    margin:0;
+// @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700&subset=latin-ext');
+// *:focus {outline:none;}
+// {
+//     font-family: 'Oxygen', sans-serif;
+//     background-color: white;
+//     margin:0;
 
-}
 .container {
-    width: 100%;
-    margin: 0 auto;
-    border: 1px solid #ececec;
-    background-color: white;
-    box-shadow: 0px 0px 100px -33px #0000003d;
+  width: 100%;
+  margin: 0 auto;
+  height: calc(100vh - 154px);
+  border: 1px solid #ececec;
+  background-color: white;
+  box-shadow: 0px 0px 100px -33px #0000003d;
 }
-
-body .chatHeader {
-    background-color: #fff;
-    position: relative;
-    padding: 11px;
-    padding-left: 40px;
-    box-shadow: 0 6px 34px -6px #e0e0e0a6;
+.chatHeader {
+  background-color: #fff;
+  position: relative;
+  padding: 11px;
+  box-shadow: 0 6px 34px -6px #e0e0e0a6;
 }
-
-body .chatHeader > .BackBtn {
-    position: absolute;
-    color: #4BFFA5;
-    font-size: 28px;
-    width: 40px;
-    height: 56px;
-    line-height: 53px;
-    text-align: center;
-    left: 0;
-    top: 0;
+.chatHeader > .BackBtn {
+  position: absolute;
+  color: #4BFFA5;
+  font-size: 28px;
+  width: 40px;
+  height: 56px;
+  line-height: 53px;
+  text-align: center;
+  left: 0;
+  top: 0;
 }
-
-body .chatHeader > .headerTitle {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    color: #2f323ab0;
+.chatHeader > .headerTitle {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #2f323ab0;
 }
 
 
 .activity-icon {
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 
-    img {
+  img {
     width: 28px;
     height: 28px;
     text-align: right;
-    }
-}
-
-body .chatHeader > .headerTitle > .Txt {
-    flex: auto;
-    margin-left: 10px;
-}
-
-body .chatHeader > .headerTitle > .Txt > div {
-    font-size: 11px;
-    margin: 2px 0;
-
-}
-
- body  .chatSend {
-    height: 48px;
-  position:relative;
-}
-
-body .chatSend > .errorTxt {
-    position: absolute;
-    top: -27px;
-    left: 0;
-    right: 0;
-    background-color: #fb5c5c;
-    font-size: 12px;
-    padding: 7px;
-    color: #fff;
-    text-align: center;
-}
-
-body .chatSend > .sendText {
-    border: 0;
-    height: 48px;
-    padding-right: 55px;
-    padding-left: 20px;
-    font-size: 12px;
-    color: #6f6f6f;
-    display: block;
-    width: calc(100% - 75px);
-}
-
-body .chatSend > .sendText::-webkit-input-placeholder {
-    color: rgba(54, 153, 246, 0.38);
-}
-
-body .chatSend > .sendText::-moz-placeholder {
-    color: rgba(54, 153, 246, 0.38);
-
-.card-product {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
   }
 }
+.Txt {
+  flex: auto;
+  align-items: center;
+  text-align: center;
+}
+.chatHeader > .headerTitle > .Txt > div {
+  font-size: 11px;
+  margin: 2px 0;
 
-body .chatSend > .sendText:-ms-input-placeholder {
-    color: rgba(54, 153, 246, 0.38);
 }
 
-body .chatSend > .sendText:-moz-placeholder {
-    color: rgba(54, 153, 246, 0.38);
+.chatSend {
+  height: 48px;
+  position:relative;
 }
+.chatSend > .errorTxt {
+  position: absolute;
+  top: -27px;
+  left: 0;
+  right: 0;
+  background-color: #fb5c5c;
+  font-size: 12px;
+  padding: 7px;
+  color: #fff;
+  text-align: center;
+}
+.chatSend > .sendText {
+  border: 0;
+  height: 48px;
+  padding-right: 55px;
+  padding-left: 20px;
+  font-size: 12px;
+  color: #6f6f6f;
+  display: block;
+  width: calc(100% - 75px);
+}
+.chatSend > .sendText::-webkit-input-placeholder {
+  color: rgba(54, 153, 246, 0.38);
+}
+.chatSend > .sendText::-moz-placeholder {
+  color: rgba(54, 153, 246, 0.38);}
 
-body .chatSend > #send-message {
+
+  .card-product {
+    overflow: hidden;
+    height: 120px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+  }
+
+  .chatSend > .sendText:-ms-input-placeholder {
+    color: rgba(54, 153, 246, 0.38);
+  }
+  .chatSend > .sendText:-moz-placeholder {
+    color: rgba(54, 153, 246, 0.38);
+  }
+  .chatSend > #send-message {
     position: absolute;
     right: 0;
     top: 2px;
@@ -133,36 +122,29 @@ body .chatSend > #send-message {
     background-color: #fff;
     font-size: 20px;
     color: #3699f6;
-}
-
-body .chatContent {
+  }
+  .chatContent {
     height: 100%;
     padding: 20px;
     max-height: 100vh;
     overflow-y: auto;
     flex-grow: 1;
-}
-body .chatContent::-webkit-scrollbar {
-  width: 3px;
-}
-
-body .chatContent::-webkit-scrollbar-track {
-  background: #fafafa;
-}
-
-body .chatContent::-webkit-scrollbar-thumb {
-  background: #4bffa54d;
-}
-body .chatContent::-webkit-scrollbar-thumb:hover {
-  background: #4bffa54d;
-}
-
-body .chatContent .chat-column {
+  } .chatContent::-webkit-scrollbar {
+    width: 3px;
+  }
+  .chatContent::-webkit-scrollbar-track {
+    background: #fafafa;
+  }
+  .chatContent::-webkit-scrollbar-thumb {
+    background: #4bffa54d;
+  } .chatContent::-webkit-scrollbar-thumb:hover {
+    background: #4bffa54d;
+  }
+  .chatContent .chat-column {
     display: flex;
     margin-bottom: 20px;
-}
-
-body .chatContent .chat-column > .item > .chat-icon {
+  }
+  .chatContent .chat-column > .item > .chat-icon {
     width: 25px;
     height: 25px;
     line-height: 25px;
@@ -174,9 +156,8 @@ body .chatContent .chat-column > .item > .chat-icon {
     font-weight: 600;
     margin-right: 13px;
     margin-top: 5px;
-}
-
-body .chatContent .chat-column > .item > .chat-message {
+  }
+  .chatContent .chat-column > .item > .chat-message {
     background-color:  #4BFFA5;
     color: #040F3D;
     font-size: 12px;
@@ -184,46 +165,42 @@ body .chatContent .chat-column > .item > .chat-message {
     border-radius: 10px;
     line-height: 20px;
     margin-bottom: 3px;
-}
-
-body .chatContent .chat-column > .item > .message-date {
+  }
+  .chatContent .chat-column > .item > .message-date {
     font-size: 10px;
     color: #c6c4c5d1;
     font-weight: 600;
     margin-top: 1px;
-}
-
-body .chatContent .chat-column.company {
+  }
+  .chatContent .chat-column.company {
     flex-direction: row-reverse;
-}
-
-body .chatContent .chat-column.company > .item > .chat-icon {
+  }
+  .chatContent .chat-column.company > .item > .chat-icon {
     margin-right: 0;
     margin-left: 13px;
     background-color: #C6C4C5;
     color: white;
-}
-
-body .chatContent .chat-column.company > .item > .chat-message {
+  }
+  .chatContent .chat-column.company > .item > .chat-message {
     background-color: #4bffa54d;
     color: #040F3D;
-}
+  }
 
-.chat-message p {
-  margin: 0;
-}
+  .chat-message p {
+    margin: 0;
+  }
 
-.chat-column .item:last-child {
-}
+  .chat-column .item:last-child {
+  }
 
-.required.message_content {
-  flex-grow: 1;
-}
+  .required.message_content {
+    flex-grow: 1;
+  }
 
-.participants_button {
-  border-radius: 50px;
-  align: center;
-  font-family: 'Oxygen', sans-serif;
+  .participants_button {
+    border-radius: 50px;
+    align: center;
+  // font-family: 'Oxygen', sans-serif;
   font-size: 15px;
   background-color: #040F3D;
   color:  #4BFFA5;
@@ -240,3 +217,26 @@ body .chatContent .chat-column.company > .item > .chat-message {
   height: 75vh
 }
 
+#send-btn {
+  width: 12vh;
+  border-radius: 0px;
+  border-color: #040F3D;
+  background-color: #040F3D;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.textmsg-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#message_content{
+
+  height: 41px;
+  width: 100%;
+}
