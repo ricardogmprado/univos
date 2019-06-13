@@ -13,12 +13,26 @@
   padding: 0;
 }
 
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 48px;
+  width: 6vh;
+}
+
+.arrow {
+  padding: 0;
+  width: 6vh;
+  height: 30px;
+  background: transparent;
+  border-style: none;
+}
+
+.filter-button-index {
+  text-align: center;
+  width: 6vh;
 }
 
 .index-navbar {
@@ -49,8 +63,8 @@
   color: white;
   font-weight: bold;
   border-color: #040F3D;
-  border-bottom: none;
-  border-radius: 8px 8px 0 0;
+  border-radius: 16px 16px 0 0;
+  padding: 8px 0;
 
 }
 
@@ -60,21 +74,11 @@
 
 }
 .nav-tabs {
-  margin-top: 16px;
+  padding-top: 16px;
   position: sticky;
   top: 66px;
   background-color: white;
-  z-index: 100;
+  z-index: 0.5;
 }
 
-.arrow {
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  border-style: none;
-}
 
-.navbar-toggler-icon {
-
-}
