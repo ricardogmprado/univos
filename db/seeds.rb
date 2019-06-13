@@ -5,25 +5,25 @@ Activity.destroy_all
 User.destroy_all
 
 photo_urls = {
-  "sports" => [
+  "Sports & Fitness" => [
        {
-        image: "https://images.pexels.com/photos/1855269/pexels-photo-1855269.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=180&w=150",
+        image: "https://media.nbcphiladelphia.com/images/987*656/20180506_BCBSR_Pic+%2835%29.jpg",
         name: "Morning jog along the coast",
         description: "I'll be jogging the scenic route along the beach and stopping by at Jas cave after."
       },
        {
-        image: "https://resources.grasshopperadventures.com/e708614ea847a7feddbc513fd75b8e3d6cb8caf5/hoi-an-countryside-bike-tour-masthead-1.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Tandem_bicycle_riders_in_Virginia.jpg",
         name: "Countryside bike ride",
         description: "I discovered this route recently with stunning views of rice fields. We'll ride to the monkey forest of Sangeh",
       },
        {
-        image: "https://images.pexels.com/photos/1238729/pexels-photo-1238729.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=250&w=170",
+        image: "http://geoff-fordphoto.co.uk/wp-content/uploads/2017/05/Belper-7.jpg",
         name: "Rugby match for charity",
         description: "I am gathering a few people to form a small team for a friendly match this weekend. No experience necessary"
       },
   ],
 
-  "food & drinks" => [
+  "Food & Drinks" => [
 {
         image: "https://images.pexels.com/photos/1893609/pexels-photo-1893609.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=300",
         name: "French food for dinner at my house",
@@ -40,14 +40,19 @@ photo_urls = {
         name: "Pizza party @ Fabrika",
         description: "We should each get a pizza so we can sample the whole menu"
       },
+      {
+        image: "http://maba.blog/wp-content/uploads/2017/10/10350932-770x578.jpg",
+        name: "Brazilian Barbecue in Canggu",
+        description: "Who else loves Brazilian barbecue? Join me! "
+      },
   ],
 
 
-  "art & culture" => [
+  "Art & Culture" => [
       {
-        image: "https://images.pexels.com/photos/1313814/pexels-photo-1313814.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&w=300",
-        name: "Lantern shopping",
-        description: "I'll be jogging the scenic route along the beach and stopping by at Jas cave after."
+        image: "https://a.travel-assets.com/findyours-php/viewfinder/images/res60/42000/42496-Uluwatu-Temple.jpg",
+        name: "A day at Uluwatu Temple",
+        description: "I wanna visit the beautiful Uluwatu temple tomorrow. It would be cool if anyone wants to join me!"
       },
        {
         image: "https://images.pexels.com/photos/2121661/pexels-photo-2121661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300",
@@ -63,14 +68,9 @@ photo_urls = {
 
 
   "Music & Dance" => [
-    {
-        image: "https://www.broadway.org/galleries/666/items/thelionkingtour-01.jpg",
-        name: "Lion King musical",
-        description: "Looking for theatre enthusiasts to see this performance with and possibly meet for dinner before."
-      },
        {
-        image: "https://images.pexels.com/photos/1398624/pexels-photo-1398624.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400",
-        name: "Dance along the River ",
+        image: "https://i.pinimg.com/originals/cf/c3/21/cfc3210ef468b40da4508e00707a6653.jpg",
+        name: "Dance with me at the Beach",
         description: "I have an hour session booked and my friends cancelled! Let's dance!",
       },
        {
@@ -83,19 +83,14 @@ photo_urls = {
   "Hobbies" => [
     {
         image: "https://images.pexels.com/photos/378152/pexels-photo-378152.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&w=300",
-        name: "Photography session at Turtle Bay",
+        name: "Photography session",
         description: "Looking for other photography aficionados look for new spots to take awesome pics!"
       },
        {
-        image: "https://images.pexels.com/photos/415176/pexels-photo-415176.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=300",
+        image: "https://www.kcet.org/sites/kl/files/atoms/article_atoms/www.kcet.org/socal/departures/fieldguides/venice/VFG_Recreation_SkateboardRollerblade.jpg",
         name: "Skateboard session",
         description: "I love skateboarding. Let's go on a trip to Ubud where they have the best roads and parks for skating!",
-      },
-       {
-        image: "https://images.pexels.com/photos/848612/pexels-photo-848612.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=300",
-        name: "Snowboarding trip",
-        description: "I'll take you to my favourite spots to do tricks around the area and we can stop for hot chocolate after"
-      },
+      }
   ],
 
 
@@ -115,9 +110,14 @@ photo_urls = {
         name: "DJ Skism",
         description: "For all music lovers and fans of DJ Skism please join me in his final concert!"
       },
+      {
+        image: "https://d22ir9aoo7cbf6.cloudfront.net/wp-content/uploads/sites/4/2017/08/15774923_546476582215267_1481063576197727972_o.jpg",
+        name: "Le wagon @ the Lawn",
+        description: "Join batch #253 at the Lawn tonight. It's gonna be an awesome celebration!!"
+      },
   ],
 
-  "Outdoors" => [
+  "Outdoors & Adventure" => [
      {
         image: "https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=350",
         name: "Sunrise jungle and volcano trek",
@@ -136,11 +136,6 @@ photo_urls = {
   ],
 
   "Social Impact" => [
-    {
-        image: "https://images.pexels.com/photos/2306817/pexels-photo-2306817.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300",
-        name: "Pride parade",
-        description: "Looking for supporters of the community to join for drinks and celebration!"
-      },
        {
         image: "http://beaches.lacounty.gov/wp-content/uploads/2016/10/BeachCleaning.jpg",
         name: "Old Man's Beach clean up",
@@ -151,6 +146,11 @@ photo_urls = {
         name: "Soup kitchen volunteering",
         description: "Let's help the community before the holiday season!"
       },
+       {
+        image: "https://ksr-ugc.imgix.net/assets/011/318/265/ff5eaa67c2efbe39bd63c33ea49c5fa5_original.png?ixlib=rb-2.0.0&crop=faces&w=1552&h=873&fit=crop&v=1463680935&auto=format&frame=1&q=92&s=87bb6f2f5c8570b350a95ee6b67b3852",
+        name: "Visit a local orphanage with me",
+        description: "Kids at this orphanage are lovely, it's so important to them to have visitors. Do you want to join me?"
+      }
   ],
 
   "Pets" => [
@@ -162,10 +162,10 @@ photo_urls = {
        {
         image:  "https://i.etsystatic.com/13690831/r/il/bc4e64/1744508583/il_570xN.1744508583_loxc.jpg",
         name: "My dog's birthday",
-        description: "Inviting small friendly dogs to socialise at my Daschund's 3rd birthday party! ",
+        description: "Inviting small friendly dogs to socialise at the beach today",
       },
        {
-        image: "https://alldogsnc.com/wp-content/uploads/2018/08/puppysmalldogsocial.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-KbkcwoFowFZzU7fVSK3DFMMi58XWg3peqmQ1tAV0_EG-pfv3",
         name: "Puppies pet social",
         description: "Starting to socialise my puppy and I want to get to know other dog owners to share tips in being a new puppy mom!",
       },
@@ -178,32 +178,32 @@ male_avatars = [
   {
  image: "https://meiro.io/wp-content/uploads/2019/05/profile-picture-Pavel-Bulowski-small-for-internet.jpg",
  name: "Noah Reed",
- about_me: " I was working as strategy consultant in Switzerland."
+ about_me: " I like outdoor activities and Id love to meet people on the same vibe!"
 
 },
 
 {
  image: "https://www.drupal.org/files/user-pictures/picture-2214664-1548465769.png",
  name: "Callum Brown",
- about_me: "I'm from Florida, where I've been working in Emergency Management for the past couple of years since coming back from teaching English in South Korea."
+ about_me: "I consider myself a very social person, I wanna go out with cool people"
 },
 
  {
   image: "https://www.face-agency.co.uk/images/uploads/models/large/1498810136-21.jpg",
  name: "Liam Dill",
- about_me: "I have a lot of time off, and in that free time I travel (often by bicycle) and try to skill up in programming."
+ about_me: "Im new to this city, I wanna get to know all the activity possibilities around!"
 },
 
 {
  image: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg",
  name: "Mason Alexander",
- about_me: "Worked in restaurant for 10 years but got tired of working same job, want to change career and work in different countries."
+ about_me: "I love doing sports, it would be cool to do activities related to that with like-minded people"
 },
 
 {
  image: "https://www.keatleyphoto.com/wp-content/uploads/2016/06/IMG_2589.jpg",
  name: "Ben Summers",
- about_me:"Worked as a financial analyst and decided to learn coding for more freedom at work. "
+ about_me:"I love dogs, if you have a dog, let's be friends and go for a walk with our little friends"
   }
 ]
 
@@ -211,13 +211,13 @@ female_avatars = [
   {
 image:"https://bittaxer.com/wp-content/uploads/2018/03/danielle-profile-bittaxer.jpg",
 name: "Jessica Matthews",
-about_me: "I'm from Oklahoma City in the United States of America. Most recently worked as a waitress."
+about_me: "I'm a yoga instructor and i love having a balance and healthy life."
 },
 
 {
 image:"https://i.dailymail.co.uk/i/pix/2016/05/23/22/348B850600000578-3605456-image-m-32_1464040491071.jpg",
 name: "Bella Jennings",
-about_me: "Hi! I'm from Minnesota, United States. I am currently in a graduate school program studying special education/speech-language pathology."
+about_me: "Im here because im super bored.... What can i do?"
 },
 
 {
@@ -229,7 +229,7 @@ about_me: "Product manager from New York"
 {
 image: "https://www.portraitprofessional.com/img/page-images/homepage/v18/slider/layers-B.jpg",
 name: "Kelly Fox",
-about_me: "I finished school and started my gap year. I was working for a few months now and decided it is time to learn something new."
+about_me: "I literally don't know what do here. Im open for suggestions!!"
 }
 
 ]
@@ -240,7 +240,7 @@ age = (25..39).to_a
 no_people = (3..10).to_a
 status = ["confirmed", "rejected", "saved"]
 
-categories = ['sports', 'food & drinks', 'art & culture', 'Music & Dance', 'Hobbies',  'Nightlife', 'Outdoors', "Pets", "Social Impact"]
+categories = ["Sports & Fitness", "Food & Drinks", "Art & Culture", "Music & Dance", 'Hobbies',  'Nightlife', "Outdoors & Adventure" , "Pets", "Social Impact"]
 
 
 puts "seeding Male Users"
@@ -282,7 +282,7 @@ categories.each do |category|
     title: activity[:name],
     description: activity[:description],
     date: Faker::Time.forward(2, :morning),
-    meeting_point: ["Denpasar, Bali", "Singapore"].sample,
+    meeting_point: ["Denpasar, Bali"].sample,
     number_of_people: no_people.sample,
     category: category,
     remote_photo_url: activity[:image],
