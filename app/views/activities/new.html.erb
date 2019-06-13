@@ -2,7 +2,7 @@
   <h1>Create your activity</h1>
   <%= simple_form_for @activity do |f| %>
     <%= f.input :title %>
-    <%= f.input :description %>
+    <%= f.input :description, as: :text %>
     <%= f.input :category %>
     <%= f.input :number_of_people %>
     <%= f.input :date %>
