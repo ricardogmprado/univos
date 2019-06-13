@@ -4,7 +4,7 @@
 <h1>All participants</h1>
   <% @activity.users.each do |user| %>
     <div class="card-participants">
-      <% if !current_user.photo.blank? %>
+      <% if !user.photo.blank? %>
         <%= cl_image_tag user.photo %>
       <% else %>
         <%= cl_image_tag user.facebook_picture_url %>
