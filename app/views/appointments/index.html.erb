@@ -1,19 +1,21 @@
     <%#= link_to "View Profile", user_session_path, class: 'btn btn-outline-primary' %>
 <%= render 'shared/navbar' %>
+
+<h1>All participants</h1>
   <% @activity.users.each do |user| %>
-    <div class="card-product">
+    <div class="card-participants">
         <%= cl_image_tag user.photo %>
-      <div class="card-product-infos">
+      <div class="card-participants-infos">
       <%= link_to user_path(user) do %>
-        <h2 class ="user-link"><%= user.name %></h2>
+        <h2><strong><%= user.name %></strong>,  <%= user.age %></h2>
       <% end %>
+      </div>
 
      <% if policy(@activity).destroy? %>
      <% if !(current_user == user)  %>
       <%= link_to 'Delete User', activity_appointment_path(@activity, Appointment.where(activity_id: @activity.id, user_id: user.id)[0]), method: :delete, class: 'btn btn-outline-primary delete-user' %>
     <% end %>
     <% end %>
-      </div>
     </div>
   <% end %>
 
