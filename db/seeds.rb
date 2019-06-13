@@ -239,7 +239,7 @@ gender = ["male", "female"]
 age = (25..39).to_a
 status = ["confirmed", "rejected", "saved"]
 
-categories = ['sports', 'food & drinks', 'art & culture', 'Music & Dance', 'Hobbies',  'Nightlife', 'Outdoors', "Pets"]
+categories = ['sports', 'food & drinks', 'art & culture', 'Music & Dance', 'Hobbies',  'Nightlife', 'Outdoors', "Pets", "Social Impact"]
 
 
 puts "seeding Male Users"
@@ -267,7 +267,7 @@ puts "seeding Female Users"
       location: Faker::Address.street_address,
       gender: "Female",
       age:  age.sample,
-      about_me: "none",
+      about_me: avatar[:about_me],
       remote_photo_url: avatar[:image]
       )
       user.save
