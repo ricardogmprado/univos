@@ -10,7 +10,7 @@
   <%= link_to activity_path(@activity) do %>
     <div class="card-trip card-trip-index">
 
-      <%= cl_image_tag @activity.photo,  height: 350, crop: :thumb, class: "index-img" %>
+      <%= cl_image_tag @activity.photo,  height: 350, width: 350, crop: :thumb, class: "index-img" %>
         <% end %>
 
       <div class="card-trip-infos" id="index">
