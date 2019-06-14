@@ -3,12 +3,13 @@
   justify-content: space-evenly;
   background-color: white;
   align-items: center;
-  height: 8vh;
+  height: 10vh;
 
   border-top: 1px solid lightgrey;
   position: absolute;
   width: 100%;
   bottom: 0px;
+  z-index: 1;
   button {
     padding: 0;
     border: none;
@@ -22,6 +23,7 @@
   border-radius: 40%;
   color: #040F3D;
   padding: 8px;
+  border: 1px solid lightgrey;
 }
 
 #save {
