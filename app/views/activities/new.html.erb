@@ -1,9 +1,10 @@
 <div class="create-activity-form">
   <h1>Create your activity</h1>
-  <%= simple_form_for @activity do |f| %>
+  <%= simple_form_for @activity, html: { class: 'activity-form' } do |f| %>
     <%= f.input :title %>
     <%= f.input :description, as: :text %>
-    <%= f.input :category %>
+    <%= f.input :category,
+                collection: @categories, include_blank: false  %>
     <%= f.input :number_of_people %>
     <%= f.input :date %>
     <%= f.input :meeting_point %>

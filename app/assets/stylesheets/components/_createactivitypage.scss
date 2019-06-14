@@ -1,20 +1,20 @@
 .create-activity-form {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
- flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
 
- h1 {
+  h1 {
   margin-bottom: 32px;
   margin-top: 32px;
   color: #040F3D;
   font-weight: bold;
   text-align: center;
- }
+  }
 }
 
-#new_activity {
+.activity-form {
   width: 260px;
   input {
   border-radius: 16px;
