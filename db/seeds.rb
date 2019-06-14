@@ -8,13 +8,8 @@ photo_urls = {
   "Sports & Fitness" => [
        {
         image: "https://media.nbcphiladelphia.com/images/987*656/20180506_BCBSR_Pic+%2835%29.jpg",
-<<<<<<< HEAD
-        name: "Morning jog along the coast",
-        description: "I'll be jogging the scenic route along the beach and stopping by at Jas cave after."
-=======
         name: "Marathon prep",
         description: "I love running marathons, i'm looking for marathon prep buddies so we can all run together and get ready for the upcoming marathon in july"
->>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
       },
        {
         image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Tandem_bicycle_riders_in_Virginia.jpg",
@@ -22,11 +17,7 @@ photo_urls = {
         description: "I discovered this route recently with stunning views of rice fields. We'll ride to the monkey forest of Sangeh",
       },
        {
-<<<<<<< HEAD
-        image: "http://geoff-fordphoto.co.uk/wp-content/uploads/2017/05/Belper-7.jpg",
-=======
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf-1F8fcvt6fl2RNWR56HdwQLFmxgf-Cj8gf-fabKYamJCcg3q_w",
->>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
         name: "Rugby match for charity",
         description: "I am gathering a few people to form a small team for a friendly match this weekend. No experience necessary"
       },
@@ -124,19 +115,11 @@ photo_urls = {
         name: "Carl Cox @ Ulu Cliffhouse",
         description: "For all music lovers and fans of DJ Carl Cox please join me at this Ulu Cliffhouse event!"
       },
-<<<<<<< HEAD
-      {
-        image: "https://d22ir9aoo7cbf6.cloudfront.net/wp-content/uploads/sites/4/2017/08/15774923_546476582215267_1481063576197727972_o.jpg",
-        name: "Le wagon @ the Lawn",
-        description: "Join batch #253 at the Lawn tonight. It's gonna be an awesome celebration!!"
-      },
-=======
         {
         image: "https://media-cdn.tripadvisor.com/media/photo-s/08/ba/0d/2c/old-man-s.jpg",
         name: "Pub Crawl in Canggu",
         description: "Let me show you my favourite bars in Canggu. Join my friends and I tonight! Trust me, we are gonna have an amazing time together!"
       }
->>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
   ],
 
   "Outdoors & Adventure" => [
@@ -176,11 +159,7 @@ photo_urls = {
        {
         image: "https://ksr-ugc.imgix.net/assets/011/318/265/ff5eaa67c2efbe39bd63c33ea49c5fa5_original.png?ixlib=rb-2.0.0&crop=faces&w=1552&h=873&fit=crop&v=1463680935&auto=format&frame=1&q=92&s=87bb6f2f5c8570b350a95ee6b67b3852",
         name: "Visit a local orphanage with me",
-<<<<<<< HEAD
-        description: "Kids at this orphanage are lovely, it's so important to them to have visitors. Do you want to join me?"
-=======
         description: "Kids at this orphanage are lovely, it's so important for them to have visitors. Do you want to join me?"
->>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
       }
   ],
 
@@ -191,15 +170,9 @@ photo_urls = {
         description: "There are so many kind and lovely dogs that need a dad or mom. Adopting a dog is an act of love!"
       },
        {
-<<<<<<< HEAD
-        image:  "https://i.etsystatic.com/13690831/r/il/bc4e64/1744508583/il_570xN.1744508583_loxc.jpg",
-        name: "My dog's birthday",
-        description: "Inviting small friendly dogs to socialise at the beach today",
-=======
         image:  "http://r.ddmcdn.com/s_f/o_1/APL/uploads/2014/10/5-safety-tips-for-taking-dog-to-the-beach0.jpg",
         name: "A day at the beach with our dogs",
         description: "Inviting small friendly dogs to socialise at the beach today"
->>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
       },
        {
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-KbkcwoFowFZzU7fVSK3DFMMi58XWg3peqmQ1tAV0_EG-pfv3",
@@ -213,27 +186,16 @@ photo_urls = {
 
 male_avatars = [
   {
-<<<<<<< HEAD
  image: "https://meiro.io/wp-content/uploads/2019/05/profile-picture-Pavel-Bulowski-small-for-internet.jpg",
  name: "Noah Reed",
-=======
- image: "https://avatars2.githubusercontent.com/u/20383179?v=4",
- name: "Rayhan Abisha",
->>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
  about_me: " I like outdoor activities and Id love to meet people on the same vibe!"
 
 },
 
 {
-<<<<<<< HEAD
- image: "https://www.drupal.org/files/user-pictures/picture-2214664-1548465769.png",
- name: "Callum Brown",
- about_me: "I consider myself a very social person, I wanna go out with cool people"
-=======
  image: "https://avatars1.githubusercontent.com/u/48044627?v=4",
  name: "Darren Tonks",
  about_me: "I consider myself a very social person and I love surfing!"
->>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
 },
 
  {
@@ -249,13 +211,13 @@ male_avatars = [
 },
 
 {
-<<<<<<< HEAD
  image: "https://www.keatleyphoto.com/wp-content/uploads/2016/06/IMG_2589.jpg",
  name: "Ben Summers",
  about_me:"I love dogs, if you have a dog, let's be friends and go for a walk with our little friends"
-  }
-=======
- image: "https://avatars2.githubusercontent.com/u/20383179?v=4",
+  },
+
+ {
+  image: "https://avatars2.githubusercontent.com/u/20383179?v=4",
  name: "Rayhan Abisha",
  about_me:"I love dogs, if you have a dog, let's be friends and go for a walk with our little friends"
   },
@@ -269,18 +231,12 @@ male_avatars = [
  name: "Daniele Deltodesco",
  about_me: "I love drinking and travelling!"
 }
->>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
 ]
 
 female_avatars = [
   {
-<<<<<<< HEAD
-image:"https://bittaxer.com/wp-content/uploads/2018/03/danielle-profile-bittaxer.jpg",
-name: "Jessica Matthews",
-=======
 image:"https://avatars2.githubusercontent.com/u/48586241?v=4",
 name: "Alina Heimgartner",
->>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
 about_me: "I'm a yoga instructor and i love having a balance and healthy life."
 },
 
