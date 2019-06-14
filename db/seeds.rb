@@ -8,8 +8,13 @@ photo_urls = {
   "Sports & Fitness" => [
        {
         image: "https://media.nbcphiladelphia.com/images/987*656/20180506_BCBSR_Pic+%2835%29.jpg",
+<<<<<<< HEAD
         name: "Morning jog along the coast",
         description: "I'll be jogging the scenic route along the beach and stopping by at Jas cave after."
+=======
+        name: "Marathon prep",
+        description: "I love running marathons, i'm looking for marathon prep buddies so we can all run together and get ready for the upcoming marathon in july"
+>>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
       },
        {
         image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Tandem_bicycle_riders_in_Virginia.jpg",
@@ -17,7 +22,11 @@ photo_urls = {
         description: "I discovered this route recently with stunning views of rice fields. We'll ride to the monkey forest of Sangeh",
       },
        {
+<<<<<<< HEAD
         image: "http://geoff-fordphoto.co.uk/wp-content/uploads/2017/05/Belper-7.jpg",
+=======
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf-1F8fcvt6fl2RNWR56HdwQLFmxgf-Cj8gf-fabKYamJCcg3q_w",
+>>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
         name: "Rugby match for charity",
         description: "I am gathering a few people to form a small team for a friendly match this weekend. No experience necessary"
       },
@@ -36,9 +45,14 @@ photo_urls = {
 ",
       },
        {
-        image: "https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=300",
-        name: "Pizza party @ Fabrika",
-        description: "We should each get a pizza so we can sample the whole menu"
+        image: "http://www.hanoiairporttransfer.net/wp-content/uploads/2014/07/hanoi-street-food-tour.jpg",
+        name: "Local street food night",
+        description: "I wanna explore the possibilities of local street food here tonight. It would be cool if anyone else wants to come with me!"
+      },
+      {
+        image: "http://maba.blog/wp-content/uploads/2017/10/10350932-770x578.jpg",
+        name: "Brazilian Barbecue in Canggu",
+        description: "Who else loves Brazilian barbecue? My friends and I are organizing one tomorrow! "
       },
       {
         image: "http://maba.blog/wp-content/uploads/2017/10/10350932-770x578.jpg",
@@ -55,14 +69,14 @@ photo_urls = {
         description: "I wanna visit the beautiful Uluwatu temple tomorrow. It would be cool if anyone wants to join me!"
       },
        {
-        image: "https://images.pexels.com/photos/2121661/pexels-photo-2121661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300",
-        name: "Art gallery hopping",
-        description: "We'll stay around 20mins in each gallery and if we're lucky there'll be complementary wine/ finger food!",
+        image: "https://www.google.com/search?q=Traditional+Dances+in+Bali&safe=strict&source=lnms&tbm=isch&sa=X&ved=0ahUKEwivru2Q6-fiAhVUWX0KHTHMBEsQ_AUIECgB&biw=1440&bih=789#imgrc=bP58YqgzXjPnnM:",
+        name: "Traditional Dances in Bali",
+        description: "There's a very famous tradicional Balinese dance perfomance that i want to wacth, I got 3 tickets for free!",
       },
        {
-        image: "https://images.pexels.com/photos/1684187/pexels-photo-1684187.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=400&w=400",
-        name: "Colour Run on Echo Beach",
-        description: "Who wants to join the colour run?"
+        image: "http://new-hls.s3.amazonaws.com/hls/data/2839/website/content/photo/places-ubud-palace-compressor.jpg",
+        name: "Visiting Ubud Palace",
+        description: "I heard that Ubud Palace is one of the top cultural must-sees in Ubud. I'd love to visit this place with other amazing people! "
       },
   ],
 
@@ -106,31 +120,44 @@ photo_urls = {
         description: "Looking for a cool bunch of people to celebrate the full moon party",
       },
        {
-        image: "https://images.pexels.com/photos/426976/pexels-photo-426976.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=300",
-        name: "DJ Skism",
-        description: "For all music lovers and fans of DJ Skism please join me in his final concert!"
+        image: "https://www.google.com/search?safe=strict&hl=en-ID&authuser=0&biw=1440&bih=789&tbm=isch&sa=1&ei=JwwDXdneO4nPvgTgz6CICQ&q=ulu+cliffhouse&oq=ulu+cliff&gs_l=img.3.0.0l10.6404.6404..7933...0.0..0.77.77.1......0....1..gws-wiz-img.ru8kD0OjlDU#imgrc=-iivVmDX3sPqaM:",
+        name: "Carl Cox @ Ulu Cliffhouse",
+        description: "For all music lovers and fans of DJ Carl Cox please join me at this Ulu Cliffhouse event!"
       },
+<<<<<<< HEAD
       {
         image: "https://d22ir9aoo7cbf6.cloudfront.net/wp-content/uploads/sites/4/2017/08/15774923_546476582215267_1481063576197727972_o.jpg",
         name: "Le wagon @ the Lawn",
         description: "Join batch #253 at the Lawn tonight. It's gonna be an awesome celebration!!"
       },
+=======
+        {
+        image: "https://media-cdn.tripadvisor.com/media/photo-s/08/ba/0d/2c/old-man-s.jpg",
+        name: "Pub Crawl in Canggu",
+        description: "Let me show you my favourite bars in Canggu. Join my friends and I tonight! Trust me, we are gonna have an amazing time together!"
+      }
+>>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
   ],
 
   "Outdoors & Adventure" => [
      {
-        image: "https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=350",
-        name: "Sunrise jungle and volcano trek",
+        image: "https://media-cdn.tripadvisor.com/media/photo-s/08/e8/35/dd/mount-batur-bali-trekking.jpg",
+        name: "Mount Batur sunrise trek",
         description: "We will hike through the forest and along the crater rim until you get to the sunrise point. There we can have breakfast and relax while watching the sunrise with views of Mt Batur, Mt Agung and Mt Rinjani in Lombok.",
       },
        {
-        image: "https://images.pexels.com/photos/1020016/pexels-photo-1020016.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=300",
+        image: "https://www.airbnb.com/google_place_photo?photoreference=CmRaAAAAnENZN-NAjtorMnO8G031E1ScHbr1ey9CbzxkqneK6zdpagK76LCUf2Pw9VmH2N8dl0A-feZiLS18FJBS5dGqSN-IzEELEcotZjS121tM0pJeJmDVnYF23Ni6nmPTBTyNEhDqTMqtbdTaoH0dye9VygNEGhRid-qZvVcdkqOjvCTRpZfalKm3gA&maxwidth=640&maxheight=640&place_id=2540820",
         name: "Slide, cliffdive & swim in 5 waterfalls",
         description: "Looking for an adventurous bunch to hike to several waterfalls and cliffdive!",
       },
        {
         image: "https://images.pexels.com/photos/390051/surfer-wave-sunset-the-indian-ocean-390051.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=400",
         name: "Day trip to local surf spots",
+        description: "There are a lot of a beautiful old fishing villages dotted along the coast and within driving distance. There are secluded beaches which are great for surfing. Expect some good waves",
+      },
+       {
+        image: "https://motorbiketourexpert.com/wp-content/uploads/2013/01/IMG_3769-400x260.jpg",
+        name: "Epic motorbike trip to Java",
         description: "There are a lot of a beautiful old fishing villages dotted along the coast and within driving distance. There are secluded beaches which are great for surfing. Expect some good waves",
       },
   ],
@@ -149,20 +176,30 @@ photo_urls = {
        {
         image: "https://ksr-ugc.imgix.net/assets/011/318/265/ff5eaa67c2efbe39bd63c33ea49c5fa5_original.png?ixlib=rb-2.0.0&crop=faces&w=1552&h=873&fit=crop&v=1463680935&auto=format&frame=1&q=92&s=87bb6f2f5c8570b350a95ee6b67b3852",
         name: "Visit a local orphanage with me",
+<<<<<<< HEAD
         description: "Kids at this orphanage are lovely, it's so important to them to have visitors. Do you want to join me?"
+=======
+        description: "Kids at this orphanage are lovely, it's so important for them to have visitors. Do you want to join me?"
+>>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
       }
   ],
 
   "Pets" => [
     {
-        image: "http://www.loveakasha.com/wp-content/uploads/2018/10/IMG_7449-1140x760.jpg",
-        name: "Haloween dog dress up party",
-        description: "Let's discover the best spots to take photos "
+        image: "https://www.google.com/search?safe=strict&hl=en-ID&authuser=0&biw=1440&bih=789&tbm=isch&sa=1&ei=5QsDXe2HHoz_vASzw4-QCQ&q=adopt+dog&oq=adopt+dog&gs_l=img.3..0l5j0i5i30j0i8i30l4.1594.2845..2956...0.0..0.114.690.8j1......0....1..gws-wiz-img.......0i67.LQ9ItE7VTaI#imgrc=QU68R9ir8BjUuM:",
+        name: "Pet adoption day",
+        description: "There are so many kind and lovely dogs that need a dad or mom. Adopting a dog is an act of love!"
       },
        {
+<<<<<<< HEAD
         image:  "https://i.etsystatic.com/13690831/r/il/bc4e64/1744508583/il_570xN.1744508583_loxc.jpg",
         name: "My dog's birthday",
         description: "Inviting small friendly dogs to socialise at the beach today",
+=======
+        image:  "http://r.ddmcdn.com/s_f/o_1/APL/uploads/2014/10/5-safety-tips-for-taking-dog-to-the-beach0.jpg",
+        name: "A day at the beach with our dogs",
+        description: "Inviting small friendly dogs to socialise at the beach today"
+>>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
       },
        {
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-KbkcwoFowFZzU7fVSK3DFMMi58XWg3peqmQ1tAV0_EG-pfv3",
@@ -176,16 +213,27 @@ photo_urls = {
 
 male_avatars = [
   {
+<<<<<<< HEAD
  image: "https://meiro.io/wp-content/uploads/2019/05/profile-picture-Pavel-Bulowski-small-for-internet.jpg",
  name: "Noah Reed",
+=======
+ image: "https://avatars2.githubusercontent.com/u/20383179?v=4",
+ name: "Rayhan Abisha",
+>>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
  about_me: " I like outdoor activities and Id love to meet people on the same vibe!"
 
 },
 
 {
+<<<<<<< HEAD
  image: "https://www.drupal.org/files/user-pictures/picture-2214664-1548465769.png",
  name: "Callum Brown",
  about_me: "I consider myself a very social person, I wanna go out with cool people"
+=======
+ image: "https://avatars1.githubusercontent.com/u/48044627?v=4",
+ name: "Darren Tonks",
+ about_me: "I consider myself a very social person and I love surfing!"
+>>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
 },
 
  {
@@ -201,16 +249,38 @@ male_avatars = [
 },
 
 {
+<<<<<<< HEAD
  image: "https://www.keatleyphoto.com/wp-content/uploads/2016/06/IMG_2589.jpg",
  name: "Ben Summers",
  about_me:"I love dogs, if you have a dog, let's be friends and go for a walk with our little friends"
   }
+=======
+ image: "https://avatars2.githubusercontent.com/u/20383179?v=4",
+ name: "Rayhan Abisha",
+ about_me:"I love dogs, if you have a dog, let's be friends and go for a walk with our little friends"
+  },
+  {
+ image: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg",
+ name: "Christopher Foley",
+ about_me: "I love cycling, that's why i founded CycleThru! Let's ride together!"
+},
+  {
+ image: "https://avatars0.githubusercontent.com/u/45018589?v=4",
+ name: "Daniele Deltodesco",
+ about_me: "I love drinking and travelling!"
+}
+>>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
 ]
 
 female_avatars = [
   {
+<<<<<<< HEAD
 image:"https://bittaxer.com/wp-content/uploads/2018/03/danielle-profile-bittaxer.jpg",
 name: "Jessica Matthews",
+=======
+image:"https://avatars2.githubusercontent.com/u/48586241?v=4",
+name: "Alina Heimgartner",
+>>>>>>> 7f080c56ea62c9360bac819fcdb33e6ba5c4fb8e
 about_me: "I'm a yoga instructor and i love having a balance and healthy life."
 },
 

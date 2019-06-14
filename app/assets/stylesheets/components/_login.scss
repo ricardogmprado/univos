@@ -3,19 +3,19 @@ background-color: #4BFFA5;
 min-height: 100vh;
 height: 100%;
 width: 100%;
-h1 {
-  color: white;
-  font-weight: bold;
-  font-size: 64px;
- margin: 0;
- text-align: center;
-}
-h3 {
-  color:#040F3D;
-  font-weight:bold;
-font-size: 24px;
- text-align: center;
-}
+  h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 64px;
+   margin: 0;
+   text-align: center;
+  }
+  h3 {
+    color:#040F3D;
+    font-weight:bold;
+  font-size: 24px;
+   text-align: center;
+  }
 }
 
 .login-form {
@@ -39,17 +39,26 @@ font-size: 24px;
   color: #040F3D;
   font-weight: bold;
   font-size: 16px;
+  }
 }
 
+.form-group.text.required.activity_description {
+  textarea {
+  border-radius: 16px;
+  border-color: #040F3D;
+  border-width: 1px;
+  }
 }
 
-
-#activity_description {
-      border-radius: 16px;
-      border-color: #040F3D;
-      border-width: 1px;
+#activity_category {
+  border-radius: 16px;
+  border-color: #040F3D;
+  border-width: 1px;
 }
 
+#activity_photo {
+  border-radius: 0;
+}
 
 #facebook-btn {
   color: white;
