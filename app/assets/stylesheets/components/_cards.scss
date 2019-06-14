@@ -14,9 +14,11 @@
 
 .card-activity-img {
   height: 20vh;
-  width: 20vh;
+
   background-size: cover;
-  background-position: center
+  background-position: center;
+  min-height: 144px;
+  min-width: 144px;
 
 }
 
@@ -25,6 +27,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   width: 80vh;
   padding-left: 2vh;
   padding-right: 2vh;
@@ -33,6 +36,10 @@
     color: #040F3D;
     font-weight: bold;
   }
+}
+
+.card-activity {
+  min-height: 144px;
 }
 
 .card-activity-buttons {
