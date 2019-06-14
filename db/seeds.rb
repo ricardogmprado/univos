@@ -24,23 +24,26 @@ photo_urls = {
   ],
 
   "Food & Drinks" => [
-{
+      {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(18..20), [00,15,30,45].sample, 0),
         image: "https://images.pexels.com/photos/1893609/pexels-photo-1893609.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=300",
         name: "French food for dinner at my house",
         description: "I'll be making some of my favourite food and ."
       },
        {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(18..21), [00,15,30,45].sample, 0),
         image: "https://images.pexels.com/photos/1246957/pexels-photo-1246957.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=250&w=300",
         name: "Pizza making fiesta",
-        description: "We will shop for ingredients at Katu and we can prep and cook the meal together.
-",
+        description: "We will shop for ingredients at Katu and we can prep and cook the meal together.",
       },
        {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(19..23), [00,15,30,45].sample, 0),
         image: "http://www.hanoiairporttransfer.net/wp-content/uploads/2014/07/hanoi-street-food-tour.jpg",
         name: "Local street food night",
         description: "I wanna explore the possibilities of local street food here tonight. It would be cool if anyone else wants to come with me!"
       },
       {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(19..23), [00,15,30,45].sample, 0),
         image: "http://maba.blog/wp-content/uploads/2017/10/10350932-770x578.jpg",
         name: "Brazilian Barbecue in Canggu",
         description: "Who else loves Brazilian barbecue? My friends and I are organizing one tomorrow! "
@@ -50,6 +53,7 @@ photo_urls = {
 
   "Art & Culture" => [
       {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(8..15), [00,15,30,45].sample, 0),
         image: "https://a.travel-assets.com/findyours-php/viewfinder/images/res60/42000/42496-Uluwatu-Temple.jpg",
         name: "A day at Uluwatu Temple",
         description: "I wanna visit the beautiful Uluwatu temple tomorrow. It would be cool if anyone wants to join me!"
@@ -74,6 +78,8 @@ photo_urls = {
         description: "I have an hour session booked and my friends cancelled! Let's dance!",
       },
        {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(18..22), [00,15,30,45].sample, 0),
+
         image: "https://images.pexels.com/photos/270789/pexels-photo-270789.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=300",
         name: "All night Salsa Fiesta",
         description: "At my favourite spot with latin music, let's salsa the night away!"
@@ -96,21 +102,25 @@ photo_urls = {
 
   "Nightlife" => [
      {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(19..23), [00,15,30,45].sample, 0),
         image: "https://images.pexels.com/photos/625644/pexels-photo-625644.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=350",
         name: "Electronic Dance Party",
         description: "Looking for people who enjoy electonic music to dance the night away!"
       },
        {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(19..21), [00,15,30,45].sample, 0),
         image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=350&w=350",
         name: "Fireworks show @ B Club",
         description: "Looking for a cool bunch of people to celebrate the full moon party",
       },
        {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(19..23), [00,15,30,45].sample, 0),
         image: "https://www.google.com/search?safe=strict&hl=en-ID&authuser=0&biw=1440&bih=789&tbm=isch&sa=1&ei=JwwDXdneO4nPvgTgz6CICQ&q=ulu+cliffhouse&oq=ulu+cliff&gs_l=img.3.0.0l10.6404.6404..7933...0.0..0.77.77.1......0....1..gws-wiz-img.ru8kD0OjlDU#imgrc=-iivVmDX3sPqaM:",
         name: "Carl Cox @ Ulu Cliffhouse",
         description: "For all music lovers and fans of DJ Carl Cox please join me at this Ulu Cliffhouse event!"
       },
         {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(19..21), [00,15,30,45].sample, 0),
         image: "https://media-cdn.tripadvisor.com/media/photo-s/08/ba/0d/2c/old-man-s.jpg",
         name: "Pub Crawl in Canggu",
         description: "Let me show you my favourite bars in Canggu. Join my friends and I tonight! Trust me, we are gonna have an amazing time together!"
@@ -119,21 +129,26 @@ photo_urls = {
 
   "Outdoors & Adventure" => [
      {
+        date: date = DateTime.new(2019, 06, [14,15].sample, 5, [00,15,30,45].sample, 0),
         image: "https://media-cdn.tripadvisor.com/media/photo-s/08/e8/35/dd/mount-batur-bali-trekking.jpg",
         name: "Mount Batur sunrise trek",
         description: "We will hike through the forest and along the crater rim until you get to the sunrise point. There we can have breakfast and relax while watching the sunrise with views of Mt Batur, Mt Agung and Mt Rinjani in Lombok.",
       },
        {
+        date: date = DateTime.new(2019, 06, [14,15].sample, 8, [00,15,30,45].sample, 0),
         image: "https://www.airbnb.com/google_place_photo?photoreference=CmRaAAAAnENZN-NAjtorMnO8G031E1ScHbr1ey9CbzxkqneK6zdpagK76LCUf2Pw9VmH2N8dl0A-feZiLS18FJBS5dGqSN-IzEELEcotZjS121tM0pJeJmDVnYF23Ni6nmPTBTyNEhDqTMqtbdTaoH0dye9VygNEGhRid-qZvVcdkqOjvCTRpZfalKm3gA&maxwidth=640&maxheight=640&place_id=2540820",
         name: "Slide, cliffdive & swim in 5 waterfalls",
         description: "Looking for an adventurous bunch to hike to several waterfalls and cliffdive!",
       },
        {
+        date: date = DateTime.new(2019, 06, [14,15].sample, 8, [00,15,30,45].sample, 0),
         image: "https://images.pexels.com/photos/390051/surfer-wave-sunset-the-indian-ocean-390051.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=300&w=400",
         name: "Day trip to local surf spots",
         description: "There are a lot of a beautiful old fishing villages dotted along the coast and within driving distance. There are secluded beaches which are great for surfing. Expect some good waves",
       },
        {
+        date: date = DateTime.new(2019, 06, [14,15].sample, 9, [00,15,30,45].sample, 0),
+
         image: "https://motorbiketourexpert.com/wp-content/uploads/2013/01/IMG_3769-400x260.jpg",
         name: "Epic motorbike trip to Java",
         description: "There are a lot of a beautiful old fishing villages dotted along the coast and within driving distance. There are secluded beaches which are great for surfing. Expect some good waves",
@@ -158,18 +173,22 @@ photo_urls = {
       }
   ],
 
+
   "Pets" => [
     {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(10..15), [00,15,30,45].sample, 0),
         image: "https://www.google.com/search?safe=strict&hl=en-ID&authuser=0&biw=1440&bih=789&tbm=isch&sa=1&ei=5QsDXe2HHoz_vASzw4-QCQ&q=adopt+dog&oq=adopt+dog&gs_l=img.3..0l5j0i5i30j0i8i30l4.1594.2845..2956...0.0..0.114.690.8j1......0....1..gws-wiz-img.......0i67.LQ9ItE7VTaI#imgrc=QU68R9ir8BjUuM:",
         name: "Pet adoption day",
         description: "There are so many kind and lovely dogs that need a dad or mom. Adopting a dog is an act of love!"
       },
        {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(10..15), [00,15,30,45].sample, 0),
         image:  "http://r.ddmcdn.com/s_f/o_1/APL/uploads/2014/10/5-safety-tips-for-taking-dog-to-the-beach0.jpg",
         name: "A day at the beach with our dogs",
         description: "Inviting small friendly dogs to socialise at the beach today"
       },
        {
+        date: date = DateTime.new(2019, 06, [14,15].sample, rand(10..15), [00,15,30,45].sample, 0),
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-KbkcwoFowFZzU7fVSK3DFMMi58XWg3peqmQ1tAV0_EG-pfv3",
         name: "Puppies pet social",
         description: "Starting to socialise my puppy and I want to get to know other dog owners to share tips in being a new puppy mom!",
@@ -251,12 +270,13 @@ about_me: "I literally don't know what do here. Im open for suggestions!!"
 
 
 gender = ["male", "female"]
-age = (25..39).to_a
+age = (23..30).to_a
 no_people = (3..10).to_a
 status = ["confirmed", "rejected", "saved"]
 
 categories = ["Sports & Fitness", "Food & Drinks", "Art & Culture", "Music & Dance", 'Hobbies',  'Nightlife', "Outdoors & Adventure" , "Pets", "Social Impact"]
 
+time_morning = []
 
 puts "seeding Male Users"
   male_avatars.each do |avatar|
@@ -296,7 +316,7 @@ categories.each do |category|
       activity = Activity.new(
     title: activity[:name],
     description: activity[:description],
-    date: Faker::Time.forward(2, :morning),
+    date: activity[:date] || DateTime.new(2019, 06, [14,15,16].sample, rand(8..18), [00,30].sample, 0) ,
     meeting_point: ["Denpasar, Bali"].sample,
     number_of_people: no_people.sample,
     category: category,
@@ -326,5 +346,7 @@ end
 
 
 
+#  daytime = DateTime.new(2019, 06, [14,15,16].sample, rand(8..18), [00,30].sample, 0)
+# date = DateTime.new(2019, 06, [14,15,16].sample, rand(19..23), [00,30].sample, 0)
 
 
