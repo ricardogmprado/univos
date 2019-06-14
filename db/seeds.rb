@@ -45,11 +45,6 @@ photo_urls = {
         name: "Brazilian Barbecue in Canggu",
         description: "Who else loves Brazilian barbecue? My friends and I are organizing one tomorrow! "
       },
-      {
-        image: "http://maba.blog/wp-content/uploads/2017/10/10350932-770x578.jpg",
-        name: "Brazilian Barbecue in Canggu",
-        description: "Who else loves Brazilian barbecue? Join me! "
-      },
   ],
 
 
