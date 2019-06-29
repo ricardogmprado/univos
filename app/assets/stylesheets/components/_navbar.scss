@@ -83,4 +83,22 @@
   z-index: 0.8;
 }
 
-
+@media screen and (min-width: 900px){
+  .nav.nav-tabs {
+    margin: auto;
+    width: 50%;
+  }
+  .tab-content {
+     margin: auto ;
+    width: 50% ;
+  }
+  body {
+    max-height: 100vh;
+  }
+ .nav-link:hover {
+    color: #040F3D;
+    border: none;
+    background-color: #C6C4C5;
+    border-radius: 16px 16px 0 0;
+  }
+  }
