@@ -10,16 +10,23 @@
   <%= link_to activity_path(@activity) do %>
     <div class="card-trip card-trip-index">
 
-      <%= cl_image_tag @activity.photo,  height: 350, width: 350, crop: :thumb, class: "index-img" %>
-        <% end %>
-
+    <% if !@activity.photo.blank? %>
+    <div style="background-image:
+      url('<%= cl_image_path @activity.photo %> ')" class="activity-picture" >
+    </div>
+    <% else %>
+    <div style="background-image:
+      url('https://images.unsplash.com/photo-1522098543979-ffc7f79a56c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')" class="activity-picture" >
+    </div>
+    <% end %>
+ <% end %>
+    <%= link_to activity_path(@activity) do %>
       <div class="card-trip-infos" id="index">
-        <div>
           <div class="activity-info">
             <h6 class="location-category text-center">
               <%= @activity.meeting_point %> • <%= @activity.category %></h6>
             <h2><%= @activity.title %></h2>
-            <p><%= @activity.description[0..50] %>...</p>
+            <p><%= @activity.description[0..50] %>...[see more]</p>
           </div>
           <div class="icon-info">
             <p><i class="fas fa-map-marker-alt"></i> <%= @activity.meeting_point %></p>
@@ -27,6 +34,7 @@
             <p><i class="fas fa-users"></i> <%= @activity.number_of_people %></p>
           </div>
         </div>
+      <% end %>
       </div>
     </div>
 </div>

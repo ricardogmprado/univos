@@ -47,7 +47,7 @@
 #index {
   height: 45vh;
   position: relative;
-
+  color: #040F3D;
 }
 
 
@@ -104,3 +104,19 @@
 
   }
 }
+
+@media screen and (min-width: 900px){
+  .maincard {
+    margin: auto;
+    width: 50%;
+  }
+  #map {
+     margin: auto !important;
+    width: 50% !important ;
+  }
+  body {
+    max-height: 100vh;
+  }
+
+  }
+
