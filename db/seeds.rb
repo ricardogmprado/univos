@@ -325,7 +325,7 @@ categories.each do |category|
       activity = Activity.new(
         title: activity[:title],
         description: activity[:description],
-        date: activity[:date] || DateTime.new(2019, 06, [14,15,16].sample, rand(8..18), [00,30].sample, 0) ,
+        date: activity[:date] || DateTime.new(2019, 09, [14,15,16].sample, rand(8..18), [00,30].sample, 0) ,
         meeting_point: ["Denpasar, Bali"].sample,
         number_of_people: no_people.sample,
         category: category,
