@@ -333,7 +333,7 @@ categories.each do |category|
         user: User.all.sample
       )
       # byebug unless activity.valid?
-      activity.save!
+      activity.save
   end
 end
 
@@ -343,7 +343,7 @@ puts "seeding Appointments"
     user: User.all.sample,
     activity: Activity.all.sample,
     status: status.sample)
-  appointment.save!
+  appointment.save
 end
 
 puts "seeding Messages"
@@ -352,7 +352,7 @@ puts "seeding Messages"
     user: User.all.sample,
     activity: Activity.all.sample,
     content: Faker::Movies::HarryPotter.quote)
-  message.save!
+  message.save
 end
 
 
