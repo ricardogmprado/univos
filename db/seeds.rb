@@ -299,7 +299,7 @@ puts "seeding Male Users"
       about_me: avatar[:about_me],
       remote_photo_url: avatar[:image]
       )
-      user.save
+      user.save!
 end
 
 puts "seeding Female Users"
@@ -314,7 +314,7 @@ puts "seeding Female Users"
       about_me: avatar[:about_me],
       remote_photo_url: avatar[:image]
       )
-      user.save
+      user.save!
 end
 
 puts "seeding Activities"
@@ -343,7 +343,7 @@ puts "seeding Appointments"
     user: User.all.sample,
     activity: Activity.all.sample,
     status: status.sample)
-  appointment.save
+  appointment.save!
 end
 
 puts "seeding Messages"
@@ -352,7 +352,7 @@ puts "seeding Messages"
     user: User.all.sample,
     activity: Activity.all.sample,
     content: Faker::Movies::HarryPotter.quote)
-  message.save
+  message.save!
 end
 
 
