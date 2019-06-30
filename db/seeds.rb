@@ -299,7 +299,7 @@ puts "seeding Male Users"
       about_me: avatar[:about_me],
       remote_photo_url: avatar[:image]
       )
-      user.save!
+      user.save
 end
 
 puts "seeding Female Users"
@@ -314,7 +314,7 @@ puts "seeding Female Users"
       about_me: avatar[:about_me],
       remote_photo_url: avatar[:image]
       )
-      user.save!
+      user.save
 end
 
 puts "seeding Activities"
