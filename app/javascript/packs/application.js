@@ -40,7 +40,7 @@ if (profile){
 
 }
 
-initMapbox();
+// initMapbox();
 initAutocomplete();
 clickCheckbox();
 keepSelected();
