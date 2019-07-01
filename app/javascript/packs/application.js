@@ -18,7 +18,7 @@
 import 'bootstrap';
 
 
-// import { initMapbox } from '../plugins/init_mapbox';
+import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 
 import { displayFilter } from 'components/toggle_navbar_links';
@@ -40,7 +40,7 @@ if (profile){
 
 }
 
-// initMapbox();
+initMapbox();
 initAutocomplete();
 clickCheckbox();
 keepSelected();
