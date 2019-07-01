@@ -10,16 +10,8 @@
   <%= link_to activity_path(@activity) do %>
     <div class="card-trip card-trip-index">
 
-    <% if !@activity.photo.blank? %>
-    <div style="background-image:
-      url('<%= cl_image_path @activity.photo %> ')" class="activity-picture" >
-    </div>
-    <% else %>
-    <div style="background-image:
-      url('https://images.unsplash.com/photo-1522098543979-ffc7f79a56c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')" class="activity-picture" >
-    </div>
+    <%= cl_image_tag @activity.photo,  height: 350, width: 350, crop: :thumb, class: "activity-picture" %>
     <% end %>
- <% end %>
     <%= link_to activity_path(@activity) do %>
       <div class="card-trip-infos" id="index">
           <div class="activity-info">
