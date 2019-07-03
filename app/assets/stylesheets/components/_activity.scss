@@ -86,7 +86,7 @@
 }
 
 .activity-picture {
-  height: 50vh;
+  height: 40vh;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -104,7 +104,6 @@
 
   }
 }
-
 @media screen and (min-width: 900px){
   .maincard {
     margin: auto;
@@ -114,9 +113,5 @@
      margin: auto !important;
     width: 40% !important ;
   }
-  body {
-    max-height: 100vh;
-  }
-
-  }
+}
 
