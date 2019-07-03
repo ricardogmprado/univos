@@ -3,7 +3,9 @@
 <% if !@user.photo.blank? %>
   <div class="user-profile"><%= cl_image_tag @user.photo%></div>
 <% else %>
-  <img src="<%= @user.facebook_picture_url %> " alt="" >
+  <div class="user-profile">
+    <img src="<%= @user.facebook_picture_url %> " alt="" >
+  </div>
 <% end %>
 
 <div class="profile-div">
