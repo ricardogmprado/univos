@@ -4,13 +4,12 @@ class ActivitiesController < ApplicationController
   skip_after_action :verify_authorized, only: :index
 
   def index
-    # raise
-    if request.location.longitude
-      @activities = policy_scope(Activity).near([request.location.latitude, request.location.longitude], 200)
-      # need all activities that do not have an appointment with current user
-    else
+    # if request.location.longitude
+    #   @activities = policy_scope(Activity).near([request.location.latitude, request.location.longitude], 200)
+    #   # need all activities that do not have an appointment with current user
+    # else
       @activities = policy_scope(Activity)
-    end
+    # end
     @seen_activities = current_user.appointments.pluck(:activity_id)
     @activities = @activities.where.not(id: @seen_activities).where.not(user_id: current_user.id)
     # SQL query: Activity.joins(:appointments).where.not(appointments: { user_id: current_user.id })
